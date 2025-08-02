@@ -9,7 +9,16 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write .",
+      "git add"
+    ]
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
