@@ -7,7 +7,7 @@ interface Customization {
   setType: (type: "light" | "dark") => void;
 }
 
-const useThemeStore = create<Customization>()(
+export const useThemeStore = create<Customization>()(
   devtools(
     persist(
       (set) => ({
@@ -21,5 +21,3 @@ const useThemeStore = create<Customization>()(
     )
   )
 );
-
-export default useThemeStore;

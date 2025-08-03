@@ -4,7 +4,7 @@ import { getSession } from "next-auth/react";
 import { UserData } from "~/types/user";
 
 export function filterUser(user: UserData): Omit<UserData, "password" | "refreshToken" | "isDeleted"> {
-  const { password: _password } = user;
+  // const { password: _password } = user;
   return user;
 }
 

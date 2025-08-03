@@ -1,4 +1,4 @@
-import { Roboto } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 
 import { ThemeOption } from "~/types/theme/color";
 
@@ -8,39 +8,40 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"]
 });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function themeTypography(theme: ThemeOption): TypographyVariantsOptions {
   return {
-    fontFamily: theme?.customization?.fontFamily || roboto.style.fontFamily || "Roboto, sans-serif",
+    fontFamily: inter?.style.fontFamily || roboto.style.fontFamily || "Roboto, sans-serif",
     h6: {
-      fontWeight: 500,
+      fontWeight: 400,
       color: theme.heading,
       fontSize: "12px"
     },
     h5: {
       fontSize: "14px",
       color: theme.heading,
-      fontWeight: 500
+      fontWeight: 400
     },
     h4: {
       fontSize: "16px",
       color: theme.heading,
-      fontWeight: 600
+      fontWeight: 500
     },
     h3: {
       fontSize: "20px",
       color: theme.heading,
-      fontWeight: 600
+      fontWeight: 500
     },
     h2: {
       fontSize: "24px",
       color: theme.heading,
-      fontWeight: 700
+      fontWeight: 600
     },
     h1: {
       fontSize: "34px",
       color: theme.heading,
-      fontWeight: 700
+      fontWeight: 600
     },
     subtitle1: {
       fontSize: "14px",
