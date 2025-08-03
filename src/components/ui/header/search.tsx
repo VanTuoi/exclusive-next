@@ -64,36 +64,40 @@ export const Search = memo(() => {
           }}
         />
       )}
-      renderOption={(props, option) => (
-        <Box
-          component="li"
-          {...props}
-          sx={{
-            p: 1,
-            borderRadius: 2,
-            cursor: "pointer",
-            "&:hover": {
-              backgroundColor: theme.palette.action.hover
-            }
-          }}
-          onClick={() => {
-            router.push(`/${option.category}/${option.id}/${option.title}`);
-            setOpen(false);
-          }}
-        >
-          <Grid container alignItems="center" gap={1}>
-            <Image src={option.image[0].url} alt={option.title} width={50} height={50} style={{ borderRadius: 4 }} />
-            <Box>
-              <Typography variant="body1" fontWeight={600}>
-                {option.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {option.category}
-              </Typography>
-            </Box>
-          </Grid>
-        </Box>
-      )}
+      renderOption={(props, option) => {
+        const { key, ...restProps } = props;
+        return (
+          <Box
+            key={key}
+            component="li"
+            {...restProps}
+            sx={{
+              p: 1,
+              borderRadius: 2,
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: theme.palette.action.hover
+              }
+            }}
+            onClick={() => {
+              router.push(`/${option.category}/${option.id}/${option.title}`);
+              setOpen(false);
+            }}
+          >
+            <Grid container alignItems="center" gap={1}>
+              <Image src={option.image[0].url} alt={option.title} width={50} height={50} style={{ borderRadius: 4 }} />
+              <Box>
+                <Typography variant="body1" fontWeight={600}>
+                  {option.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {option.category}
+                </Typography>
+              </Box>
+            </Grid>
+          </Box>
+        );
+      }}
     />
   );
 });

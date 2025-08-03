@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Box } from "@mui/material";
-import { memo } from "react";
+import { JSX, memo } from "react";
 import {
   isImageFitCover,
   isImageSlide,
