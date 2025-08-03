@@ -1,3 +1,4 @@
+"use client";
 import { Box, Skeleton, Stack } from "@mui/material";
 import { useLocale } from "next-intl";
 import { memo, useEffect, useState } from "react";

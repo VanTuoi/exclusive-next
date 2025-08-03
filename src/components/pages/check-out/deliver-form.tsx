@@ -1,3 +1,4 @@
+"use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Card, Stack, Typography, useTheme } from "@mui/material";
 import { memo, useEffect } from "react";

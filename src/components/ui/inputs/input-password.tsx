@@ -1,3 +1,4 @@
+"use client";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { FormControl, FormHelperText, IconButton, InputAdornment, TextField, TextFieldProps } from "@mui/material";
 import { useState } from "react";

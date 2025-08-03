@@ -1,3 +1,4 @@
+"use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import LoadingButton from "@mui/lab/LoadingButton";
 import { Box, FormControl, FormHelperText, Stack, TextField, Typography, useTheme } from "@mui/material";

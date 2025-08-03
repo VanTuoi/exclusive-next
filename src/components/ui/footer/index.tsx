@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 import { Box, Container, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
@@ -11,6 +10,7 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "~/assets
 
 import { Logo } from "../header/logo";
 
+import Link from "next/link";
 import { CopyRight } from "./copy-right";
 import { SendMailComponent } from "./send-mail";
 
@@ -123,7 +123,6 @@ export const Footer = memo(() => {
 });
 
 const FooterColumn: React.FC<{ title: string; items: FooterItem[] }> = ({ title, items }) => {
-  const router = useRouter();
   return (
     <Box
       sx={{
@@ -137,9 +136,19 @@ const FooterColumn: React.FC<{ title: string; items: FooterItem[] }> = ({ title,
         {title}
       </Typography>
       {items.map(({ name, url }, idx) => (
-        <Typography key={idx} variant="h4" onClick={() => router.push(url)} sx={{ cursor: "pointer", color: "white" }}>
-          {name}
-        </Typography>
+        <Link key={idx} href={url} passHref>
+          <Typography
+            variant="h4"
+            sx={{
+              cursor: "pointer",
+              color: "white",
+              textDecoration: "none",
+              "&:hover": { textDecoration: "underline" }
+            }}
+          >
+            {name}
+          </Typography>
+        </Link>
       ))}
     </Box>
   );

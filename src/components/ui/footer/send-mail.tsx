@@ -1,3 +1,4 @@
+"use client";
 import { Box, InputAdornment, TextField } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useTranslations } from "next-intl";

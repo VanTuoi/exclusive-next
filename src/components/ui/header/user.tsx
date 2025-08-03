@@ -1,3 +1,4 @@
+"use client";
 import { Box, IconButton, Menu, MenuItem, Skeleton, Tooltip, Typography, useTheme } from "@mui/material";
 import { memo, MouseEvent, useEffect, useState } from "react";
 

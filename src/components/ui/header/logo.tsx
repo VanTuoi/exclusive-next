@@ -1,6 +1,5 @@
-import { useRouter } from "next/navigation";
-
 import { Box, Typography } from "@mui/material";
+import Link from "next/link";
 import { memo } from "react";
 
 interface LogoProps {
@@ -8,31 +7,32 @@ interface LogoProps {
 }
 
 export const Logo = memo(({ justifyContent = "center" }: LogoProps) => {
-  const router = useRouter();
-
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "row",
-        justifyContent: justifyContent,
-        cursor: "pointer"
-      }}
-      onClick={() => {
-        router.push("/");
+        justifyContent: justifyContent
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{
-          color: "currentcolor",
-          fontFamily: "Inter",
-          lineHeight: "24px",
-          letterSpacing: "0.03em"
-        }}
-      >
-        Exclusive
-      </Typography>
+      <Link href="/" style={{ textDecoration: "none" }}>
+        <Typography
+          variant="h2"
+          sx={{
+            color: "black",
+            fontFamily: "Inter",
+            lineHeight: "24px",
+            letterSpacing: "0.03em",
+            cursor: "pointer",
+            textDecoration: "none",
+            "&:hover": {
+              textDecoration: "none"
+            }
+          }}
+        >
+          Exclusive
+        </Typography>
+      </Link>
     </Box>
   );
 });

@@ -1,3 +1,4 @@
+"use client";
 import { Box, Button, Divider, Grid, IconButton, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { memo, useEffect, useState } from "react";
 import "yet-another-react-lightbox/styles.css";
