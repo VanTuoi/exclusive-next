@@ -1,18 +1,58 @@
-"use client";
+import { Box, IconButton, Menu, MenuItem, Skeleton, Tooltip, Typography, useTheme } from "@mui/material";
+import { memo, MouseEvent, useEffect, useState } from "react";
 
-import { useRouter } from "next/navigation";
-
-import { Avatar, Box, Button, IconButton, Menu, MenuItem, Skeleton, Tooltip, Typography } from "@mui/material";
-import { useSession } from "next-auth/react";
-import { memo, MouseEvent, useState } from "react";
-
-import { useLogout } from "~/hooks";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import CancelIcon from "@mui/icons-material/Cancel";
+import LogoutIcon from "@mui/icons-material/Logout";
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import StarRateIcon from "@mui/icons-material/StarRate";
+import { useTranslations } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
+import { useAuth, useGetMe } from "~/hooks/auth";
+import { useAuthStore } from "~/stores";
+import { isOlderThanMinutes } from "~/utils";
 
 export const User = memo(() => {
-  const { data: session, status } = useSession();
-  const { handleLogout } = useLogout();
-  const router = useRouter();
+  const { userData, timeUpdate } = useAuthStore();
+  const theme = useTheme();
+  const t = useTranslations("common");
 
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const { handleLogout } = useAuth();
+  const { handleGetMe } = useGetMe();
+
+  const menuItems = [
+    {
+      icon: <AccountCircleIcon fontSize="small" />,
+      text: t("header.user.manageMyAccount"),
+      action: () => router.push("/user/profile")
+    },
+    {
+      icon: <ReceiptLongIcon fontSize="small" />,
+      text: t("header.user.myOrder"),
+      action: () => router.push("/user/orders")
+    },
+    {
+      icon: <CancelIcon fontSize="small" />,
+      text: t("header.user.myCancellations"),
+      action: () => router.push("/user/cancellations")
+    },
+    {
+      icon: <StarRateIcon fontSize="small" />,
+      text: t("header.user.myReviews"),
+      action: () => router.push("/user/reviews")
+    },
+    {
+      icon: <LogoutIcon fontSize="small" />,
+      text: t("header.user.logout"),
+      action: handleLogout
+    }
+  ];
+
+  const [loading, setLoading] = useState<boolean>(true);
+  const [isLogin, setIsLogin] = useState<boolean>(false);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
   const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
@@ -23,31 +63,57 @@ export const User = memo(() => {
     setAnchorElUser(null);
   };
 
-  const userData = session?.user;
-  const loading = status === "loading";
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      if ((isOlderThanMinutes(timeUpdate, 30) || !userData) && localStorage.getItem("isLogin") === "true") {
+        setIsLogin(true);
+        await handleGetMe().finally(() => setLoading(false));
+      } else {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [userData, pathname]);
+
+  useEffect(() => {
+    handleCloseUserMenu();
+  }, [pathname]);
 
   return !loading ? (
     <Box sx={{ flexGrow: 0 }}>
-      {!userData ? (
-        <Button variant="contained" onClick={() => router.push("/login")}>
-          Đăng nhập
-        </Button>
-      ) : (
+      {!isLogin || !userData ? null : (
         <>
-          <Tooltip title="">
-            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt={userData.name || "User"} src={userData.avatar || ""} />
+          <Tooltip title={t("header.user.title")}>
+            <IconButton
+              color={pathname.includes("/user/profile") ? "primary" : "default"}
+              onClick={handleOpenUserMenu}
+              aria-label="Open user menu"
+            >
+              <AccountCircleIcon />
             </IconButton>
           </Tooltip>
+
           <Menu
-            sx={{ mt: "45px" }}
+            sx={{
+              mt: "45px",
+              "& .MuiPaper-root": {
+                color: "inherit",
+                backgroundColor: "rgba(0, 0, 0, 0.35)",
+                boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+                backdropFilter: "blur(15px)",
+                WebkitBackdropFilter: "blur(10px)",
+                borderRadius: "10px",
+                border: "1px solid rgba(255, 255, 255, 0.18)"
+              }
+            }}
             id="menu-appbar"
             anchorEl={anchorElUser}
             anchorOrigin={{
               vertical: "top",
               horizontal: "right"
             }}
-            keepMounted
+            keepMounted={false}
             transformOrigin={{
               vertical: "top",
               horizontal: "right"
@@ -55,28 +121,16 @@ export const User = memo(() => {
             open={Boolean(anchorElUser)}
             onClose={handleCloseUserMenu}
           >
-            <MenuItem
-              onClick={() => {
-                handleCloseUserMenu();
-                router.push("/profile");
-              }}
-              sx={{ px: 3, py: 1 }}
-            >
-              <Typography variant="h4" sx={{ textAlign: "center" }}>
-                Cài đặt
-              </Typography>
-            </MenuItem>
-            <MenuItem
-              onClick={() => {
-                handleCloseUserMenu();
-                handleLogout();
-              }}
-              sx={{ px: 3, py: 1 }}
-            >
-              <Typography variant="h4" sx={{ textAlign: "center" }}>
-                Đăng xuất
-              </Typography>
-            </MenuItem>
+            {menuItems.map((item, index) => (
+              <MenuItem key={index} onClick={item.action} sx={{ paddingX: 3, paddingY: 1 }}>
+                <Box sx={{ display: "flex", alignItems: "center", color: theme.palette.common.white }}>
+                  {item.icon}
+                  <Typography variant="h4" sx={{ ml: 2, textAlign: "center", color: theme.palette.common.white }}>
+                    {item.text}
+                  </Typography>
+                </Box>
+              </MenuItem>
+            ))}
           </Menu>
         </>
       )}

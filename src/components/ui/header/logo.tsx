@@ -1,11 +1,13 @@
-"use client";
 import { useRouter } from "next/navigation";
 
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { memo } from "react";
 
-export const Logo = memo(() => {
-  const theme = useTheme();
+interface LogoProps {
+  justifyContent?: "flex-start" | "center" | "flex-end" | "space-between";
+}
+
+export const Logo = memo(({ justifyContent = "center" }: LogoProps) => {
   const router = useRouter();
 
   return (
@@ -13,8 +15,7 @@ export const Logo = memo(() => {
       sx={{
         display: "flex",
         flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
+        justifyContent: justifyContent,
         cursor: "pointer"
       }}
       onClick={() => {
@@ -24,16 +25,13 @@ export const Logo = memo(() => {
       <Typography
         variant="h2"
         sx={{
-          color: theme.palette.background.paper,
-          backgroundColor: theme.palette.primary.main,
-          borderRadius: 2
+          color: "currentcolor",
+          fontFamily: "Inter",
+          lineHeight: "24px",
+          letterSpacing: "0.03em"
         }}
-        p={1}
       >
-        F2
-      </Typography>
-      <Typography variant="h5" sx={{ fontWeight: 600 }} p={1}>
-        Hệ thống học tập trực tuyến
+        Exclusive
       </Typography>
     </Box>
   );

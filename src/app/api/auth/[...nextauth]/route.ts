@@ -1,10 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-import { authApi } from "~/services";
-
-import { filterUser } from "~/utils/auth";
-
 const handler = NextAuth({
   providers: [
     CredentialsProvider({
@@ -14,20 +10,22 @@ const handler = NextAuth({
         password: { label: "Password", type: "password" }
       },
       authorize: async (credentials) => {
-        try {
-          const { data } = await authApi("public").login({
-            email: credentials?.email,
-            password: credentials?.password
-          });
+        console.log("credentials", credentials);
+        return null;
+        // try {
+        //   const { data } = await authApi("public").login({
+        //     email: credentials?.email,
+        //     password: credentials?.password
+        //   });
 
-          if (data?.data?.accessToken && data?.data?.user) {
-            return { ...filterUser(data?.data?.user), accessToken: data?.data?.accessToken };
-          }
+        //   if (data?.data?.accessToken && data?.data?.user) {
+        //     return { ...filterUser(data?.data?.user), accessToken: data?.data?.accessToken };
+        //   }
 
-          throw new Error("Invalid credentials");
-        } catch (err) {
-          throw new Error(`Invalid credentials ${err}`);
-        }
+        //   throw new Error("Invalid credentials");
+        // } catch (err) {
+        //   throw new Error(`Invalid credentials ${err}`);
+        // }
       }
     })
   ],
