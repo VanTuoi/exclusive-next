@@ -6,6 +6,7 @@ import { Logo } from "./logo";
 import { Nav } from "./nav";
 import { Search } from "./search";
 import { TopHeader } from "./top";
+import { User } from "./user";
 import { WishList } from "./wish-list";
 
 export const Header = memo(() => {
@@ -47,6 +48,7 @@ export const Header = memo(() => {
           <Search />
           <WishList />
           <Cart />
+          <User />
         </Box>
       </Box>
     </Box>

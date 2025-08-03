@@ -1,5 +1,6 @@
 export * from "./buttons";
 export * from "./footer";
+export * from "./forms";
 export * from "./header";
 export * from "./header/logo";
 export * from "./inputs";

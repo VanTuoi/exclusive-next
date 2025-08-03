@@ -92,6 +92,11 @@
       "product": "Product",
       "viewCart": "View Cart",
       "checkout": "Checkout"
+    },
+    "notFound": {
+      "title": "404 - Page Not Found",
+      "description": "The page you are looking for does not exist.",
+      "goHome": "Go back home"
     }
   },
   "home": {
@@ -275,5 +280,71 @@
     },
     "button": "Place Order",
     "emptyCart": "Your cart is empty"
+  },
+  "loginPage": {
+    "title": "Log in to Exclusive",
+    "content": "Enter your details below",
+    "form": {
+      "contact": {
+        "label": "Email or Phones Number",
+        "placeholder": "Email or Phones Number"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Password"
+      }
+    },
+    "button": "Login",
+    "loginWithGoogle": "Sign up with Google",
+    "forgetPassword": "Forget Password?",
+    "validate": {
+      "name": "Full name",
+      "password": "Password",
+      "minLength": "{objectName} must be at least {minimumValue} characters",
+      "maxLength": "{objectName} maximum {maximumValue} characters",
+      "regexSchema": "{objectName} must include at least 1 letter 1 number and 1 special character"
+    }
+  },
+  "signUpPage": {
+    "title": "Create an account",
+    "content": "Enter your details below",
+    "form": {
+      "name": {
+        "label": "Full name",
+        "placeholder": "Full name"
+      },
+      "contact": {
+        "label": "Email or Phones Number",
+        "placeholder": "Email or Phones Number"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Password"
+      }
+    },
+    "button": "Sign up",
+    "haveAccount": "Forget Password?",
+    "linkLogin": "Login",
+    "validate": {
+      "name": "Full name",
+      "password": "Password",
+      "minLength": "{objectName} must be at least {minimumValue} characters",
+      "maxLength": "{objectName} maximum {maximumValue} characters",
+      "regexSchema": "{objectName} must include at least 1 letter 1 number and 1 special character"
+    }
+  },
+  "forgetPassword": {
+    "title": "Forgot Password",
+    "subtitle": "Enter your contact information",
+    "contactLabel": "Email or Phone Number",
+    "contactPlaceholder": "Email or Phone Number",
+    "submitButton": "Recover Password",
+    "validation": {
+      "contactField": "Invalid contact information"
+    },
+    "error": {
+      "notFound": "No matching user found",
+      "unknown": "An unknown error occurred"
+    }
   }
 }

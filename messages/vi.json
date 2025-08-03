@@ -92,6 +92,11 @@
       "product": "Sản phẩm",
       "viewCart": "Giỏ hàng",
       "checkout": "Thanh toán"
+    },
+    "notFound": {
+      "title": "404 - Không tìm thấy trang",
+      "description": "Trang bạn đang tìm kiếm không tồn tại.",
+      "goHome": "Quay về trang chủ"
     }
   },
   "home": {
@@ -273,5 +278,71 @@
     },
     "button": "Đặt hàng",
     "emptyCart": "Giỏ hàng của bạn trống"
+  },
+  "loginPage": {
+    "title": "Đăng nhập vào Exclusive",
+    "content": "Nhập thông tin cá nhân vào bên dưới",
+    "form": {
+      "contact": {
+        "label": "Email hoặc số điện thoại",
+        "placeholder": "Email hoặc số điện thoại"
+      },
+      "password": {
+        "label": "Mật khẩu",
+        "placeholder": "Mật khẩu"
+      }
+    },
+    "button": "Đăng nhập",
+    "loginWithGoogle": "Đăng nhập với Google",
+    "forgetPassword": "Quên mật khẩu?",
+    "validate": {
+      "name": "Họ và tên",
+      "password": "Mật khẩu",
+      "minLength": "{objectName} ít nhất phải có {minimumValue} kí tự",
+      "maxLength": "{objectName} tối đa {maximumValue} kí tự",
+      "regexSchema": "{objectName} phải có ít nhất 1 chữ cái 1 chữ số và 1 kí tự đặc biệt"
+    }
+  },
+  "signUpPage": {
+    "title": "Tạo tài khoản",
+    "content": "Nhập thông tin cá nhân vào bên dưới",
+    "form": {
+      "name": {
+        "label": "Họ và tên",
+        "placeholder": "Họ và tên"
+      },
+      "contact": {
+        "label": "Email hoặc số điện thoại",
+        "placeholder": "Email hoặc số điện thoại"
+      },
+      "password": {
+        "label": "Mật khẩu",
+        "placeholder": "Mật khẩu"
+      }
+    },
+    "button": "Đăng ký",
+    "haveAccount": "Bạn đã có tài khoản",
+    "linkLogin": "Đăng nhập",
+    "validate": {
+      "name": "Họ và tên",
+      "password": "Mật khẩu",
+      "minLength": "{objectName} ít nhất phải có {minimumValue} kí tự",
+      "maxLength": "{objectName} tối đa {maximumValue} kí tự",
+      "regexSchema": "{objectName} phải có ít nhất 1 chữ cái 1 chữ số và 1 kí tự đặc biệt"
+    }
+  },
+  "forgetPassword": {
+    "title": "Quên mật khẩu",
+    "subtitle": "Nhập thông tin liên hệ của bạn",
+    "contactLabel": "Email hoặc Số điện thoại",
+    "contactPlaceholder": "Email hoặc Số điện thoại",
+    "submitButton": "Lấy lại mật khẩu",
+    "validation": {
+      "contactField": "Thông tin liên hệ không hợp lệ"
+    },
+    "error": {
+      "notFound": "Không tìm thấy người dùng tương ứng",
+      "unknown": "Đã xảy ra lỗi không xác định"
+    }
   }
 }
