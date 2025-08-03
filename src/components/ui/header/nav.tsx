@@ -40,7 +40,7 @@ export const Nav = () => {
         return item.link !== "/auth/sign-up" || !userData;
       }).map((item: NavItem) => {
         return (
-          <CustomLink fontWeight={500} key={item.link} variant="h4" href={item.link}>
+          <CustomLink fontWeight={600} key={item.link} variant="h4" href={item.link}>
             {item.title[currentLocale]}
           </CustomLink>
         );

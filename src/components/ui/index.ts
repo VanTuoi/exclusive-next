@@ -8,4 +8,5 @@ export * from "./links/index";
 export * from "./loading-bar";
 export * from "./section/section";
 export * from "./slide-details";
+export * from "./tabs";
 export * from "./toast";

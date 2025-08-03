@@ -91,7 +91,9 @@
       "myAccount": "Tài khoản của tôi",
       "product": "Sản phẩm",
       "viewCart": "Giỏ hàng",
-      "checkout": "Thanh toán"
+      "checkout": "Thanh toán",
+      "about": "Về chúng tôi",
+      "contact": "Liên hệ"
     },
     "notFound": {
       "title": "404 - Không tìm thấy trang",
@@ -344,5 +346,123 @@
       "notFound": "Không tìm thấy người dùng tương ứng",
       "unknown": "Đã xảy ra lỗi không xác định"
     }
+  },
+  "profile": {
+    "tabs": {
+      "manageAccount": "Quản lý tài khoản",
+      "myProfile": "Hồ sơ của tôi",
+      "addressBook": "Sổ địa chỉ",
+      "paymentOptions": "Phương thức thanh toán",
+      "myOrders": "Đơn hàng của tôi",
+      "myReturns": "Trả hàng",
+      "myCancellations": "Đã hủy",
+      "myWishlist": "Danh sách yêu thích",
+      "wishlist": "Danh sách yêu thích"
+    },
+    "title": "Thay đổi hồ sơ",
+    "form": {
+      "firstName": {
+        "label": "Tên",
+        "validate": {
+          "required": "Tên là bắt buộc"
+        }
+      },
+      "lastName": {
+        "label": "Họ"
+      },
+      "emailAddress": {
+        "label": "Địa chỉ Email",
+        "validate": {
+          "required": "Địa chỉ email là bắt buộc"
+        }
+      },
+      "streetAddress": {
+        "label": "Địa chỉ",
+        "validate": {
+          "required": "Địa chỉ là bắt buộc"
+        }
+      },
+      "currentPassword": {
+        "label": "Thay đổi mật khẩu"
+      },
+      "newPassword": {
+        "label": "Mật khẩu mới"
+      },
+      "confirmNewPassword": {
+        "label": "Xác nhận mật khẩu mới",
+        "validate": {
+          "match": "Mật khẩu không khớp"
+        }
+      },
+      "submit": "Lưu thay đổi",
+      "cancel": "Hủy"
+    },
+    "passwordSectionTitle": "Thay đổi mật khẩu"
+  },
+  "contact": {
+    "info": {
+      "phone": {
+        "title": "Gọi cho chúng tôi",
+        "content": "Chúng tôi phục vụ 24/7, 7 ngày một tuần.",
+        "text": "Điện thoại"
+      },
+      "mail": {
+        "title": "Viết thư cho chúng tôi",
+        "content": "Hãy điền vào biểu mẫu của chúng tôi và chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.",
+        "text": "Email"
+      }
+    },
+    "form": {
+      "name": {
+        "label": "Tên của bạn",
+        "validate": {
+          "required": "Tên của bạn là bắt buộc"
+        }
+      },
+      "email": {
+        "label": "Email của bạn",
+        "validate": {
+          "required": "Email của bạn là bắt buộc"
+        }
+      },
+      "phone": {
+        "label": "Số điện thoại của bạn",
+        "validate": {
+          "required": "Số điện thoại của bạn là bắt buộc"
+        }
+      },
+      "message": {
+        "label": "Lời nhắn của bạn",
+        "validate": {
+          "required": "Lời nhắn là bắt buộc"
+        }
+      },
+      "submit": "Gửi lời nhắn"
+    }
+  },
+  "about": {
+    "section1": {
+      "title": "Câu chuyện của chúng tôi",
+      "content1": "Ra mắt vào năm 2015, Exclusive là trang mua sắm trực tuyến hàng đầu Nam Á với sự hiện diện tích cực tại Bangladesh. Được hỗ trợ bởi nhiều giải pháp tiếp thị, dữ liệu và dịch vụ được thiết kế riêng, Exclusive có 10.500 nhân viên bán hàng và 300 thương hiệu, phục vụ 3 triệu khách hàng trên khắp khu vực.",
+      "content2": "Exclusive cung cấp hơn 1 triệu sản phẩm, phát triển rất nhanh. Exclusive cung cấp nhiều loại sản phẩm khác nhau trong các danh mục từ người tiêu dùng."
+    },
+    "section2": [
+      {
+        "title": "10,5 nghìn",
+        "content": "Người bán đang hoạt động trên trang web của chúng tôi"
+      },
+      {
+        "title": "33 nghìn",
+        "content": "Bán sản phẩm hàng tháng"
+      },
+      {
+        "title": "45,5 nghìn",
+        "content": "Khách hàng đang hoạt động trên trang web của chúng tôi"
+      },
+      {
+        "title": "25 nghìn",
+        "content": "Doanh số bán hàng gộp hàng năm trên trang web của chúng tôi"
+      }
+    ]
   }
 }
