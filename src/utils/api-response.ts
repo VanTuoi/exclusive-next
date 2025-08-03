@@ -1,4 +1,4 @@
-import { ResponseData } from "~/types";
+import { Errors, ResponseData } from "~/types";
 
 import type { NextApiResponse } from "next";
 
@@ -15,11 +15,17 @@ export function handleApiResponse<T>(
   res: NextApiResponse<ResponseData<T>>,
   message: string,
   success: boolean,
-  data: T
+  data: T,
+  errors: Errors,
+  statusCode?: string | number,
+  statusText?: string
 ) {
   return res.json({
     data,
     message,
-    success
+    success,
+    statusCode,
+    statusText,
+    errors
   });
 }

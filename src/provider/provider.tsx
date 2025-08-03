@@ -7,11 +7,10 @@ import { SessionProvider } from "next-auth/react";
 import { useMemo } from "react";
 import { Toaster } from "react-hot-toast";
 
+import { useThemeStore } from "~/stores";
 import theme from "~/theme";
 
 import { LoadingBar } from "~/components/ui";
-
-import useThemeStore from "~/stores/theme";
 
 const queryClient = new QueryClient();
 

@@ -1,6 +1,161 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "common": {
+    "header": {
+      "banner": {
+        "saleContent": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
+        "saleLink": "ShopNow"
+      },
+      "selectLanguage": "Select Language",
+      "searchTitle": "What are you looking for?",
+      "noResult": "No result found",
+      "user": {
+        "title": "Open settings",
+        "manageMyAccount": "Manage My Account",
+        "myOrder": "My Order",
+        "myCancellations": "My Cancellations",
+        "myReviews": "My Reviews",
+        "logout": "Logout"
+      }
+    },
+    "footer": {
+      "contact": "Contact",
+      "copy": "Copyright Rimel {currentYear}. All right reserved",
+      "subscribe": "Subscribe",
+      "sale": "Get 10% off your first order",
+      "email": {
+        "placeholder": "Enter your email"
+      },
+      "support": "Support",
+      "sections": [
+        {
+          "title": "Account",
+          "items": [
+            {
+              "name": "My Account",
+              "url": "#"
+            },
+            {
+              "name": "Login / Register",
+              "url": "#"
+            },
+            {
+              "name": "Cart",
+              "url": "#"
+            },
+            {
+              "name": "Wishlist",
+              "url": "#"
+            },
+            {
+              "name": "Shop",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Quick Link",
+          "items": [
+            {
+              "name": "Privacy Policy",
+              "url": "#"
+            },
+            {
+              "name": "Terms Of Use",
+              "url": "#"
+            },
+            {
+              "name": "FAQ",
+              "url": "#"
+            },
+            {
+              "name": "Contact",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "downloadApp": {
+        "title": "Download Our App",
+        "content": "Save $3 with App New User Only"
+      }
+    }
+  },
+  "home": {
+    "addToCart": "Add To Cart",
+    "addToCartDialog": {
+      "title": "Add to cart success",
+      "colors": "Color",
+      "size": "Size",
+      "price": "Price",
+      "buttonBack": "Continue Shopping",
+      "buttonCheckout": "Checkout",
+      "similarProduct": "Similar Products"
+    },
+    "categoriesNav": "Categories",
+    "flashSale": {
+      "title": "Today’s",
+      "content": "Flash Sales"
+    },
+    "countingTime": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
+    "categories": {
+      "title": "Categories",
+      "content": "Browse By Category"
+    },
+    "monthSale": {
+      "title": "This Month",
+      "content": "Best Selling Products"
+    },
+    "bottomBanner": {
+      "title": "Categories",
+      "content": "Enhance Your Music Experience",
+      "button": "Buy now !"
+    },
+    "explore": {
+      "title": "Featured",
+      "content": "New Arrival"
+    },
+    "buttonViewAll": "View all products",
+    "arrival": {
+      "title": "Featured",
+      "content": "New Arrival",
+      "item": [
+        {
+          "title": "PlayStation 5",
+          "content": "Black and White version of the PS5 coming out on sale."
+        },
+        {
+          "title": "Women’s Collections",
+          "content": "Featured woman collections that give you another vibe."
+        },
+        {
+          "title": "Speakers",
+          "content": "Amazon wireless speakers"
+        },
+        {
+          "title": "Perfume",
+          "content": "GUCCI INTENSE OUD EDP"
+        }
+      ],
+      "button": "Shop Now"
+    },
+    "support": [
+      {
+        "title": "FREE AND FAST DELIVERY",
+        "content": "Free delivery for all orders over {objectName}"
+      },
+      {
+        "title": "24/7 CUSTOMER SERVICE",
+        "content": "Friendly 24/7 customer support"
+      },
+      {
+        "title": "MONEY BACK GUARANTEE",
+        "content": "We reurn money within 30 days"
+      }
+    ]
   }
 }

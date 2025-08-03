@@ -1,6 +1,161 @@
 {
-  "HomePage": {
-    "title": "Chào",
-    "about": "Go to the about page"
+  "common": {
+    "header": {
+      "banner": {
+        "saleContent": "Khuyến mãi mùa hè cho tất cả đồ bơi và giao hàng nhanh miễn phí - GIẢM 50%!",
+        "saleLink": "Mua sắm ngay"
+      },
+      "selectLanguage": "Lựa chọn ngôn ngữ",
+      "searchTitle": "Bạn đang tìm kiếm gì?",
+      "noResult": "Không tìm thấy kết quả",
+      "user": {
+        "title": "Cài đặt",
+        "manageMyAccount": "Quản lý tài khoản",
+        "myOrder": "Đơn hàng của tôi",
+        "myCancellations": "Đơn hàng đã hủy",
+        "myReviews": "Đánh giá của tôi",
+        "logout": "Đăng xuất"
+      }
+    },
+    "footer": {
+      "contact": "Liên hệ",
+      "copy": "Bản quyền Rimel {currentYear}. Đã đăng ký bản quyền",
+      "subscribe": "Đăng ký",
+      "sale": "Giảm 10% cho đơn đầu",
+      "email": {
+        "placeholder": "Nhập email của bạn"
+      },
+      "support": "Hỗ trợ",
+      "sections": [
+        {
+          "title": "Tài khoản",
+          "items": [
+            {
+              "name": "Tài khoản của tôi",
+              "url": "#"
+            },
+            {
+              "name": "Đăng nhập / Đăng ký",
+              "url": "#"
+            },
+            {
+              "name": "Giỏ hàng",
+              "url": "#"
+            },
+            {
+              "name": "Danh sách mong muốn",
+              "url": "#"
+            },
+            {
+              "name": "Cửa hàng",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "title": "Liên kết nhanh",
+          "items": [
+            {
+              "name": "Chính sách bảo mật",
+              "url": "#"
+            },
+            {
+              "name": "Điều khoản sử dụng",
+              "url": "#"
+            },
+            {
+              "name": "Câu hỏi thường gặp",
+              "url": "#"
+            },
+            {
+              "name": "Liên hệ",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "downloadApp": {
+        "title": "Tải xuống ứng dụng",
+        "content": "Tiết kiệm 3 đô la cho người dùng mới"
+      }
+    }
+  },
+  "home": {
+    "addToCart": "Thêm vào giỏ hàng",
+    "addToCartDialog": {
+      "title": "Thêm vào giỏ hàng thành công",
+      "colors": "Màu sắc",
+      "size": "Kích thước",
+      "price": "Giá",
+      "buttonBack": "Tiếp tục mua hàng",
+      "buttonCheckout": "Thanh toán",
+      "similarProduct": "Sản phẩm tương tự"
+    },
+    "categoriesNav": "Danh mục sản phẩm",
+    "flashSale": {
+      "title": "Hôm nay",
+      "content": "Khuyến mại chớp nhoáng"
+    },
+    "countingTime": {
+      "days": "Ngày",
+      "hours": "Giờ",
+      "minutes": "Phút",
+      "seconds": "Giây"
+    },
+    "categories": {
+      "title": "Danh mục",
+      "content": "Duyệt theo danh mục"
+    },
+    "monthSale": {
+      "title": "Tháng này",
+      "content": "Sản phẩm bán chạy nhất"
+    },
+    "bottomBanner": {
+      "title": "Danh mục",
+      "content": "Nâng cao trải nghiệm âm nhạc của bạn",
+      "button": "Mua ngay!"
+    },
+    "explore": {
+      "title": "Nổi bật",
+      "content": "Mới đến"
+    },
+    "buttonViewAll": "Xem tất cả sản phẩm",
+    "arrival": {
+      "title": "Nổi bật",
+      "content": "Hàng mới về",
+      "item": [
+        {
+          "title": "PlayStation 5",
+          "content": "Phiên bản đen trắng của PS5 sắp được bán ra."
+        },
+        {
+          "title": "Bộ sưu tập dành cho phụ nữ",
+          "content": "Bộ sưu tập dành cho phụ nữ nổi bật mang đến cho bạn một phong cách khác."
+        },
+        {
+          "title": "Loa",
+          "content": "Loa không dây Amazon"
+        },
+        {
+          "title": "Nước hoa",
+          "content": "GUCCI INTENSE OUD EDP"
+        }
+      ],
+      "button": "Mua ngay"
+    },
+    "support": [
+      {
+        "title": "GIAO HÀNG MIỄN PHÍ VÀ NHANH CHÓNG",
+        "content": "Giao hàng miễn phí cho tất cả các đơn hàng trên {objectName}"
+      },
+      {
+        "title": "DỊCH VỤ KHÁCH HÀNG 24/7",
+        "content": "Hỗ trợ khách hàng thân thiện 24/7"
+      },
+      {
+        "title": "ĐẢM BẢO HOÀN TIỀN",
+        "content": "Chúng tôi hoàn lại tiền trong vòng 30 ngày"
+      }
+    ]
   }
 }

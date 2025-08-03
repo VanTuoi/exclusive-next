@@ -27,5 +27,7 @@
   "editor.rulers": [120],
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,
-  "i18n-ally.localesPaths": ["messages", "src/i18n"]
+  "i18n-ally.localesPaths": ["messages", "src/i18n"],
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true
 }

@@ -6,11 +6,8 @@ import { Avatar, Box, Button, IconButton, Menu, MenuItem, Skeleton, Tooltip, Typ
 import { useSession } from "next-auth/react";
 import { memo, MouseEvent, useState } from "react";
 
-import { useLogout } from "~/hooks";
-
 export const User = memo(() => {
   const { data: session, status } = useSession();
-  const { handleLogout } = useLogout();
   const router = useRouter();
 
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
@@ -69,7 +66,6 @@ export const User = memo(() => {
             <MenuItem
               onClick={() => {
                 handleCloseUserMenu();
-                handleLogout();
               }}
               sx={{ px: 3, py: 1 }}
             >

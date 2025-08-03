@@ -2,6 +2,8 @@ import axios, { AxiosError } from "axios";
 
 import { getNextAuthToken } from "~/utils";
 
+import applyMockAdapter from "./mocks";
+
 const publicApi = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
   timeout: 20000,
@@ -41,5 +43,8 @@ privateApi.interceptors.response.use(
     return Promise.reject(error.response?.data);
   }
 );
+
+applyMockAdapter(publicApi);
+applyMockAdapter(privateApi);
 
 export { privateApi, publicApi };
