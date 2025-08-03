@@ -35,6 +35,7 @@ export const HomeNavCategories = memo(() => {
           }}
         />
         <Slider />
+        zzz
       </Box>
     </Container>
   );

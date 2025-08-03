@@ -1,3 +1,4 @@
+"use client";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { memo, useMemo, useRef } from "react";
 import { SwiperSlide } from "swiper/react";

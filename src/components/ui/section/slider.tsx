@@ -1,3 +1,4 @@
+"use client";
 import { Container, useMediaQuery, useTheme } from "@mui/material";
 import { forwardRef, ReactNode, useImperativeHandle, useRef } from "react";
 import { Swiper as SwiperType } from "swiper";

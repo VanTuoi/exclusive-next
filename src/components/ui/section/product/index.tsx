@@ -1,3 +1,4 @@
+"use client";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { Box, Button, IconButton, Stack, useTheme } from "@mui/material";

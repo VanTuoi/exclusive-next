@@ -1,3 +1,4 @@
+"use client";
 import { Container } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { memo, useRef } from "react";

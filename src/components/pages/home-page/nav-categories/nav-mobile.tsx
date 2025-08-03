@@ -1,3 +1,4 @@
+"use client";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import { Accordion, AccordionDetails, AccordionSummary, Box, Skeleton, Typography } from "@mui/material";

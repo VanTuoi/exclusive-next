@@ -1,3 +1,4 @@
+"use client";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { Box, Button, IconButton, Stack, useTheme } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
