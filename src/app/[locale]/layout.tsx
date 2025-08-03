@@ -56,6 +56,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="dns-prefetch" href="https://js.stripe.com" />
+      </head>
       <body>
         <NextIntlClientProvider>
           <Provider>{children}</Provider>

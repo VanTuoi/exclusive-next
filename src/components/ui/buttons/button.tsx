@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from "next/navigation";
 
 import { Button, ButtonProps, SxProps, Theme } from "@mui/material";

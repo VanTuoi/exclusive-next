@@ -1,12 +1,29 @@
-import { Box, FormControl, FormControlLabel, Radio, RadioGroup, Typography, useTheme } from "@mui/material";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe, StripeElementLocale } from "@stripe/stripe-js";
+"use client";
+
+import {
+  Box,
+  CircularProgress,
+  FormControl,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  Typography,
+  useTheme
+} from "@mui/material";
+import { useLocale, useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import { memo, useState } from "react";
 
-import { useLocale, useTranslations } from "next-intl";
-import { CardInput } from "./cart-input";
 import { IconBank } from "./icon-bank";
 
+const DynamicCardForm = dynamic(() => import("./stripe-card-form"), {
+  ssr: false,
+  loading: () => (
+    <Box display="flex" justifyContent="center" alignItems="center" height={100}>
+      <CircularProgress size={12} />
+    </Box>
+  )
+});
 interface PayMethodProps {
   isSubmitting: boolean;
   changeTypePayMethod: (type: "bank" | "cash") => void;
@@ -18,14 +35,7 @@ export const PayMethod = memo(
   ({ isSubmitting, changeTypePayMethod, setIsValidCard, typePayMethod }: PayMethodProps) => {
     const locale = useLocale();
     const theme = useTheme();
-
     const t = useTranslations();
-
-    const appearance = {
-      theme: (theme.palette.mode === "dark" ? "night" : "stripe") as "night" | "stripe" | "flat"
-    };
-
-    const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY || "");
 
     const [selectedType, setSelectedType] = useState<string>(typePayMethod);
 
@@ -50,10 +60,9 @@ export const PayMethod = memo(
             label={
               <Box
                 minWidth={{ xs: "280px", md: "370px" }}
-                display={"flex"}
-                flexDirection={"row"}
-                justifyContent={"space-between"}
-                alignItems={"center"}
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
               >
                 <Typography sx={{ width: "100%" }} variant="h4">
                   {t("checkout.payMethod.bank")}
@@ -62,20 +71,14 @@ export const PayMethod = memo(
               </Box>
             }
           />
-          <Box sx={{ width: { xs: "100%", md: "400px" } }} display={"flex"} flexDirection={"column"} gap={2}>
+          <Box sx={{ width: { xs: "100%", md: "400px" } }} display="flex" flexDirection="column" gap={2}>
             {selectedType === "bank" && (
-              <Elements
-                stripe={stripePromise}
-                options={{
-                  mode: "payment",
-                  amount: 120,
-                  currency: "usd",
-                  locale: (locale as StripeElementLocale) || "en",
-                  appearance
-                }}
-              >
-                <CardInput isSubmitting={isSubmitting} setIsValidCard={setIsValidCard} />
-              </Elements>
+              <DynamicCardForm
+                isSubmitting={isSubmitting}
+                setIsValidCard={setIsValidCard}
+                locale={locale}
+                mode={theme.palette.mode}
+              />
             )}
           </Box>
           <FormControlLabel

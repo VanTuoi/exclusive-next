@@ -1,3 +1,4 @@
+"use client";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Box, Button, IconButton, Stack, useTheme } from "@mui/material";

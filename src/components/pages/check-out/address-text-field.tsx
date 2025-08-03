@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FormControl, FormHelperText, FormLabel, TextFieldProps } from "@mui/material";
 import { styled } from "@mui/material/styles";

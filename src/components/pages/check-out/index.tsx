@@ -1,3 +1,4 @@
+"use client";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { memo, useEffect, useMemo, useState } from "react";
 

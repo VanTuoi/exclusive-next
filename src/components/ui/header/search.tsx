@@ -1,17 +1,17 @@
+"use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 import SearchIcon from "@mui/icons-material/Search";
 import { Autocomplete, Box, Grid, InputAdornment, TextField, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { memo, useState } from "react";
 
+import Link from "next/link";
 import { useSearch } from "~/hooks";
 
 export const Search = memo(() => {
   const { dataProductByName, handleGetProductByName } = useSearch();
   const theme = useTheme();
-  const router = useRouter();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const t = useTranslations("common.header");
 
@@ -65,37 +65,44 @@ export const Search = memo(() => {
         />
       )}
       renderOption={(props, option) => {
-        const { key, ...restProps } = props;
+        const { key } = props;
         return (
-          <Box
-            key={key}
-            component="li"
-            {...restProps}
-            sx={{
-              p: 1,
-              borderRadius: 2,
-              cursor: "pointer",
-              "&:hover": {
-                backgroundColor: theme.palette.action.hover
-              }
-            }}
-            onClick={() => {
-              router.push(`/${option.category}/${option.id}/${option.title}`);
-              setOpen(false);
-            }}
-          >
-            <Grid container alignItems="center" gap={1}>
-              <Image src={option.image[0].url} alt={option.title} width={50} height={50} style={{ borderRadius: 4 }} />
-              <Box>
-                <Typography variant="body1" fontWeight={600}>
-                  {option.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {option.category}
-                </Typography>
+          <li key={key} style={{ listStyle: "none" }}>
+            <Link
+              href={`/${option.category}/${option.id}/${option.title}`}
+              onClick={() => setOpen(false)}
+              style={{ textDecoration: "none" }}
+            >
+              <Box
+                sx={{
+                  p: 1,
+                  borderRadius: 2,
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: theme.palette.action.hover
+                  }
+                }}
+              >
+                <Grid container alignItems="center" gap={1}>
+                  <Image
+                    src={option.image[0].url}
+                    alt={option.title}
+                    width={50}
+                    height={50}
+                    style={{ borderRadius: 4 }}
+                  />
+                  <Box>
+                    <Typography variant="body1" fontWeight={600}>
+                      {option.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {option.category}
+                    </Typography>
+                  </Box>
+                </Grid>
               </Box>
-            </Grid>
-          </Box>
+            </Link>
+          </li>
         );
       }}
     />
