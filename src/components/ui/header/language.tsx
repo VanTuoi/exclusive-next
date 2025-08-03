@@ -42,7 +42,7 @@ export const LanguageSelect = memo(() => {
       <Tooltip title={t("selectLanguage")}>
         <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={handleOpen}>
           <Typography>{LANGUAGES.find((l) => l.key === locale)?.title}</Typography>
-          <IconButton sx={{ p: 0, ml: 0.5 }} onClick={handleOpen}>
+          <IconButton sx={{ p: 0, ml: 0.5 }} onClick={handleOpen} aria-label="Toggle dropdown change language">
             <KeyboardArrowDownIcon sx={{ color: theme.palette.common.white }} fontSize="small" />
           </IconButton>
         </Box>

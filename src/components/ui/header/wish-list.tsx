@@ -35,7 +35,7 @@ export const WishList = memo(() => {
         color="secondary"
         badgeContent={totalItems}
       >
-        <IconButton color={pathname.includes("/wish-list") ? "primary" : "default"}>
+        <IconButton color={pathname.includes("/wish-list") ? "primary" : "default"} aria-label="View wish list">
           <FavoriteIcon />
         </IconButton>
       </Badge>

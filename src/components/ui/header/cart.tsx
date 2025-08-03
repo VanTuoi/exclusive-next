@@ -35,7 +35,7 @@ export const Cart = memo(() => {
         color="secondary"
         badgeContent={totalItems}
       >
-        <IconButton color={pathname.includes("/cart") ? "primary" : "default"}>
+        <IconButton color={pathname.includes("/cart") ? "primary" : "default"} aria-label="View shopping cart">
           <ShoppingCartIcon />
         </IconButton>
       </Badge>

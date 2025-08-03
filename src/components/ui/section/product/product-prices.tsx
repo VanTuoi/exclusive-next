@@ -21,7 +21,7 @@ export const ProductPrice = ({
 
   return (
     <Stack direction={"row"} gap={2} sx={{ color: theme.palette.text.secondary, ...sx }}>
-      <Typography sx={{ ...sx }} color={showOldPrice ? "secondary" : "primary"}>
+      <Typography sx={{ ...sx }} color={showOldPrice ? "red" : theme.palette.primary.dark}>
         {formatCurrency(finalPrice, locale)}
       </Typography>
       {showOldPrice && (

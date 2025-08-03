@@ -45,7 +45,7 @@ export const Discount = memo(({ locale = "en", promotions = [] }: DiscountProps)
                 borderRadius: "4px",
                 minWidth: "55px",
                 color: "background.paper",
-                backgroundColor: "secondary.main",
+                backgroundColor: (theme) => theme.palette.primary.main,
                 height: "26px",
                 paddingX: "8px"
               }}

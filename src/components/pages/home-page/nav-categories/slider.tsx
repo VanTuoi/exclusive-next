@@ -18,19 +18,11 @@ export const Slider = memo(() => {
   const isSmallDisplay = useMediaQuery(theme.breakpoints.down("lg"));
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [width, setWidth] = useState<number>(0);
-  console.log("width", width);
 
   useEffect(() => {
     if (dataBanner) setIsLoading(false);
   }, [dataBanner]);
 
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   const height = isSmallDisplay ? 150 : 344;
 
   return !isLoading ? (
@@ -39,7 +31,9 @@ export const Slider = memo(() => {
         pagination={{
           clickable: true,
           renderBullet: (index: number, className: string) => {
-            return `<span class="${className}" style="border: 2px solid #fff; border-radius: 50%; width: 15px; height: 15px; display: inline-block; margin: 0 5px; background: ${index >= 0 ? "#ff0000" : "#ccc"};"></span>`;
+            return `<span class="${className}" style="border: 2px solid #fff; border-radius: 50%; width: 15px; height: 15px; display: inline-block; margin: 0 5px; background: ${
+              index >= 0 ? "#ff0000" : "#ccc"
+            };"></span>`;
           }
         }}
         loop={true}
@@ -56,6 +50,7 @@ export const Slider = memo(() => {
               alt={slide.alt}
               fill
               sizes="100%"
+              priority={index === 0}
               style={{ objectFit: "cover", cursor: "pointer" }}
               onClick={() => router.push(slide.link)}
             />

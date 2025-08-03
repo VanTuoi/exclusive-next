@@ -13,7 +13,11 @@ export const ThemeToggle = memo(() => {
   };
 
   return (
-    <IconButton onClick={toggleTheme} color="inherit">
+    <IconButton
+      onClick={toggleTheme}
+      color="inherit"
+      aria-label={type === "light" ? "Switch to dark mode" : "Switch to light mode"}
+    >
       {type === "light" ? (
         <LightModeIcon sx={{ height: "20px", width: "20px" }} />
       ) : (

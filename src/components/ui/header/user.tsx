@@ -85,10 +85,15 @@ export const User = memo(() => {
       {!isLogin || !userData ? null : (
         <>
           <Tooltip title={t("header.user.title")}>
-            <IconButton color={pathname.includes("/user/profile") ? "primary" : "default"} onClick={handleOpenUserMenu}>
+            <IconButton
+              color={pathname.includes("/user/profile") ? "primary" : "default"}
+              onClick={handleOpenUserMenu}
+              aria-label="Open user menu"
+            >
               <AccountCircleIcon />
             </IconButton>
           </Tooltip>
+
           <Menu
             sx={{
               mt: "45px",

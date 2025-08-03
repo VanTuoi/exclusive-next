@@ -66,7 +66,7 @@ export const Section = memo(
                 backgroundColor: theme.palette.secondary.main
               }}
             ></Box>
-            <Typography variant="h4" sx={{ fontWeight: 600, color: theme.palette.secondary.main }}>
+            <Typography variant="h4" sx={{ fontWeight: 600, color: theme.palette.primary.dark }}>
               {title}
             </Typography>
           </Stack>

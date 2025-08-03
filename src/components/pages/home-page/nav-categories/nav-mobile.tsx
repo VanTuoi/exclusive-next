@@ -27,6 +27,7 @@ export const NavCategoriesMobile = memo(() => {
     <Accordion sx={{ width: "100%", margin: 0 }}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
+        aria-label="Toggle categories navigation"
         sx={{
           padding: 0,
           "& .MuiAccordionSummary-content": {
@@ -34,11 +35,12 @@ export const NavCategoriesMobile = memo(() => {
           }
         }}
       >
-        <Box display={"flex"} flexDirection={"row"} alignItems={"center"} justifyContent={"flex-start"} gap={1}>
+        <Box display="flex" flexDirection="row" alignItems="center" justifyContent="flex-start" gap={1}>
           <WidgetsIcon />
           <Typography variant="h4">{t("home.categoriesNav")}</Typography>
         </Box>
       </AccordionSummary>
+
       <AccordionDetails sx={{ padding: 1 }}>
         <Box display={"flex"} flexDirection={"column"} alignItems={"flex-start"} gap={1}>
           {dataNavCategories.map((item) => {

@@ -31,6 +31,7 @@ export const ColorSelect = memo(({ isLabel = false, imgs, selectedColor, handleC
                         fontSize: "inherit"
                       }
                     }}
+                    aria-label={img.colorText}
                   />
                 }
                 label={isLabel ? img.colorText.charAt(0).toUpperCase() + img.colorText.slice(1) : ""}
