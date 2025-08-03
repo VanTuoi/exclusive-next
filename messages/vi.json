@@ -78,6 +78,11 @@
         "title": "Tải xuống ứng dụng",
         "content": "Tiết kiệm 3 đô la cho người dùng mới"
       }
+    },
+    "develop": {
+      "title": "Trang web này đang trong quá trình xây dựng",
+      "content": "Vui lòng truy cập sau",
+      "button": "Quay về trang chủ"
     }
   },
   "home": {
@@ -157,5 +162,25 @@
         "content": "Chúng tôi hoàn lại tiền trong vòng 30 ngày"
       }
     ]
+  },
+  "productDetail": {
+    "review": "Đánh giá",
+    "inStock": "Còn hàng",
+    "outStock": "Hết hàng",
+    "colors": "Màu sắc",
+    "size": "Kích thước",
+    "buttonBuy": "Mua ngay",
+    "support": {
+      "deliver": {
+        "title": "Giao hàng miễn phí",
+        "content": "Nhập mã bưu chính của bạn để biết khả năng giao hàng"
+      },
+      "return": {
+        "title": "Trả hàng",
+        "content": "Trả hàng miễn phí trong 30 ngày",
+        "details": "Chi tiết"
+      }
+    },
+    "relatedItem": "Sản phẩm tương tự"
   }
 }

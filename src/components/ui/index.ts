@@ -6,3 +6,4 @@ export * from "./input-password";
 export * from "./links/index";
 export * from "./loading-bar";
 export * from "./section/section";
+export * from "./slide-details";

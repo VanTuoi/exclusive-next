@@ -8,7 +8,7 @@ import { memo, useEffect } from "react";
 
 import { useCartStore, useDialogStore, useWishList } from "~/stores";
 
-import { HeartIcon } from "~/assets/icons";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 import { ColorSelect } from "../product/colors-select";
 import { ProductPrice } from "../product/product-prices";
@@ -136,7 +136,7 @@ export const ViewMore = memo(() => {
                   }
                 }}
               >
-                <HeartIcon />
+                <FavoriteBorderOutlinedIcon />
               </IconButton>
             </Stack>
           </Grid>

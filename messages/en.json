@@ -78,6 +78,11 @@
         "title": "Download Our App",
         "content": "Save $3 with App New User Only"
       }
+    },
+    "develop": {
+      "title": "This page is under development",
+      "content": "Please try accessing later",
+      "button": "Back To Home Page"
     }
   },
   "home": {
@@ -157,5 +162,25 @@
         "content": "We reurn money within 30 days"
       }
     ]
+  },
+  "productDetail": {
+    "review": "Reviews",
+    "inStock": "In Stock",
+    "outStock": "Out Stock",
+    "colors": "Colors",
+    "size": "Sizes",
+    "buttonBuy": "Buy Now",
+    "support": {
+      "deliver": {
+        "title": "Free Delivery",
+        "content": "Enter your postal code for Delivery Availability"
+      },
+      "return": {
+        "title": "Return Delivery",
+        "content": "Free 30 Days Delivery Returns",
+        "details": "Details"
+      }
+    },
+    "relatedItem": "Related Item"
   }
 }

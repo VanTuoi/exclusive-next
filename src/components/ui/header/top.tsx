@@ -37,17 +37,16 @@ export const TopHeader = memo(() => {
         <Box
           sx={{
             m: "0 auto",
-            display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            gap: 2
+            gap: 2,
+            display: isMobile ? "none" : "flex"
           }}
         >
           <Typography
             component="h5"
             variant={isMobile ? "h6" : "h5"}
             sx={{
-              display: isMobile ? "none" : "flex",
               color: theme.palette.common.white,
               wordBreak: "break-word"
             }}
@@ -57,20 +56,18 @@ export const TopHeader = memo(() => {
 
           <CustomLink
             sx={{
-              display: isMobile ? "none" : "flex",
               color: theme.palette.common.white,
               fontWeight: 600
             }}
             variant={isMobile ? "h6" : "h5"}
             href="/"
             underline
-            lineHeight={21}
+            lineHeight={12}
             underlineThickness={1.1}
           >
             {t("header.banner.saleLink")}
           </CustomLink>
         </Box>
-
         <LanguageSelect />
       </Box>
     </Box>

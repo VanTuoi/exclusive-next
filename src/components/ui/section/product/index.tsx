@@ -1,17 +1,13 @@
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { Box, Button, IconButton, Stack, useTheme } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { memo, useEffect } from "react";
-
 import { useCartStore, useDialogStore, useWishList } from "~/stores";
 import { Product } from "~/types";
-
-import { EyeIcon, HeartIcon } from "~/assets/icons";
-
 import { CustomLink } from "../../links";
-
 import { ColorSelect } from "./colors-select";
 import { Discount } from "./discount";
 import { ProductPrice } from "./product-prices";
@@ -101,7 +97,7 @@ export const ProductComponent = memo(({ product }: ProductComponentProps) => {
               }
             }}
           >
-            <HeartIcon />
+            <FavoriteBorderOutlinedIcon />
           </IconButton>
           <IconButton
             onClick={() => openViewDetail(product)}
@@ -117,7 +113,7 @@ export const ProductComponent = memo(({ product }: ProductComponentProps) => {
               }
             }}
           >
-            <EyeIcon />
+            <VisibilityOutlinedIcon />
           </IconButton>
         </Stack>
         <Button
