@@ -1,14 +1,12 @@
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { Box, Button, IconButton, Stack, useTheme } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { memo, useEffect } from "react";
 
 import { useCartStore, useDialogStore } from "~/stores";
 import { Product } from "~/types";
-
-import { CartIcon, EyeIcon } from "~/assets/icons";
 
 import { CustomLink } from "../../links";
 
@@ -50,10 +48,10 @@ export const ProductJustForYouComponent = memo(({ product }: ProductComponentPro
     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 1 }}>
       <Box
         sx={{
-          height: "250px",
-          width: "270px",
+          height: "200px",
+          width: "220px",
           position: "relative",
-          backgroundColor: theme.palette.grey[100],
+          backgroundColor: theme.palette.background.default,
           borderRadius: "4px",
           overflow: "hidden",
           "&:hover .hover-button": {
@@ -70,9 +68,14 @@ export const ProductJustForYouComponent = memo(({ product }: ProductComponentPro
             product?.image?.find((img) => img.colorCode === selectedColor)?.url ||
             "/assets/imgs/product-image-not-available.webp"
           }
-          fill
-          sizes="100%"
-          style={{ top: 0, objectFit: "cover", cursor: "pointer" }}
+          height={180}
+          width={180}
+          style={{
+            objectFit: "contain",
+            position: "absolute",
+            inset: 0,
+            margin: "auto"
+          }}
         />
         <Discount locale={locale || "en"} promotions={product.promotions} />
         <Stack direction={"column"} gap={1} sx={{ position: "absolute", top: "10px", right: "10px" }}>
@@ -80,9 +83,17 @@ export const ProductJustForYouComponent = memo(({ product }: ProductComponentPro
             onClick={() => openViewDetail(product)}
             aria-label="fingerprint"
             color="inherit"
-            sx={{ backgroundColor: theme.palette.grey[50], height: "40px", width: "40px" }}
+            sx={{
+              backgroundColor: theme.palette.background.default,
+              height: "35px",
+              width: "35px",
+              ":hover": {
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.common.white
+              }
+            }}
           >
-            <EyeIcon />
+            <VisibilityOutlinedIcon />
           </IconButton>
         </Stack>
         <Button
@@ -95,15 +106,14 @@ export const ProductJustForYouComponent = memo(({ product }: ProductComponentPro
             updateItem(product, 1, { color: selectedColor, size: selectedSize });
           }}
           sx={{
-            height: "41px",
+            height: "35px",
             position: "absolute",
-            opacity: 0,
             bottom: 0,
+            zIndex: 2,
+            opacity: 0,
             borderRadius: "0px",
-            backgroundColor: theme.palette.background.default,
             transition: "opacity 0.35s ease"
           }}
-          startIcon={<CartIcon />}
         >
           {t("home.addToCart")}
         </Button>

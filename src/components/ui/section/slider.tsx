@@ -34,7 +34,7 @@ export const SliderProducts = forwardRef(({ multiRow, borderless, children }: Sl
   }));
 
   return (
-    <Container maxWidth={"xl"} sx={{ overflow: { xs: "hidden", lg: "visible" } }} disableGutters>
+    <Container maxWidth={"lg"} sx={{ overflow: { xs: "hidden", lg: "visible" } }} disableGutters>
       <Swiper
         style={{
           overflow: borderless && !isSmallScreen ? "visible" : "hidden"

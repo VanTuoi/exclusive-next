@@ -1,17 +1,13 @@
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Box, Button, IconButton, Stack, useTheme } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { memo } from "react";
-
 import { useCartStore, useWishList } from "~/stores";
 import { Product } from "~/types";
-
-import { CartIcon, DeleteIcon } from "~/assets/icons";
-
 import { CustomLink } from "../../links";
-
 import { ColorSelect } from "./colors-select";
 import { Discount } from "./discount";
 import { ProductPrice } from "./product-prices";
@@ -33,7 +29,7 @@ export const ProductWishListComponent = memo(({ product }: ProductComponentProps
 
   const { updateItem } = useCartStore();
 
-  const { items, toggleWishList, isProductInWishList } = useWishList();
+  const { items, toggleWishList } = useWishList();
 
   const selectedColor = items[product.id].selectedOptions?.color || "";
   const selectedSize = items[product.id].selectedOptions?.size || "";
@@ -42,10 +38,10 @@ export const ProductWishListComponent = memo(({ product }: ProductComponentProps
     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 1 }}>
       <Box
         sx={{
-          height: "250px",
-          width: "270px",
+          height: "200px",
+          width: "220px",
           position: "relative",
-          backgroundColor: theme.palette.grey[100],
+          backgroundColor: theme.palette.background.default,
           borderRadius: "4px",
           overflow: "hidden",
           "&:hover .hover-button": {
@@ -62,9 +58,14 @@ export const ProductWishListComponent = memo(({ product }: ProductComponentProps
             product?.image?.find((img) => img.colorCode === selectedColor)?.url ||
             "/assets/imgs/product-image-not-available.webp"
           }
-          fill
-          sizes="100%"
-          style={{ top: 0, objectFit: "cover", cursor: "pointer" }}
+          height={180}
+          width={180}
+          style={{
+            objectFit: "contain",
+            position: "absolute",
+            inset: 0,
+            margin: "auto"
+          }}
         />
         <Discount locale={locale || "en"} promotions={product.promotions} />
         <Stack direction={"column"} gap={1} sx={{ position: "absolute", top: "10px", right: "10px" }}>
@@ -72,9 +73,16 @@ export const ProductWishListComponent = memo(({ product }: ProductComponentProps
             onClick={() => toggleWishList(product, { color: selectedColor, size: selectedSize })}
             aria-label="fingerprint"
             color="inherit"
-            sx={{ color: isProductInWishList() ? "red" : "" }}
+            sx={{
+              backgroundColor: theme.palette.background.default,
+              height: "35px",
+              width: "35px",
+              ":hover": {
+                color: theme.palette.error.main
+              }
+            }}
           >
-            <DeleteIcon />
+            <DeleteOutlineOutlinedIcon />
           </IconButton>
         </Stack>
         <Button
@@ -87,24 +95,24 @@ export const ProductWishListComponent = memo(({ product }: ProductComponentProps
             updateItem(product, 1, { color: selectedColor, size: selectedSize });
           }}
           sx={{
-            height: "41px",
+            height: "35px",
             position: "absolute",
-            opacity: 0,
             bottom: 0,
+            zIndex: 2,
+            opacity: 0,
             borderRadius: "0px",
-            backgroundColor: theme.palette.background.default,
             transition: "opacity 0.35s ease"
           }}
-          startIcon={<CartIcon />}
+          startIcon={<ShoppingCartOutlinedIcon />}
         >
           {t("home.addToCart")}
         </Button>
       </Box>
       <CustomLink
         href={"/" + product.category + "/" + product.id + "/" + product.title}
-        variant="h4"
-        maxLength={250}
-        sx={{ fontWeight: 600 }}
+        variant="h5"
+        maxLength={25}
+        sx={{ fontWeight: 500 }}
       >
         {product?.title}
       </CustomLink>

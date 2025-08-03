@@ -5,15 +5,15 @@ export interface PromotionData {
   price: number;
 }
 
-export interface DeliveryFormData {
+export type DeliveryFormData = {
   firstName: string;
-  companyName?: string;
-  streetAddress: string;
-  apartment?: string;
   city: string;
   phoneNumber: string;
   emailAddress: string;
-}
+  companyName?: string;
+  streetAddress?: string;
+  apartment?: string;
+};
 
 export interface CardInfo {
   isValid: boolean;

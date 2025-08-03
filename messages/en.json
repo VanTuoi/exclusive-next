@@ -83,6 +83,15 @@
       "title": "This page is under development",
       "content": "Please try accessing later",
       "button": "Back To Home Page"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "cart": "Cart",
+      "account": "Account",
+      "myAccount": "My Account",
+      "product": "Product",
+      "viewCart": "View Cart",
+      "checkout": "Checkout"
     }
   },
   "home": {
@@ -182,5 +191,89 @@
       }
     },
     "relatedItem": "Related Item"
+  },
+  "cart": {
+    "empty": "Empty",
+    "titleButton": "Return To Shop",
+    "table": {
+      "products": "Products",
+      "price": "Price",
+      "quantity": "Quantity",
+      "subtotal": "Subtotal"
+    },
+    "buttonCoupon": "Apply Coupon",
+    "inputCoupon": "Coupon code",
+    "validateCoupon": {
+      "min": "min",
+      "regex": "in validate"
+    },
+    "shipping": "Free",
+    "pay": {
+      "title": "Cart Total",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "discount": "Discount",
+      "total": "Total",
+      "button": "Procees to checkout",
+      "removeDiscount": "Remove discount",
+      "expirationDate": "Expiration Date"
+    }
+  },
+  "wishList": {
+    "title": "Wishlist",
+    "button": "Move All To Bag",
+    "empty": "Empty",
+    "justForYou": {
+      "title": "Just For You"
+    }
+  },
+  "checkout": {
+    "title": "Billing Details",
+    "shipping": "Free",
+    "pay": {
+      "title": "Cart Total",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "discount": "Discount",
+      "total": "Total",
+      "button": "Procees to checkout",
+      "removeDiscount": "Remove discount",
+      "expirationDate": "Expiration date"
+    },
+    "form": {
+      "firstName": {
+        "label": "First Name"
+      },
+      "companyName": {
+        "label": "Company Name"
+      },
+      "streetAddress": {
+        "label": "Street Address"
+      },
+      "apartment": {
+        "label": "Apartment, floor, etc. (optional)"
+      },
+      "city": {
+        "label": "Town/City"
+      },
+      "phoneNumber": {
+        "label": "Phone Number"
+      },
+      "emailAddress": {
+        "label": "Email Address"
+      },
+      "validate": {
+        "required": "This field is required",
+        "email": "Invalid email address",
+        "phoneNumber": "Invalid phone number"
+      }
+    },
+    "saveInfo": "Save this information for faster check-out next time",
+    "payMethod": {
+      "bank": "Bank",
+      "cash": "Cash on delivery"
+    },
+    "button": "Place Order",
+    "emptyCart": "Your cart is empty"
   }
 }

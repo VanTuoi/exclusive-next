@@ -15,7 +15,7 @@ export function cart(mock: MockAdapter) {
           data: {
             promoCode: promotionCode,
             description: "Get 20% off on your next purchase.",
-            expiryDate: "2024-12-31",
+            expiryDate: "2026-12-31",
             price: 50.0
           }
         }
@@ -30,7 +30,7 @@ export function cart(mock: MockAdapter) {
           data: {
             promoCode: promotionCode,
             description: "Get 20% off on your next purchase.",
-            expiryDate: "2024-12-31",
+            expiryDate: "2026-12-31",
             price: 70.0
           }
         }
@@ -45,7 +45,7 @@ export function cart(mock: MockAdapter) {
           data: {
             promoCode: promotionCode,
             description: "Get 20% off on your next purchase.",
-            expiryDate: "2024-12-31",
+            expiryDate: "2026-12-31",
             price: 80.0
           }
         }

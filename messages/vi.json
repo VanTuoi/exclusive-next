@@ -83,6 +83,15 @@
       "title": "Trang web này đang trong quá trình xây dựng",
       "content": "Vui lòng truy cập sau",
       "button": "Quay về trang chủ"
+    },
+    "breadcrumbs": {
+      "home": "Trang chủ",
+      "cart": "Giỏ hàng",
+      "account": "Tài khoản",
+      "myAccount": "Tài khoản của tôi",
+      "product": "Sản phẩm",
+      "viewCart": "Giỏ hàng",
+      "checkout": "Thanh toán"
     }
   },
   "home": {
@@ -182,5 +191,87 @@
       }
     },
     "relatedItem": "Sản phẩm tương tự"
+  },
+  "cart": {
+    "empty": "Trống",
+    "titleButton": "Quay lại cửa hàng",
+    "table": {
+      "products": "Sản phẩm",
+      "price": "Giá",
+      "quantity": "Số lượng",
+      "subtotal": "Tổng số tiền"
+    },
+    "buttonCoupon": "Áp dụng mã",
+    "inputCoupon": "Mã giảm giá",
+    "validateCoupon": {
+      "min": "Tối thiểu",
+      "regex": "Không hợp lệ"
+    },
+    "shipping": "Miễn phí",
+    "pay": {
+      "title": "Tổng cộng giỏ hàng",
+      "subtotal": "Tổng cộng",
+      "shipping": "Vận chuyển",
+      "discount": "Giảm giá",
+      "total": "Tổng",
+      "button": "Tiến hành thanh toán",
+      "removeDiscount": "Xóa mã giảm giá",
+      "expirationDate": "Ngày hết hạn"
+    }
+  },
+  "wishList": {
+    "title": "Danh sách yêu thích",
+    "button": "Di chuyển tất cả sang giỏ hàng",
+    "empty": "Trống",
+    "justForYou": {
+      "title": "Chỉ dành cho bạn"
+    }
+  },
+  "checkout": {
+    "title": "Chi tiết thanh toán",
+    "shipping": "Miễn phí",
+    "pay": {
+      "title": "Tổng cộng giỏ hàng",
+      "subtotal": "Tổng cộng",
+      "shipping": "Vận chuyển",
+      "discount": "Giảm giá",
+      "total": "Tổng",
+      "button": "Tiến hành thanh toán"
+    },
+    "form": {
+      "firstName": {
+        "label": "Tên"
+      },
+      "companyName": {
+        "label": "Tên công ty"
+      },
+      "streetAddress": {
+        "label": "Địa chỉ đường phố"
+      },
+      "apartment": {
+        "label": "Căn hộ, tầng, v.v. (tùy chọn)"
+      },
+      "city": {
+        "label": "Thị trấn/Thành phố"
+      },
+      "phoneNumber": {
+        "label": "Số điện thoại"
+      },
+      "emailAddress": {
+        "label": "Địa chỉ email"
+      },
+      "validate": {
+        "required": "Trường này là bắt buộc",
+        "email": "Địa chỉ email không hợp lệ",
+        "phoneNumber": "Số điện thoại không hợp lệ"
+      }
+    },
+    "saveInfo": "Lưu thông tin này để thanh toán nhanh hơn vào lần sau",
+    "payMethod": {
+      "bank": "Ngân hàng",
+      "cash": "Thanh toán khi nhận hàng"
+    },
+    "button": "Đặt hàng",
+    "emptyCart": "Giỏ hàng của bạn trống"
   }
 }
