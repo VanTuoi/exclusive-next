@@ -4,20 +4,21 @@ import React, { memo } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { useTranslations } from "next-intl";
 import { useCustomSnackbar } from "~/hooks";
+import { usePromotion } from "~/hooks/cart";
 import { usePromotionStore } from "~/stores";
 
-import { useTranslations } from "next-intl";
-import { usePromotion } from "~/hooks/cart";
-
-const promoCodeSchema = z.object({
-  promoCode: z
-    .string()
-    .min(1, { message: "Promo code is required" })
-    .regex(/^[A-Z0-9]{5,10}$/, { message: "Invalid promo code format" })
-});
-
 export const PromoCodeInput: React.FC = memo(() => {
+  const t = useTranslations("cart");
+
+  const promoCodeSchema = z.object({
+    promoCode: z
+      .string()
+      .min(1, { message: t("errorRequired") })
+      .regex(/^[A-Z0-9]{5,10}$/, { message: t("errorFormat") })
+  });
+
   const {
     register,
     handleSubmit,
@@ -32,12 +33,8 @@ export const PromoCodeInput: React.FC = memo(() => {
     }
   });
 
-  const t = useTranslations();
-
   const { handleGetPromotion } = usePromotion();
-
   const { showSnackbar } = useCustomSnackbar();
-
   const { promotions, addPromotion } = usePromotionStore();
 
   const onSubmit = async (data: z.infer<typeof promoCodeSchema>) => {
@@ -45,13 +42,13 @@ export const PromoCodeInput: React.FC = memo(() => {
 
     if (dataPromotion) {
       if (promotions.some((item) => item.promoCode === dataPromotion.promoCode)) {
-        showSnackbar("This code has been applied", "warning");
+        showSnackbar(t("warningApplied"), "warning");
       } else {
         addPromotion(dataPromotion);
-        showSnackbar("Add promotion successfully", "success");
+        showSnackbar(t("successAdd"), "success");
       }
     } else {
-      setError("promoCode", { type: "manual", message: "Invalid promo code" });
+      setError("promoCode", { type: "manual", message: t("errorInvalid") });
       reset();
     }
   };
@@ -60,7 +57,7 @@ export const PromoCodeInput: React.FC = memo(() => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Stack direction="row" spacing={1} alignItems="flex-start" justifyContent={"center"}>
         <TextField
-          label={t("cart.inputCoupon")}
+          label={t("inputCoupon")}
           variant="outlined"
           size="small"
           {...register("promoCode")}
@@ -82,7 +79,7 @@ export const PromoCodeInput: React.FC = memo(() => {
           type="submit"
           disabled={!!errors.promoCode || isSubmitting}
         >
-          {t("cart.buttonCoupon")}
+          {t("buttonCoupon")}
         </Button>
       </Stack>
     </form>

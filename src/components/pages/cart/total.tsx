@@ -55,7 +55,7 @@ export const Total = memo(({ subtotal, shipping = "Free" }: TotalProps) => {
                     sx={{ cursor: "pointer" }}
                     onClick={() => {
                       removePromotion(promotion.promoCode);
-                      showSnackbar("Promotion removed successfully", "success");
+                      showSnackbar(t("cart.pay.removeDiscountMessage"), "success");
                     }}
                   >
                     {t("cart.pay.removeDiscount")}

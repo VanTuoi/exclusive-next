@@ -69,7 +69,7 @@ const BottomBanner = memo(() => {
             justifyContent: "flex-start"
           }}
         >
-          <Typography variant="h4" sx={{ color: "#00FF66" }}>
+          <Typography variant="h4" sx={{ color: theme.palette.success.main }}>
             {t("home.bottomBanner.title")}
           </Typography>
           <Typography
@@ -85,7 +85,7 @@ const BottomBanner = memo(() => {
                 md: "60px"
               },
               width: isSmallDisplay ? `${(450 / 1170) * 100}vw` : "450px",
-              color: "background.paper"
+              color: theme.palette.common.white
             }}
           >
             {t("home.bottomBanner.content")}
@@ -100,9 +100,9 @@ const BottomBanner = memo(() => {
               size={!isSmallDisplay ? "large" : "medium"}
               sx={{
                 width: "171px",
-                backgroundColor: "#00FF66",
+                backgroundColor: theme.palette.success.main,
                 ":hover": {
-                  backgroundColor: "#00FF55"
+                  backgroundColor: theme.palette.success[800]
                 }
               }}
             >

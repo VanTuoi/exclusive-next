@@ -1,7 +1,6 @@
 import axios, { AxiosError } from "axios";
 
-import { getNextAuthToken } from "~/utils";
-
+import { useAuthStore } from "~/stores";
 import applyMockAdapter from "./mocks";
 
 const publicApi = axios.create({
@@ -21,7 +20,7 @@ const privateApi = axios.create({
 
 privateApi.interceptors.request.use(
   async (config) => {
-    const token = await getNextAuthToken();
+    const token = useAuthStore.getState().token;
     if (token) {
       config.headers["Authorization"] = `Bearer ${token}`;
     }

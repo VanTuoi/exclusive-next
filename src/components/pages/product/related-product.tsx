@@ -1,7 +1,8 @@
 "use client";
+
 import { Container, Skeleton } from "@mui/material";
 import { useTranslations } from "next-intl";
-import { memo, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 import { SwiperSlide } from "swiper/react";
 
 import { Section } from "~/components/ui";
@@ -23,7 +24,9 @@ export const RelatedProduct = memo(({ id }: RelatedProductProps) => {
 
   const { dataFlashSafe, isLoading } = useFlashSales();
 
-  console.log("use is id", id);
+  useEffect(() => {
+    console.log("call api with id", id);
+  }, []);
 
   const sliderRef = useRef<SliderProductsRef | null>(null);
 
