@@ -1,3 +1,5 @@
+"use client";
+
 import { useSnackbar, VariantType } from "notistack";
 
 export const useCustomSnackbar = () => {

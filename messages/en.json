@@ -197,7 +197,8 @@
         "details": "Details"
       }
     },
-    "relatedItem": "Related Item"
+    "relatedItem": "Related Item",
+    "notFound": "The product does not exist or has been removed."
   },
   "cart": {
     "empty": "Empty",
@@ -210,6 +211,11 @@
     },
     "buttonCoupon": "Apply Coupon",
     "inputCoupon": "Coupon code",
+    "errorRequired": "Promo code is required",
+    "errorFormat": "Invalid promo code format",
+    "errorInvalid": "Invalid promo code",
+    "warningApplied": "This code has been applied",
+    "successAdd": "Add promotion successfully",
     "validateCoupon": {
       "min": "min",
       "regex": "in validate"
@@ -223,6 +229,7 @@
       "total": "Total",
       "button": "Procees to checkout",
       "removeDiscount": "Remove discount",
+      "removeDiscountMessage": "Promotion removed successfully",
       "expirationDate": "Expiration Date"
     }
   },
@@ -305,7 +312,10 @@
       "minLength": "{objectName} must be at least {minimumValue} characters",
       "maxLength": "{objectName} maximum {maximumValue} characters",
       "regexSchema": "{objectName} must include at least 1 letter 1 number and 1 special character"
-    }
+    },
+    "loginSuccess": "Login Successful",
+    "loginGoogleSuccess": "Login with Google Successful",
+    "unknownError": "An error occurred"
   },
   "signUpPage": {
     "title": "Create an account",
@@ -333,7 +343,9 @@
       "minLength": "{objectName} must be at least {minimumValue} characters",
       "maxLength": "{objectName} maximum {maximumValue} characters",
       "regexSchema": "{objectName} must include at least 1 letter 1 number and 1 special character"
-    }
+    },
+    "registerSuccess": "Registered successfully",
+    "logoutSuccess": "Logouted successfully"
   },
   "forgetPassword": {
     "title": "Forgot Password",

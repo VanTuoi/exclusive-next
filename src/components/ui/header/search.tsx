@@ -71,7 +71,7 @@ export const Search = memo(() => {
             <Link
               href={`/${option.category}/${option.id}/${option.title}`}
               onClick={() => setOpen(false)}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", color: theme.palette.common.black }}
             >
               <Box
                 sx={{

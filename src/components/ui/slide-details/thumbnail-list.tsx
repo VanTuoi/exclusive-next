@@ -61,7 +61,7 @@ export const ThumbnailList = memo(
             key={index}
             onClick={() => onThumbnailClick && onThumbnailClick(index)}
             sx={{
-              backgroundColor: theme.palette.grey[100],
+              backgroundColor: theme.palette.background.default,
               border: activeStep === index ? `2px solid ${theme.palette.secondary.main}` : "2px solid transparent",
               borderRadius: "4px",
               padding: 0,

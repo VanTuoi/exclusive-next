@@ -197,7 +197,8 @@
         "details": "Chi tiết"
       }
     },
-    "relatedItem": "Sản phẩm tương tự"
+    "relatedItem": "Sản phẩm tương tự",
+    "notFound": "Sản phẩm không tồn tại hoặc đã bị xóa."
   },
   "cart": {
     "empty": "Trống",
@@ -210,6 +211,11 @@
     },
     "buttonCoupon": "Áp dụng mã",
     "inputCoupon": "Mã giảm giá",
+    "errorRequired": "Vui lòng nhập mã giảm giá",
+    "errorFormat": "Định dạng mã giảm giá không hợp lệ",
+    "errorInvalid": "Mã giảm giá không hợp lệ",
+    "warningApplied": "Mã này đã được sử dụng",
+    "successAdd": "Thêm mã giảm giá thành công",
     "validateCoupon": {
       "min": "Tối thiểu",
       "regex": "Không hợp lệ"
@@ -223,6 +229,7 @@
       "total": "Tổng",
       "button": "Tiến hành thanh toán",
       "removeDiscount": "Xóa mã giảm giá",
+      "removeDiscountMessage": "Xoá mã giảm giá thành công",
       "expirationDate": "Ngày hết hạn"
     }
   },
@@ -303,7 +310,10 @@
       "minLength": "{objectName} ít nhất phải có {minimumValue} kí tự",
       "maxLength": "{objectName} tối đa {maximumValue} kí tự",
       "regexSchema": "{objectName} phải có ít nhất 1 chữ cái 1 chữ số và 1 kí tự đặc biệt"
-    }
+    },
+    "loginSuccess": "Đăng nhập thành công",
+    "loginGoogleSuccess": "Đăng nhập bằng Google thành công",
+    "unknownError": "Có lỗi xảy ra"
   },
   "signUpPage": {
     "title": "Tạo tài khoản",
@@ -331,7 +341,9 @@
       "minLength": "{objectName} ít nhất phải có {minimumValue} kí tự",
       "maxLength": "{objectName} tối đa {maximumValue} kí tự",
       "regexSchema": "{objectName} phải có ít nhất 1 chữ cái 1 chữ số và 1 kí tự đặc biệt"
-    }
+    },
+    "registerSuccess": "Đăng ký thành công",
+    "logoutSuccess": "Đăng xuất thành công"
   },
   "forgetPassword": {
     "title": "Quên mật khẩu",

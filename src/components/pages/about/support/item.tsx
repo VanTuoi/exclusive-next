@@ -1,3 +1,5 @@
+"use client";
+
 import { alpha, Box, Stack, Typography, useTheme } from "@mui/material";
 import { memo, ReactNode } from "react";
 

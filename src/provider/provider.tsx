@@ -3,7 +3,6 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { SessionProvider } from "next-auth/react";
 import { useMemo } from "react";
 import { Toaster } from "react-hot-toast";
 import { CustomSnackbar, LoadingBar } from "~/components/ui";
@@ -17,19 +16,17 @@ export default function Provider({ children }: { children: React.ReactNode }) {
   const muiTheme = useMemo(() => theme({ type }), [type]);
 
   return (
-    <SessionProvider>
-      <AppRouterCacheProvider>
-        <ThemeProvider theme={muiTheme}>
-          <QueryClientProvider client={queryClient}>
-            <CustomSnackbar>
-              <CssBaseline />
-              {children}
-              <Toaster position="bottom-left" />
-              <LoadingBar />
-            </CustomSnackbar>
-          </QueryClientProvider>
-        </ThemeProvider>
-      </AppRouterCacheProvider>
-    </SessionProvider>
+    <AppRouterCacheProvider>
+      <ThemeProvider theme={muiTheme}>
+        <QueryClientProvider client={queryClient}>
+          <CustomSnackbar>
+            <CssBaseline />
+            {children}
+            <Toaster position="bottom-left" />
+            <LoadingBar />
+          </CustomSnackbar>
+        </QueryClientProvider>
+      </ThemeProvider>
+    </AppRouterCacheProvider>
   );
 }

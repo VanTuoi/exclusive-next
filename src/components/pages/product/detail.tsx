@@ -22,22 +22,22 @@ interface ProductDetailsProps {
 
 export const ProductDetails = memo(({ product }: ProductDetailsProps) => {
   const t = useTranslations();
-
+  const locale = useLocale();
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
-
-  const [quantity, setQuantity] = useState<number>(1);
-
   const { items, toggleWishList, isProductInWishList } = useWishList();
-
   const { items: cartItems, updateItem } = useCartStore();
 
-  const locale = useLocale();
-
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const [quantity, setQuantity] = useState<number>(1);
   const [selectedColor, setSelectedColorPage] = useState<string>("");
   const [selectedSize, setSelectedSizePage] = useState<string>("");
-
   const width = isSmallScreen ? "97vw" : "500px";
+
+  // Avoid hydration error: this ensures client-only store data (like isProductInWishList) doesn't run during SSR
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (product) {
@@ -105,20 +105,22 @@ export const ProductDetails = memo(({ product }: ProductDetailsProps) => {
                 <Typography variant="h4" sx={{ fontWeight: 400 }}>
                   {t("productDetail.colors")}:
                 </Typography>
-                <ColorSelect
-                  isLabel={false}
-                  imgs={product?.image || []}
-                  selectedColor={selectedColor}
-                  handleColorChange={(color) => {
-                    setSelectedColorPage(color);
-                    if (isProductInWishList(product?.id)) {
-                      toggleWishList(product, {
-                        color: color,
-                        size: items[product?.id].selectedOptions.size
-                      });
-                    }
-                  }}
-                />
+                {selectedColor && (
+                  <ColorSelect
+                    isLabel={false}
+                    imgs={product?.image || []}
+                    selectedColor={selectedColor}
+                    handleColorChange={(color) => {
+                      setSelectedColorPage(color);
+                      if (isProductInWishList(product?.id)) {
+                        toggleWishList(product, {
+                          color: color,
+                          size: items[product?.id].selectedOptions.size
+                        });
+                      }
+                    }}
+                  />
+                )}
               </Box>
               <Box display={"flex"} flexDirection={"row"} alignItems={"center"} gap={2}>
                 <Typography variant="h4" sx={{ fontWeight: 400 }}>
@@ -153,25 +155,27 @@ export const ProductDetails = memo(({ product }: ProductDetailsProps) => {
                 >
                   {t("productDetail.buttonBuy")}
                 </Button>
-                <IconButton
-                  onClick={() => toggleWishList(product, { color: selectedColor, size: selectedSize })}
-                  aria-label="fingerprint"
-                  color={isProductInWishList(product.id) ? "primary" : "inherit"}
-                  sx={{
-                    backgroundColor: isProductInWishList(product.id)
-                      ? theme.palette.primary.main
-                      : theme.palette.background.default,
-                    color: isProductInWishList(product.id) ? theme.palette.common.white : "",
-                    height: "40px",
-                    width: "40px",
-                    ":hover": {
-                      backgroundColor: theme.palette.primary.main,
-                      color: theme.palette.common.white
-                    }
-                  }}
-                >
-                  <FavoriteBorderOutlinedIcon />
-                </IconButton>
+                {mounted && (
+                  <IconButton
+                    onClick={() => toggleWishList(product, { color: selectedColor, size: selectedSize })}
+                    aria-label="fingerprint"
+                    color={isProductInWishList(product.id) ? "primary" : "inherit"}
+                    sx={{
+                      backgroundColor: isProductInWishList(product.id)
+                        ? theme.palette.primary.main
+                        : theme.palette.background.default,
+                      color: isProductInWishList(product.id) ? theme.palette.common.white : "",
+                      height: "40px",
+                      width: "40px",
+                      ":hover": {
+                        backgroundColor: theme.palette.primary.main,
+                        color: theme.palette.common.white
+                      }
+                    }}
+                  >
+                    <FavoriteBorderOutlinedIcon />
+                  </IconButton>
+                )}
               </Box>
             </Box>
           </Grid>
