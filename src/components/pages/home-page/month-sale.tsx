@@ -1,5 +1,4 @@
 "use client";
-import { Container } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { memo, useRef } from "react";
 import { SwiperSlide } from "swiper/react";
@@ -29,24 +28,22 @@ export const MonthSale = memo(() => {
   };
 
   return (
-    <Container maxWidth={"lg"} disableGutters>
-      <Section
-        viewAll="top-right"
-        title={t("home.monthSale.title")}
-        content={t("home.monthSale.content")}
-        timePromotion=""
-        multiRow={1}
-        nextItem={false}
-        handleChangeStep={handleChangeStep}
-      >
-        <SliderProducts ref={sliderRef}>
-          {dataFlashSafe.map((item) => (
-            <SwiperSlide key={item.id} style={{ width: "250px", height: "auto" }}>
-              <ProductComponent product={item} />
-            </SwiperSlide>
-          ))}
-        </SliderProducts>
-      </Section>
-    </Container>
+    <Section
+      viewAll="top-right"
+      title={t("home.monthSale.title")}
+      content={t("home.monthSale.content")}
+      timePromotion=""
+      multiRow={1}
+      nextItem={false}
+      handleChangeStep={handleChangeStep}
+    >
+      <SliderProducts ref={sliderRef}>
+        {dataFlashSafe.map((item) => (
+          <SwiperSlide key={item.id} style={{ width: "250px", height: "auto" }}>
+            <ProductComponent product={item} />
+          </SwiperSlide>
+        ))}
+      </SliderProducts>
+    </Section>
   );
 });
