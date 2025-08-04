@@ -9,7 +9,7 @@ import { formatCurrency } from "~/utils";
 
 import { SupportItem } from "./item";
 
-export const Support = memo(() => {
+const Support = memo(() => {
   const t = useTranslations();
 
   const locale = useLocale();
@@ -47,3 +47,5 @@ export const Support = memo(() => {
     </Container>
   );
 });
+
+export default Support;

@@ -13,7 +13,7 @@ type SliderProductsRef = {
   slidePrev: () => void;
 };
 
-export const BrowseByCategory = memo(() => {
+const BrowseByCategory = memo(() => {
   const t = useTranslations();
 
   const { dataCategories } = useHome();
@@ -47,3 +47,5 @@ export const BrowseByCategory = memo(() => {
     </Section>
   );
 });
+
+export default BrowseByCategory;

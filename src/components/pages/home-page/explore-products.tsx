@@ -14,7 +14,7 @@ type SliderProductsRef = {
   slidePrev: () => void;
 };
 
-export const ExploreProducts = memo(() => {
+const ExploreProducts = memo(() => {
   const { dataFlashSafe } = useHome();
 
   const t = useTranslations();
@@ -52,3 +52,5 @@ export const ExploreProducts = memo(() => {
     </Section>
   );
 });
+
+export default ExploreProducts;

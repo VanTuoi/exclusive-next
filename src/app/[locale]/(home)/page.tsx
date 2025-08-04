@@ -5,12 +5,12 @@ import dynamic from "next/dynamic";
 
 const HomeNavCategories = dynamic(() => import("~/components/pages/home-page/nav-categories/index"));
 const FlashSales = dynamic(() => import("~/components/pages/home-page/flash-sales"));
-// const BrowseByCategory = dynamic(() => import("~/components/pages/browse-by-category"));
-// const MonthSale = dynamic(() => import("~/components/pages/month-sale"));
-// const BottomBanner = dynamic(() => import("~/components/pages/bottom-banner"));
-// const ExploreProducts = dynamic(() => import("~/components/pages/explore-products"));
-// const Arrival = dynamic(() => import("~/components/pages/arrival"));
-// const Support = dynamic(() => import("~/components/pages/support"));
+const BrowseByCategory = dynamic(() => import("~/components/pages/home-page/browse-by-category"));
+const MonthSale = dynamic(() => import("~/components/pages/home-page/month-sale"));
+const BottomBanner = dynamic(() => import("~/components/pages/home-page/bottom-banner"));
+const ExploreProducts = dynamic(() => import("~/components/pages/home-page/explore-products"));
+const Arrival = dynamic(() => import("~/components/pages/home-page/arrival"));
+const Support = dynamic(() => import("~/components/pages/home-page/support"));
 
 const HomePage = () => {
   return (
@@ -26,13 +26,13 @@ const HomePage = () => {
     >
       <HomeNavCategories />
       <FlashSales />
-      {/* <BrowseByCategory />
+      <BrowseByCategory />
       <MonthSale />
       <MonthSale />
       <BottomBanner />
       <ExploreProducts />
       <Arrival />
-      <Support /> */}
+      <Support />
     </Stack>
   );
 };

@@ -6,7 +6,7 @@ import { Section } from "~/components/ui";
 
 import { ArrivalItem } from "./item";
 
-export const Arrival = memo(() => {
+const Arrival = memo(() => {
   const t = useTranslations();
 
   const theme = useTheme();
@@ -79,3 +79,5 @@ export const Arrival = memo(() => {
     </Container>
   );
 });
+
+export default Arrival;

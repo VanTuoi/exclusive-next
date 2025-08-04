@@ -13,7 +13,7 @@ type SliderProductsRef = {
   slidePrev: () => void;
 };
 
-export const MonthSale = memo(() => {
+const MonthSale = memo(() => {
   const t = useTranslations();
 
   const { dataFlashSafe } = useHome();
@@ -47,3 +47,5 @@ export const MonthSale = memo(() => {
     </Section>
   );
 });
+
+export default MonthSale;

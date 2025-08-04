@@ -7,7 +7,7 @@ import { memo } from "react";
 import { PromotionPeriod } from "~/components/ui/section";
 import { getDatePlusNDays } from "~/utils";
 
-export const BottomBanner = memo(() => {
+const BottomBanner = memo(() => {
   const t = useTranslations();
 
   const theme = useTheme();
@@ -114,3 +114,5 @@ export const BottomBanner = memo(() => {
     </Container>
   );
 });
+
+export default BottomBanner;
