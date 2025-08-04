@@ -4,7 +4,7 @@ import { memo } from "react";
 import { NavCategoriesWrapper } from "./nav";
 import { Slider } from "./slider";
 
-export const HomeNavCategories = memo(() => {
+const HomeNavCategories = memo(() => {
   return (
     <Container maxWidth={"lg"} disableGutters>
       <Box
@@ -14,7 +14,7 @@ export const HomeNavCategories = memo(() => {
             xs: "column",
             lg: "row"
           },
-          alignItems: "center",
+          alignItems: "start",
           gap: {
             sm: 0,
             md: 1
@@ -35,8 +35,9 @@ export const HomeNavCategories = memo(() => {
           }}
         />
         <Slider />
-        zzz
       </Box>
     </Container>
   );
 });
+
+export default HomeNavCategories;

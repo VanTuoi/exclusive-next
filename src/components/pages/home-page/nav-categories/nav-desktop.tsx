@@ -1,5 +1,5 @@
 "use client";
-import { Box, Skeleton, Stack } from "@mui/material";
+import { Box, Skeleton } from "@mui/material";
 import { useLocale } from "next-intl";
 import { memo, useEffect, useState } from "react";
 
@@ -40,10 +40,20 @@ export const NavCategoriesDesktop = memo(() => {
       })}
     </Box>
   ) : (
-    <Stack direction={"column"} spacing={1}>
-      {Array.from({ length: 5 }).map((_, index) => (
-        <Skeleton key={index} variant="rounded" width={210} height={40} />
+    <Box
+      sx={{
+        height: "344px",
+        width: "220px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+        gap: 1
+      }}
+    >
+      {Array.from({ length: 3 }).map((_, index) => (
+        <Skeleton key={index} variant="rounded" width="100%" height={30} animation="wave" sx={{ borderRadius: 1 }} />
       ))}
-    </Stack>
+    </Box>
   );
 });

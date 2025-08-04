@@ -1,5 +1,5 @@
 "use client";
-import { Container, useMediaQuery, useTheme } from "@mui/material";
+import { useMediaQuery, useTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { memo, useRef } from "react";
 import { SwiperSlide } from "swiper/react";
@@ -14,7 +14,7 @@ type SliderProductsRef = {
   slidePrev: () => void;
 };
 
-export const ExploreProducts = memo(() => {
+const ExploreProducts = memo(() => {
   const { dataFlashSafe } = useHome();
 
   const t = useTranslations();
@@ -33,24 +33,24 @@ export const ExploreProducts = memo(() => {
   };
 
   return (
-    <Container maxWidth={"lg"} disableGutters>
-      <Section
-        viewAll="bottom"
-        title={t("home.explore.title")}
-        content={t("home.explore.content")}
-        timePromotion=""
-        multiRow={isSmallDisplay ? 1 : 2}
-        nextItem={true}
-        handleChangeStep={handleChangeStep}
-      >
-        <SliderProducts ref={sliderRef}>
-          {[...dataFlashSafe, ...dataFlashSafe].map((item, index) => (
-            <SwiperSlide key={item.id + index} style={{ width: "250px", height: "auto" }}>
-              <ProductComponent product={item} />
-            </SwiperSlide>
-          ))}
-        </SliderProducts>
-      </Section>
-    </Container>
+    <Section
+      viewAll="bottom"
+      title={t("home.explore.title")}
+      content={t("home.explore.content")}
+      timePromotion=""
+      multiRow={isSmallDisplay ? 1 : 2}
+      nextItem={true}
+      handleChangeStep={handleChangeStep}
+    >
+      <SliderProducts ref={sliderRef}>
+        {[...dataFlashSafe, ...dataFlashSafe].map((item, index) => (
+          <SwiperSlide key={item.id + index} style={{ width: "250px", height: "auto" }}>
+            <ProductComponent product={item} />
+          </SwiperSlide>
+        ))}
+      </SliderProducts>
+    </Section>
   );
 });
+
+export default ExploreProducts;

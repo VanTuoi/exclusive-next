@@ -60,7 +60,7 @@ export const Footer = memo(() => {
               gap: 3
             }}
           >
-            <Logo justifyContent="flex-start" />
+            <Logo justifyContent="flex-start" color="white" />
             <Typography variant="h3" sx={{ color: "white" }}>
               {t("footer.subscribe")}
             </Typography>
@@ -96,7 +96,7 @@ export const Footer = memo(() => {
             <Typography variant="h3" sx={{ color: "white" }}>
               {t("footer.downloadApp.title")}
             </Typography>
-            <Typography variant="h5" sx={{ color: "white" }}>
+            <Typography variant="h3" sx={{ color: "white", fontSize: 14 }}>
               {t("footer.downloadApp.content")}
             </Typography>
             <Box display="flex" gap={2}>
@@ -136,14 +136,16 @@ const FooterColumn: React.FC<{ title: string; items: FooterItem[] }> = ({ title,
         {title}
       </Typography>
       {items.map(({ name, url }, idx) => (
-        <Link key={idx} href={url} passHref>
+        <Link key={idx} href={url} passHref style={{ textDecoration: "none" }}>
           <Typography
             variant="h4"
             sx={{
               cursor: "pointer",
               color: "white",
               textDecoration: "none",
-              "&:hover": { textDecoration: "underline" }
+              "&:hover": {
+                textDecoration: "none"
+              }
             }}
           >
             {name}
