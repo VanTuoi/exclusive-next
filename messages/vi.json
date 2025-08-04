@@ -15,6 +15,18 @@
         "myCancellations": "Đơn hàng đã hủy",
         "myReviews": "Đánh giá của tôi",
         "logout": "Đăng xuất"
+      },
+      "nav": {
+        "home": "Trang chủ",
+        "contact": "Liên hệ",
+        "about": "Giới thiệu",
+        "signup": "Đăng nhập"
+      },
+      "language": {
+        "english": "Tiếng Anh",
+        "vietnamese": "Tiếng Việt",
+        "japanese": "Tiếng Nhật",
+        "chinese": "Tiếng Trung"
       }
     },
     "footer": {

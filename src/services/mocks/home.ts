@@ -37,63 +37,81 @@ export function home(mock: MockAdapter) {
       {
         name: {
           en: "Woman's Fashion",
-          vi: "Thời Trang Nữ"
+          vi: "Thời Trang Nữ",
+          ja: "レディースファッション",
+          zh: "女装"
         },
         url: "/womens-fashion"
       },
       {
         name: {
           en: "Men's Fashion",
-          vi: "Thời Trang Nam"
+          vi: "Thời Trang Nam",
+          ja: "メンズファッション",
+          zh: "男装"
         },
         url: "/mens-fashion"
       },
       {
         name: {
           en: "Electronics",
-          vi: "Điện Tử"
+          vi: "Điện Tử",
+          ja: "電子機器",
+          zh: "电子产品"
         },
         url: "/electronics"
       },
       {
         name: {
           en: "Home & Lifestyle",
-          vi: "Nhà & Đời Sống"
+          vi: "Nhà & Đời Sống",
+          ja: "ホーム＆ライフスタイル",
+          zh: "家居与生活"
         },
         url: "/home-lifestyle"
       },
       {
         name: {
           en: "Medicine",
-          vi: "Y Tế"
+          vi: "Y Tế",
+          ja: "医薬品",
+          zh: "药品"
         },
         url: "/medicine"
       },
       {
         name: {
           en: "Sports & Outdoor",
-          vi: "Thể Thao & Ngoài Trời"
+          vi: "Thể Thao & Ngoài Trời",
+          ja: "スポーツ＆アウトドア",
+          zh: "运动与户外"
         },
         url: "/sports-outdoor"
       },
       {
         name: {
           en: "Baby's & Toys",
-          vi: "Trẻ Em & Đồ Chơi"
+          vi: "Trẻ Em & Đồ Chơi",
+          ja: "ベビー＆おもちゃ",
+          zh: "婴儿与玩具"
         },
         url: "/babies-toys"
       },
       {
         name: {
           en: "Groceries & Pets",
-          vi: "Thực Phẩm & Thú Cưng"
+          vi: "Thực Phẩm & Thú Cưng",
+          ja: "食料品＆ペット",
+          zh: "食品与宠物"
         },
         url: "/groceries-pets"
       },
       {
         name: {
           en: "Health & Beauty",
-          vi: "Sức Khỏe & Sắc Đẹp"
+          vi: "Sức Khỏe & Sắc Đẹp",
+          ja: "健康＆美容",
+          zh: "健康与美容"
         },
         url: "/health-beauty"
       }

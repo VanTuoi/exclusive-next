@@ -15,6 +15,18 @@
         "myCancellations": "My Cancellations",
         "myReviews": "My Reviews",
         "logout": "Logout"
+      },
+      "nav": {
+        "home": "Home",
+        "contact": "Contact",
+        "about": "About",
+        "signup": "Sign up"
+      },
+      "language": {
+        "english": "English",
+        "vietnamese": "Vietnamese",
+        "japanese": "Japanese",
+        "chinese": "Chinese"
       }
     },
     "footer": {
