@@ -1,21 +1,19 @@
 "use client";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Button, Stack, useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Typography from "@mui/material/Typography";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import { memo, useEffect } from "react";
 
 import { useDialogStore } from "~/stores";
 import { formatCurrency } from "~/utils";
-
-import { CartIcon } from "~/assets/icons";
 
 import { SimilarProducts } from "../similar-products";
 
@@ -116,7 +114,7 @@ export const AddToCart = memo(() => {
               variant="contained"
               size="large"
               fullWidth
-              endIcon={<CartIcon />}
+              endIcon={<ShoppingCartIcon />}
               onClick={() => router.push("/cart")}
             >
               {t("home.addToCartDialog.buttonCheckout")}

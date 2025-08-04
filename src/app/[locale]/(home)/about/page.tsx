@@ -2,7 +2,8 @@
 
 import { Box, Grid } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
-import { Prices, SliderManager, Support, TopBanner } from "~/components/pages";
+import { Prices, SliderManager, TopBanner } from "~/components/pages";
+import Support from "~/components/pages/home-page/support";
 
 import { BreadcrumbsComponent } from "~/components/ui/breadcrumbs";
 import { Path } from "~/types";

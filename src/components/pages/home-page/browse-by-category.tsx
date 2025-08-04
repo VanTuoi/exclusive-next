@@ -1,5 +1,4 @@
 "use client";
-import { Container } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { memo, useRef } from "react";
 import { SwiperSlide } from "swiper/react";
@@ -14,7 +13,7 @@ type SliderProductsRef = {
   slidePrev: () => void;
 };
 
-export const BrowseByCategory = memo(() => {
+const BrowseByCategory = memo(() => {
   const t = useTranslations();
 
   const { dataCategories } = useHome();
@@ -29,24 +28,24 @@ export const BrowseByCategory = memo(() => {
   };
 
   return (
-    <Container maxWidth={"lg"} disableGutters>
-      <Section
-        viewAll="none"
-        title={t("home.categories.title")}
-        content={t("home.categories.content")}
-        timePromotion=""
-        multiRow={1}
-        nextItem={true}
-        handleChangeStep={handleChangeStep}
-      >
-        <SliderProducts ref={sliderRef}>
-          {dataCategories.map((item) => (
-            <SwiperSlide key={item.title} style={{ width: "170px", height: "auto" }}>
-              <CategoriesComponent categories={item} />
-            </SwiperSlide>
-          ))}
-        </SliderProducts>
-      </Section>
-    </Container>
+    <Section
+      viewAll="none"
+      title={t("home.categories.title")}
+      content={t("home.categories.content")}
+      timePromotion=""
+      multiRow={1}
+      nextItem={true}
+      handleChangeStep={handleChangeStep}
+    >
+      <SliderProducts ref={sliderRef}>
+        {dataCategories.map((item) => (
+          <SwiperSlide key={item.title} style={{ width: "170px", height: "auto" }}>
+            <CategoriesComponent categories={item} />
+          </SwiperSlide>
+        ))}
+      </SliderProducts>
+    </Section>
   );
 });
+
+export default BrowseByCategory;

@@ -1,4 +1,5 @@
-import { Rating, Stack, Typography, useTheme } from "@mui/material";
+import { Star } from "@mui/icons-material";
+import { Stack, Typography, useTheme } from "@mui/material";
 
 interface ProductRatingProps {
   rating: {
@@ -8,23 +9,15 @@ interface ProductRatingProps {
   moreText?: string;
 }
 
-export const ProductRating = ({ rating, moreText = "" }: ProductRatingProps) => {
+export const ProductRating = ({ rating }: ProductRatingProps) => {
   const theme = useTheme();
 
   return (
-    <Stack direction="row" gap={1} alignItems="center" sx={{ color: theme.palette.text.secondary }}>
-      <Rating
-        readOnly
-        precision={0.1}
-        name="size-small"
-        value={rating?.rate}
-        sx={{ borderRadius: "4px" }}
-        aria-label={`Rating: ${rating?.rate ?? 0} out of 5`}
-      />
-      <Typography variant="h5" fontWeight={500}>
-        ({rating?.count}
-        {moreText})
+    <Stack direction="row" gap={0.5} alignItems="center" sx={{ color: theme.palette.text.secondary }}>
+      <Typography variant="h5" fontWeight={500} component="span">
+        {rating?.rate?.toFixed(1)}
       </Typography>
+      <Star fontSize="small" sx={{ color: "#f5a623" }} />
     </Stack>
   );
 };

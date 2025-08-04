@@ -4,9 +4,10 @@ import { memo } from "react";
 
 interface LogoProps {
   justifyContent?: "flex-start" | "center" | "flex-end" | "space-between";
+  color?: string;
 }
 
-export const Logo = memo(({ justifyContent = "center" }: LogoProps) => {
+export const Logo = memo(({ justifyContent = "center", color = "black" }: LogoProps) => {
   return (
     <Box
       sx={{
@@ -19,7 +20,7 @@ export const Logo = memo(({ justifyContent = "center" }: LogoProps) => {
         <Typography
           variant="h2"
           sx={{
-            color: "black",
+            color: color,
             fontFamily: "Inter",
             lineHeight: "24px",
             letterSpacing: "0.03em",
