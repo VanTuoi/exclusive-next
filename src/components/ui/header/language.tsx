@@ -6,14 +6,30 @@ import { Box, IconButton, Menu, MenuItem, Tooltip, Typography, useTheme } from "
 import { useLocale, useTranslations } from "next-intl";
 import React, { memo, useState } from "react";
 
-import { LANGUAGES } from "~/constants";
 import { usePathname, useRouter } from "~/i18n/navigation";
 
 import { ThemeToggle } from "./theme-toggle";
 
+const LANGUAGES = [
+  {
+    key: "en",
+    translationKey: "language.english"
+  },
+  {
+    key: "vi",
+    translationKey: "language.vietnamese"
+  },
+  {
+    key: "ja",
+    translationKey: "language.japanese"
+  },
+  { key: "zh", translationKey: "language.chinese" }
+];
+
 export const LanguageSelect = memo(() => {
   const theme = useTheme();
   const t = useTranslations("common.header");
+  const tLang = useTranslations("common.header");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -42,7 +58,7 @@ export const LanguageSelect = memo(() => {
       <ThemeToggle />
       <Tooltip title={t("selectLanguage")}>
         <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={handleOpen}>
-          <Typography>{LANGUAGES.find((l) => l.key === locale)?.title}</Typography>
+          <Typography>{tLang(LANGUAGES.find((l) => l.key === locale)?.translationKey || "")}</Typography>
           <IconButton sx={{ p: 0, ml: 0.5 }} onClick={handleOpen} aria-label="Toggle dropdown change language">
             <KeyboardArrowDownIcon sx={{ color: theme.palette.common.white }} fontSize="small" />
           </IconButton>
@@ -81,7 +97,7 @@ export const LanguageSelect = memo(() => {
             }}
           >
             <Typography variant="body2" sx={{ color: "inherit" }}>
-              {item.title}
+              {tLang(item.translationKey)}
             </Typography>
           </MenuItem>
         ))}

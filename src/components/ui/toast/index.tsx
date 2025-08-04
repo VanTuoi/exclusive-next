@@ -1,3 +1,4 @@
+"use client";
 import { SnackbarProvider, SnackbarProviderProps } from "notistack";
 import React, { ReactNode } from "react";
 

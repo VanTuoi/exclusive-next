@@ -6,7 +6,7 @@ import { useAuthStore } from "~/stores";
 export function useGetMe() {
   const { setInfo } = useAuthStore();
 
-  const getUserApi = authApi("public");
+  const getUserApi = authApi("private");
 
   const handleGetMe = async () => {
     try {

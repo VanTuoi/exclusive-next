@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { memo } from "react";
 
@@ -35,7 +37,7 @@ export const Header = memo(() => {
           alignItems: "center"
         }}
       >
-        <Logo />
+        <Logo color={theme.palette.mode === "light" ? "black" : "white"} />
         <Nav />
         <Box
           sx={{

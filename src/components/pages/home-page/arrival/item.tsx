@@ -109,13 +109,19 @@ export const ArrivalItem = memo(
             alignItems: "flex-start"
           }}
         >
-          <Typography variant="h2" sx={{ fontWeight: 600, color: theme.palette.background.paper }}>
+          <Typography variant="h2" sx={{ fontWeight: 600, color: theme.palette.common.white }}>
             {title}
           </Typography>
-          <Typography variant="h4" sx={{ maxWidth: "300px", color: theme.palette.background.paper }}>
+          <Typography variant="h4" sx={{ maxWidth: "300px", color: theme.palette.common.white }}>
             {content}
           </Typography>
-          <CustomLink variant="h4" href={link} underline={true} underlineThickness={1.5}>
+          <CustomLink
+            variant="h4"
+            href={link}
+            underline={true}
+            underlineThickness={1.5}
+            sx={{ color: theme.palette.common.white }}
+          >
             {t("home.arrival.button")}
           </CustomLink>
         </Box>

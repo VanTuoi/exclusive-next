@@ -1,114 +1,96 @@
 "use client";
-import { useRouter, useSearchParams } from "next/navigation";
-
 import { AxiosError } from "axios";
-
+import { useTranslations } from "next-intl";
+import { useRouter, useSearchParams } from "next/navigation";
 import { authApi } from "~/services";
 import { useAuthStore } from "~/stores";
 import { UserDataRegister } from "~/types";
-
 import { useCustomSnackbar } from "../use-toast";
 
 export function useAuth() {
-  const { setInfo } = useAuthStore();
-
+  const { setInfo, setToken } = useAuthStore();
   const { showSnackbar } = useCustomSnackbar();
-
   const router = useRouter();
   const searchParams = useSearchParams();
   const urlCallBack = searchParams.get("urlCallBack");
+  const t = useTranslations();
 
   const getAuthApi = authApi("public");
   const getAuthApiServer = authApi("private");
 
   const handleLogin = async (emailAddress: string, currentPassword: string) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      const res = await getAuthApi.login({ emailAddress, currentPassword });
 
-      await getAuthApi.login({ emailAddress, currentPassword });
-
-      localStorage.setItem("isLogin", "true");
-
-      showSnackbar("Login successful", "success");
-
-      if (urlCallBack && typeof urlCallBack === "string") {
-        router.push(urlCallBack);
+      if (res.data.success) {
+        setToken(res.data.data.accessToken);
+        localStorage.setItem("isLogin", "true");
+        showSnackbar(t("loginPage.loginSuccess"), "success");
+        router.push(typeof urlCallBack === "string" ? urlCallBack : "/");
       } else {
-        router.push("/");
+        showSnackbar(t("loginPage.unknownError"), "error");
+        return null;
       }
-
-      return null;
     } catch (error) {
       if (error instanceof AxiosError) {
-        const errorMessage = error.response?.data?.message;
-
-        return errorMessage;
+        return error.response?.data?.message;
       }
-      return "Unknown error occurred";
+      return t("loginPage.unknownError");
     }
   };
 
   const handleLoginWithGoogle = async (accessToken: string) => {
     try {
-      await getAuthApi.loginWithGoogle(accessToken);
-
-      localStorage.setItem("isLogin", "true");
-
-      showSnackbar("Login with Google successful", "success");
-
-      if (urlCallBack && typeof urlCallBack === "string") {
-        router.push(urlCallBack);
+      const res = await getAuthApi.loginWithGoogle(accessToken);
+      if (res.data.success) {
+        localStorage.setItem("isLogin", "true");
+        setToken(res.data.data.accessToken);
+        showSnackbar(t("loginPage.loginGoogleSuccess"), "success");
+        router.push(typeof urlCallBack === "string" ? urlCallBack : "/");
       } else {
-        router.push("/");
+        return null;
       }
-
-      return null;
     } catch (error) {
       if (error instanceof AxiosError) {
-        const errorMessage = error.response?.data?.message;
-
-        return errorMessage;
+        return error.response?.data?.message;
       }
-      return "Unknown error occurred";
+      return t("loginPage.unknownError");
     }
   };
 
   const handleRegister = async (userData: UserDataRegister) => {
     try {
-      await getAuthApiServer.register(userData);
+      const res = await getAuthApiServer.register(userData);
 
-      router.push("/auth/login");
-
-      showSnackbar("Registration successful", "success");
-
-      return null;
+      if (res.data.success) {
+        showSnackbar(t("signUpPage.registerSuccess"), "success");
+        router.push("/auth/login");
+      } else {
+        return null;
+      }
     } catch (error) {
       if (error instanceof AxiosError) {
-        const errorMessage = error.response?.data?.message;
-
-        return errorMessage;
+        return error.response?.data?.message;
       }
-      return "Unknown error occurred";
+      return t("loginPage.unknownError");
     }
   };
 
   const handleLogout = async () => {
     try {
       await getAuthApi.logout();
-
       setInfo(null);
-
+      setToken(null);
       localStorage.removeItem("isLogin");
-
-      showSnackbar("Logout successful", "success");
-
+      showSnackbar(t("signUpPage.logoutSuccess"), "success");
       router.push("/");
     } catch (error) {
       if (error instanceof AxiosError) {
         const errorMessage = error.response?.data?.message;
-        showSnackbar(errorMessage, "error");
+        showSnackbar(errorMessage || t("loginPage.unknownError"), "error");
+      } else {
+        showSnackbar(t("loginPage.unknownError"), "error");
       }
-      showSnackbar("Unknown error occurred", "error");
     }
   };
 

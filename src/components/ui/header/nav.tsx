@@ -1,30 +1,24 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { useLocale } from "next-intl";
 
-import { NAV } from "~/constants";
 import { useAuthStore } from "~/stores";
 
+import { useTranslations } from "next-intl";
 import { CustomLink } from "~/components/ui";
-
-interface NavTitle {
-  en: string;
-  vi: string;
-}
-
-interface NavItem {
-  title: NavTitle;
-  link: string;
-}
 
 export const Nav = () => {
   const { userData } = useAuthStore();
 
-  const locale = useLocale();
-
-  const currentLocale = locale === "vi" || locale === "en" ? locale : "en";
+  const t = useTranslations("common.header.nav");
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const NAV = [
+    { titleKey: "home", link: "/" },
+    { titleKey: "contact", link: "/contact" },
+    { titleKey: "about", link: "/about" },
+    { titleKey: "signup", link: "/auth/sign-up" }
+  ];
 
   return (
     <Box
@@ -36,15 +30,13 @@ export const Nav = () => {
         marginLeft: "54px"
       }}
     >
-      {NAV.filter((item: NavItem) => {
+      {NAV.filter((item) => {
         return item.link !== "/auth/sign-up" || !userData;
-      }).map((item: NavItem) => {
-        return (
-          <CustomLink fontWeight={600} key={item.link} variant="h4" href={item.link}>
-            {item.title[currentLocale]}
-          </CustomLink>
-        );
-      })}
+      }).map((item) => (
+        <CustomLink fontWeight={600} key={item.link} variant="h4" href={item.link}>
+          {t(item.titleKey)}
+        </CustomLink>
+      ))}
     </Box>
   );
 };

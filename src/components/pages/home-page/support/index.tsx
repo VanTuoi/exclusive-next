@@ -1,3 +1,5 @@
+"use client";
+
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";

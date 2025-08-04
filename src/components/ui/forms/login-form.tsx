@@ -15,7 +15,6 @@ import { useAuth } from "~/hooks/auth";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { LoginWithGoogle } from "../buttons/login-with-google";
-// import { LoginWithGoogle } from "../buttons/login-with-google";
 
 export const LoginForm = memo(() => {
   const router = useRouter();
@@ -38,7 +37,6 @@ export const LoginForm = memo(() => {
   const {
     register,
     handleSubmit,
-    setError,
     formState: { errors, isSubmitting, isValid }
   } = useForm<z.infer<typeof formSchema>>({
     mode: "onChange",
@@ -51,20 +49,7 @@ export const LoginForm = memo(() => {
   });
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    const message = await handleLogin(data.contactField, data.password);
-
-    if (!message) return;
-    switch (message) {
-      case "1":
-        setError("contactField", { type: "manual", message: "User contactField not found" });
-        break;
-      case "2":
-        setError("password", { type: "manual", message: "Incorrect password" });
-        break;
-      default:
-        setError("contactField", { type: "manual", message: "An unknown error occurred" });
-        break;
-    }
+    await handleLogin(data.contactField, data.password);
   };
 
   return (
