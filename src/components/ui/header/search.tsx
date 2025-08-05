@@ -4,14 +4,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 import SearchIcon from "@mui/icons-material/Search";
-import { Autocomplete, Box, Grid, InputAdornment, TextField, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Autocomplete,
+  Box,
+  Grid,
+  IconButton,
+  InputAdornment,
+  TextField,
+  Typography,
+  useMediaQuery,
+  useTheme
+} from "@mui/material";
 import { useTranslations } from "next-intl";
 import { memo, useEffect, useState } from "react";
 
+import { useRouter } from "next/navigation";
 import { useDebounce, useProducts, useQueryConfig } from "~/hooks";
 
 export const Search = memo(() => {
   const theme = useTheme();
+  const router = useRouter();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const t = useTranslations("common.header");
   const queryConfig = useQueryConfig();
@@ -35,6 +47,14 @@ export const Search = memo(() => {
       setOpen(false);
     }
   }, [debouncedSearchTerm]);
+
+  if (isSmallScreen) {
+    return (
+      <IconButton color="default" aria-label="Search" onClick={() => router.push("/products")}>
+        <SearchIcon />
+      </IconButton>
+    );
+  }
 
   return (
     <Autocomplete

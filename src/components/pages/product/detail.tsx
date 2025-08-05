@@ -14,6 +14,7 @@ import { useCartStore, useWishList } from "~/stores";
 import { Product } from "~/types";
 
 import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import { SupportProduct } from "./support";
 
 interface ProductDetailsProps {
@@ -24,6 +25,7 @@ export const ProductDetails = memo(({ product }: ProductDetailsProps) => {
   const t = useTranslations();
   const locale = useLocale();
   const theme = useTheme();
+  const router = useRouter();
   const { items, toggleWishList, isProductInWishList } = useWishList();
   const { items: cartItems, updateItem } = useCartStore();
 
@@ -151,6 +153,7 @@ export const ProductDetails = memo(({ product }: ProductDetailsProps) => {
                       color: selectedColor,
                       size: selectedSize
                     });
+                    router.push("/cart");
                   }}
                 >
                   {t("productDetail.buttonBuy")}

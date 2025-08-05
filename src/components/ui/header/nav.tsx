@@ -1,9 +1,7 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-
-import { useAuthStore } from "~/stores";
-
 import { useTranslations } from "next-intl";
 import { CustomLink } from "~/components/ui";
+import { useAuthStore } from "~/stores";
 
 export const Nav = () => {
   const { userData } = useAuthStore();
@@ -24,19 +22,37 @@ export const Nav = () => {
   return (
     <Box
       sx={{
-        display: isSmallScreen ? "none" : "flex",
+        display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        gap: "48px",
-        marginLeft: "54px"
+        gap: isSmallScreen ? "8px" : "48px",
+        marginLeft: isSmallScreen ? 0 : "54px",
+        overflowX: isSmallScreen ? "auto" : "visible",
+        width: "100%",
+        px: 2
       }}
     >
       {NAV.filter((item) => {
         return item.link !== "/auth/sign-up" || !userData;
       }).map((item) => (
-        <CustomLink fontWeight={600} key={item.link} variant="h4" href={item.link}>
-          {t(item.titleKey)}
-        </CustomLink>
+        <Box
+          key={item.link}
+          sx={{
+            flex: "0 0 auto",
+            minWidth: "auto"
+          }}
+        >
+          <CustomLink
+            fontWeight={isSmallScreen ? 500 : 600}
+            variant={isSmallScreen ? "h5" : "h4"}
+            href={item.link}
+            sx={{
+              whiteSpace: "nowrap"
+            }}
+          >
+            {t(item.titleKey)}
+          </CustomLink>
+        </Box>
       ))}
     </Box>
   );

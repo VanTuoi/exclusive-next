@@ -30,7 +30,6 @@ export const ProductComponent = memo(({ product }: ProductComponentProps) => {
   const { selectedOptions, setSelectedColor, openViewDetail, setSelectedSize, openAddToCart } = useDialogStore();
 
   const { updateItem } = useCartStore();
-
   const { toggleWishList, isProductInWishList } = useWishList();
 
   const selectedColor = selectedOptions[product.id]?.color || "";
@@ -50,7 +49,7 @@ export const ProductComponent = memo(({ product }: ProductComponentProps) => {
       <Box
         sx={{
           height: "200px",
-          width: "220px",
+          width: { xs: "220px", sm: "220px" },
           position: "relative",
           backgroundColor: theme.palette.background.default,
           borderRadius: "4px",

@@ -52,7 +52,7 @@ export const ProductWishListComponent = memo(({ product }: ProductComponentProps
       >
         <Image
           onClick={() => {
-            router.push("/" + product.category + "/" + product.id + "/" + product.title);
+            router.push("/product" + "/" + product.id + "/" + product.title);
           }}
           alt={product?.image?.find((img) => img.colorCode === selectedColor)?.alt || "img product"}
           src={
@@ -110,7 +110,7 @@ export const ProductWishListComponent = memo(({ product }: ProductComponentProps
         </Button>
       </Box>
       <CustomLink
-        href={"/" + product.category + "/" + product.id + "/" + product.title}
+        href={"/product" + "/" + product.id + "/" + product.title}
         variant="h5"
         maxLength={25}
         sx={{ fontWeight: 500 }}
