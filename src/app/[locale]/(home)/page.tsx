@@ -10,7 +10,7 @@ const MonthSale = dynamic(() => import("~/components/pages/home-page/month-sale"
 const BottomBanner = dynamic(() => import("~/components/pages/home-page/bottom-banner"));
 const ExploreProducts = dynamic(() => import("~/components/pages/home-page/explore-products"));
 const Arrival = dynamic(() => import("~/components/pages/home-page/arrival"));
-const Support = dynamic(() => import("~/components/pages/home-page/support"));
+const Support = dynamic(() => import("~/components/pages/home-page/support"), { ssr: false });
 
 const HomePage = () => {
   return (

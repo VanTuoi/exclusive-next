@@ -33,17 +33,17 @@ export const User = memo(() => {
     {
       icon: <ReceiptLongIcon fontSize="small" />,
       text: t("header.user.myOrder"),
-      action: () => router.push("/user/orders")
+      action: () => router.push("#")
     },
     {
       icon: <CancelIcon fontSize="small" />,
       text: t("header.user.myCancellations"),
-      action: () => router.push("/user/cancellations")
+      action: () => router.push("#")
     },
     {
       icon: <StarRateIcon fontSize="small" />,
       text: t("header.user.myReviews"),
-      action: () => router.push("/user/reviews")
+      action: () => router.push("#")
     },
     {
       icon: <LogoutIcon fontSize="small" />,
@@ -53,7 +53,7 @@ export const User = memo(() => {
   ];
 
   const [loading, setLoading] = useState<boolean>(true);
-  const [isLogin, setIsLogin] = useState<boolean>(false);
+  const [isLogin, setIsLogin] = useState<boolean>(true);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
   const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {

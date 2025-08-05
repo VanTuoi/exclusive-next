@@ -18,15 +18,15 @@ export function useUserTabs(): NestedTab[] {
       section: t("manageAccount"),
       items: [
         { label: t("myProfile"), path: "/user/profile" },
-        { label: t("addressBook"), path: "/user/address" },
-        { label: t("paymentOptions"), path: "/user/payments" }
+        { label: t("addressBook"), path: "#" },
+        { label: t("paymentOptions"), path: "#" }
       ]
     },
     {
       section: t("myOrders"),
       items: [
-        { label: t("myReturns"), path: "/user/returns" },
-        { label: t("myCancellations"), path: "/user/cancellations" }
+        { label: t("myReturns"), path: "#" },
+        { label: t("myCancellations"), path: "#" }
       ]
     },
     {

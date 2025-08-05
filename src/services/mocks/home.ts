@@ -39,7 +39,8 @@ export function home(mock: MockAdapter) {
           en: "Woman's Fashion",
           vi: "Thời Trang Nữ",
           ja: "レディースファッション",
-          zh: "女装"
+          zh: "女装",
+          ar: "أزياء نسائية"
         },
         url: "/womens-fashion"
       },
@@ -48,7 +49,8 @@ export function home(mock: MockAdapter) {
           en: "Men's Fashion",
           vi: "Thời Trang Nam",
           ja: "メンズファッション",
-          zh: "男装"
+          zh: "男装",
+          ar: "أزياء رجالية"
         },
         url: "/mens-fashion"
       },
@@ -57,7 +59,8 @@ export function home(mock: MockAdapter) {
           en: "Electronics",
           vi: "Điện Tử",
           ja: "電子機器",
-          zh: "电子产品"
+          zh: "电子产品",
+          ar: "إلكترونيات"
         },
         url: "/electronics"
       },
@@ -66,7 +69,8 @@ export function home(mock: MockAdapter) {
           en: "Home & Lifestyle",
           vi: "Nhà & Đời Sống",
           ja: "ホーム＆ライフスタイル",
-          zh: "家居与生活"
+          zh: "家居与生活",
+          ar: "المنزل ونمط الحياة"
         },
         url: "/home-lifestyle"
       },
@@ -75,7 +79,8 @@ export function home(mock: MockAdapter) {
           en: "Medicine",
           vi: "Y Tế",
           ja: "医薬品",
-          zh: "药品"
+          zh: "药品",
+          ar: "الأدوية"
         },
         url: "/medicine"
       },
@@ -84,7 +89,8 @@ export function home(mock: MockAdapter) {
           en: "Sports & Outdoor",
           vi: "Thể Thao & Ngoài Trời",
           ja: "スポーツ＆アウトドア",
-          zh: "运动与户外"
+          zh: "运动与户外",
+          ar: "الرياضة والهواء الطلق"
         },
         url: "/sports-outdoor"
       },
@@ -93,7 +99,8 @@ export function home(mock: MockAdapter) {
           en: "Baby's & Toys",
           vi: "Trẻ Em & Đồ Chơi",
           ja: "ベビー＆おもちゃ",
-          zh: "婴儿与玩具"
+          zh: "婴儿与玩具",
+          ar: "ألعاب ورضّع"
         },
         url: "/babies-toys"
       },
@@ -102,7 +109,8 @@ export function home(mock: MockAdapter) {
           en: "Groceries & Pets",
           vi: "Thực Phẩm & Thú Cưng",
           ja: "食料品＆ペット",
-          zh: "食品与宠物"
+          zh: "食品与宠物",
+          ar: "بقالة وحيوانات أليفة"
         },
         url: "/groceries-pets"
       },
@@ -111,7 +119,8 @@ export function home(mock: MockAdapter) {
           en: "Health & Beauty",
           vi: "Sức Khỏe & Sắc Đẹp",
           ja: "健康＆美容",
-          zh: "健康与美容"
+          zh: "健康与美容",
+          ar: "الصحة والجمال"
         },
         url: "/health-beauty"
       }

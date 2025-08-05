@@ -40,7 +40,7 @@ export const ProfileForm = memo(() => {
 
   const {
     register,
-    formState: { errors, isValid, isSubmitting, isDirty },
+    formState: { errors, isValid, isSubmitting },
     setValue,
     trigger,
     handleSubmit
@@ -63,22 +63,6 @@ export const ProfileForm = memo(() => {
       setValue("emailAddress", userData?.emailAddress ?? "");
     }
   }, [userData, setValue]);
-
-  useEffect(() => {
-    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-      if (isDirty) {
-        event.preventDefault();
-        event.returnValue = t("profile.form.unsavedChangesWarning");
-        alert("");
-      }
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, [isDirty, t]);
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     await handleUpdateInfo(data);

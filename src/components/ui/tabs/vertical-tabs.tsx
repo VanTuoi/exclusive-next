@@ -40,7 +40,11 @@ export function VerticalTabs({ tabs, children }: Props) {
               {group.items.map((item, j) => (
                 <Button
                   key={j}
-                  onClick={() => router.push(`/${locale}${item.path}`)}
+                  onClick={() => {
+                    if (item.path !== "#") {
+                      router.push(`/${locale}${item.path}`);
+                    }
+                  }}
                   sx={{
                     justifyContent: "flex-start",
                     textTransform: "none",

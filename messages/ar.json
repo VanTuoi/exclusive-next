@@ -1,0 +1,495 @@
+{
+    "common": {
+        "header": {
+            "banner": {
+                "saleContent": "تخفيضات الصيف لجميع ملابس السباحة وتوصيل سريع مجاني - خصم 50%!",
+                "saleLink": "تسوق الآن"
+            },
+            "selectLanguage": "اختر اللغة",
+            "searchTitle": "ما الذي تبحث عنه؟",
+            "noResult": "لا توجد نتائج",
+            "user": {
+                "title": "فتح الإعدادات",
+                "manageMyAccount": "إدارة حسابي",
+                "myOrder": "طلباتي",
+                "myCancellations": "إلغاءاتي",
+                "myReviews": "تقييماتي",
+                "logout": "تسجيل الخروج"
+            },
+            "nav": {
+                "home": "الرئيسية",
+                "contact": "اتصل بنا",
+                "about": "معلومات عنا",
+                "signup": "تسجيل"
+            },
+            "language": {
+                "english": "الإنجليزية",
+                "vietnamese": "الفيتنامية",
+                "japanese": "اليابانية",
+                "chinese": "الصينية",
+                "arabic": "العربية"
+            }
+        },
+        "footer": {
+            "contact": "اتصل بنا",
+            "copy": "حقوق النشر Rimel {currentYear}. جميع الحقوق محفوظة",
+            "subscribe": "اشترك",
+            "sale": "احصل على خصم 10% على أول طلب لك",
+            "email": {
+                "placeholder": "أدخل بريدك الإلكتروني"
+            },
+            "support": "الدعم",
+            "sections": [
+                {
+                    "title": "الحساب",
+                    "items": [
+                        {
+                            "name": "حسابي",
+                            "url": "#"
+                        },
+                        {
+                            "name": "تسجيل الدخول / التسجيل",
+                            "url": "#"
+                        },
+                        {
+                            "name": "عربة التسوق",
+                            "url": "#"
+                        },
+                        {
+                            "name": "قائمة الرغبات",
+                            "url": "#"
+                        },
+                        {
+                            "name": "تسوق",
+                            "url": "#"
+                        }
+                    ]
+                },
+                {
+                    "title": "روابط سريعة",
+                    "items": [
+                        {
+                            "name": "سياسة الخصوصية",
+                            "url": "#"
+                        },
+                        {
+                            "name": "شروط الاستخدام",
+                            "url": "#"
+                        },
+                        {
+                            "name": "الأسئلة الشائعة",
+                            "url": "#"
+                        },
+                        {
+                            "name": "اتصل بنا",
+                            "url": "#"
+                        }
+                    ]
+                }
+            ],
+            "downloadApp": {
+                "title": "حمل تطبيقنا",
+                "content": "وفر 3$ للمستخدمين الجدد فقط"
+            }
+        },
+        "develop": {
+            "title": "هذه الصفحة قيد التطوير",
+            "content": "يرجى المحاولة لاحقاً",
+            "button": "العودة إلى الصفحة الرئيسية"
+        },
+        "breadcrumbs": {
+            "home": "الرئيسية",
+            "cart": "عربة التسوق",
+            "account": "الحساب",
+            "myAccount": "حسابي",
+            "product": "المنتج",
+            "viewCart": "عرض العربة",
+            "checkout": "الدفع",
+            "about": "معلومات عنا",
+            "contact": "اتصل بنا"
+        },
+        "notFound": {
+            "title": "404 - الصفحة غير موجودة",
+            "description": "الصفحة التي تبحث عنها غير موجودة.",
+            "goHome": "العودة إلى الرئيسية"
+        }
+    },
+    "home": {
+        "addToCart": "أضف إلى العربة",
+        "addToCartDialog": {
+            "title": "تمت الإضافة إلى العربة بنجاح",
+            "colors": "اللون",
+            "size": "المقاس",
+            "price": "السعر",
+            "buttonBack": "مواصلة التسوق",
+            "buttonCheckout": "الدفع",
+            "similarProduct": "منتجات مشابهة"
+        },
+        "categoriesNav": "الفئات",
+        "flashSale": {
+            "title": "تخفيضات",
+            "content": "اليوم"
+        },
+        "countingTime": {
+            "days": "أيام",
+            "hours": "ساعات",
+            "minutes": "دقائق",
+            "seconds": "ثواني"
+        },
+        "categories": {
+            "title": "الفئات",
+            "content": "تصفح حسب الفئة"
+        },
+        "monthSale": {
+            "title": "هذا الشهر",
+            "content": "أفضل المنتجات مبيعاً"
+        },
+        "bottomBanner": {
+            "title": "الفئات",
+            "content": "حسن من تجربة موسيقاك",
+            "button": "اشتر الآن!"
+        },
+        "explore": {
+            "title": "مميز",
+            "content": "وصل حديثاً"
+        },
+        "buttonViewAll": "عرض جميع المنتجات",
+        "arrival": {
+            "title": "مميز",
+            "content": "وصل حديثاً",
+            "item": [
+                {
+                    "title": "بلايستيشن 5",
+                    "content": "نسخة بلايستيشن 5 بالأبيض والأسود معروضة للبيع"
+                },
+                {
+                    "title": "مجموعات نسائية",
+                    "content": "مجموعات نسائية مميزة تمنحك إحساساً مختلفاً"
+                },
+                {
+                    "title": "سماعات",
+                    "content": "سماعات أمازون اللاسلكية"
+                },
+                {
+                    "title": "عطر",
+                    "content": "عطر جوتشي اود المركز"
+                }
+            ],
+            "button": "تسوق الآن"
+        },
+        "support": [
+            {
+                "title": "توصيل مجاني وسريع",
+                "content": "توصيل مجاني لجميع الطلبات فوق {objectName}"
+            },
+            {
+                "title": "خدمة عملاء على مدار الساعة",
+                "content": "دعم فني ودود على مدار الساعة"
+            },
+            {
+                "title": "ضمان استرداد الأموال",
+                "content": "نسترجع الأموال خلال 30 يوماً"
+            }
+        ]
+    },
+    "productDetail": {
+        "review": "التقييمات",
+        "inStock": "متوفر",
+        "outStock": "غير متوفر",
+        "colors": "الألوان",
+        "size": "المقاسات",
+        "buttonBuy": "اشتر الآن",
+        "support": {
+            "deliver": {
+                "title": "توصيل مجاني",
+                "content": "أدخل رمزك البريدي للتحقق من إمكانية التوصيل"
+            },
+            "return": {
+                "title": "إرجاع مجاني",
+                "content": "إرجاع مجاني خلال 30 يوماً",
+                "details": "تفاصيل"
+            }
+        },
+        "relatedItem": "منتجات ذات صلة",
+        "notFound": "المنتج غير موجود أو تم إزالته."
+    },
+    "cart": {
+        "empty": "فارغ",
+        "titleButton": "العودة إلى المتجر",
+        "table": {
+            "products": "المنتجات",
+            "price": "السعر",
+            "quantity": "الكمية",
+            "subtotal": "المجموع الفرعي"
+        },
+        "buttonCoupon": "تطبيق كوبون",
+        "inputCoupon": "كود الكوبون",
+        "errorRequired": "كود الخصم مطلوب",
+        "errorFormat": "صيغة كود الخصم غير صالحة",
+        "errorInvalid": "كود خصم غير صالح",
+        "warningApplied": "تم تطبيق هذا الكود",
+        "successAdd": "تمت إضافة العرض بنجاح",
+        "validateCoupon": {
+            "min": "الحد الأدنى",
+            "regex": "في التحقق"
+        },
+        "shipping": "مجاني",
+        "pay": {
+            "title": "إجمالي العربة",
+            "subtotal": "المجموع الفرعي",
+            "shipping": "الشحن",
+            "discount": "الخصم",
+            "total": "الإجمالي",
+            "button": "المتابعة إلى الدفع",
+            "removeDiscount": "إزالة الخصم",
+            "removeDiscountMessage": "تمت إزالة العرض بنجاح",
+            "expirationDate": "تاريخ الانتهاء"
+        }
+    },
+    "wishList": {
+        "title": "قائمة الرغبات",
+        "button": "نقل الكل إلى الحقيبة",
+        "empty": "فارغ",
+        "justForYou": {
+            "title": "مخصص لك"
+        }
+    },
+    "checkout": {
+        "title": "تفاصيل الفاتورة",
+        "shipping": "مجاني",
+        "pay": {
+            "title": "إجمالي العربة",
+            "subtotal": "المجموع الفرعي",
+            "shipping": "الشحن",
+            "discount": "الخصم",
+            "total": "الإجمالي",
+            "button": "المتابعة إلى الدفع",
+            "removeDiscount": "إزالة الخصم",
+            "expirationDate": "تاريخ الانتهاء"
+        },
+        "form": {
+            "firstName": {
+                "label": "الاسم الأول"
+            },
+            "companyName": {
+                "label": "اسم الشركة"
+            },
+            "streetAddress": {
+                "label": "عنوان الشارع"
+            },
+            "apartment": {
+                "label": "الشقة، الطابق، إلخ. (اختياري)"
+            },
+            "city": {
+                "label": "المدينة"
+            },
+            "phoneNumber": {
+                "label": "رقم الهاتف"
+            },
+            "emailAddress": {
+                "label": "البريد الإلكتروني"
+            },
+            "validate": {
+                "required": "هذا الحقل مطلوب",
+                "email": "بريد إلكتروني غير صالح",
+                "phoneNumber": "رقم هاتف غير صالح"
+            }
+        },
+        "saveInfo": "احفظ هذه المعلومات لتسريع الدفع في المرة القادمة",
+        "payMethod": {
+            "bank": "بنك",
+            "cash": "الدفع عند الاستلام"
+        },
+        "button": "تقديم الطلب",
+        "emptyCart": "عربة التسوق فارغة"
+    },
+    "loginPage": {
+        "title": "تسجيل الدخول إلى Exclusive",
+        "content": "أدخل تفاصيلك أدناه",
+        "form": {
+            "contact": {
+                "label": "البريد الإلكتروني أو رقم الهاتف",
+                "placeholder": "البريد الإلكتروني أو رقم الهاتف"
+            },
+            "password": {
+                "label": "كلمة المرور",
+                "placeholder": "كلمة المرور"
+            }
+        },
+        "button": "تسجيل الدخول",
+        "loginWithGoogle": "تسجيل الدخول باستخدام جوجل",
+        "forgetPassword": "نسيت كلمة المرور؟",
+        "validate": {
+            "name": "الاسم الكامل",
+            "password": "كلمة المرور",
+            "minLength": "{objectName} يجب أن يكون على الأقل {minimumValue} أحرف",
+            "maxLength": "{objectName} بحد أقصى {maximumValue} أحرف",
+            "regexSchema": "{objectName} يجب أن يحتوي على الأقل على حرف واحد ورقم واحد وحرف خاص واحد"
+        },
+        "loginSuccess": "تم تسجيل الدخول بنجاح",
+        "loginGoogleSuccess": "تم تسجيل الدخول باستخدام جوجل بنجاح",
+        "unknownError": "حدث خطأ ما"
+    },
+    "signUpPage": {
+        "title": "إنشاء حساب",
+        "content": "أدخل تفاصيلك أدناه",
+        "form": {
+            "name": {
+                "label": "الاسم الكامل",
+                "placeholder": "الاسم الكامل"
+            },
+            "contact": {
+                "label": "البريد الإلكتروني أو رقم الهاتف",
+                "placeholder": "البريد الإلكتروني أو رقم الهاتف"
+            },
+            "password": {
+                "label": "كلمة المرور",
+                "placeholder": "كلمة المرور"
+            }
+        },
+        "button": "تسجيل",
+        "haveAccount": "نسيت كلمة المرور؟",
+        "linkLogin": "تسجيل الدخول",
+        "validate": {
+            "name": "الاسم الكامل",
+            "password": "كلمة المرور",
+            "minLength": "{objectName} يجب أن يكون على الأقل {minimumValue} أحرف",
+            "maxLength": "{objectName} بحد أقصى {maximumValue} أحرف",
+            "regexSchema": "{objectName} يجب أن يحتوي على الأقل على حرف واحد ورقم واحد وحرف خاص واحد"
+        },
+        "registerSuccess": "تم التسجيل بنجاح",
+        "logoutSuccess": "تم تسجيل الخروج بنجاح"
+    },
+    "forgetPassword": {
+        "title": "نسيت كلمة المرور",
+        "subtitle": "أدخل معلومات الاتصال الخاصة بك",
+        "contactLabel": "البريد الإلكتروني أو رقم الهاتف",
+        "contactPlaceholder": "البريد الإلكتروني أو رقم الهاتف",
+        "submitButton": "استعادة كلمة المرور",
+        "validation": {
+            "contactField": "معلومات الاتصال غير صالحة"
+        },
+        "error": {
+            "notFound": "لم يتم العثور على مستخدم مطابق",
+            "unknown": "حدث خطأ غير معروف"
+        }
+    },
+    "profile": {
+        "tabs": {
+            "manageAccount": "إدارة حسابي",
+            "myProfile": "ملفي الشخصي",
+            "addressBook": "دفتر العناوين",
+            "paymentOptions": "خيارات الدفع الخاصة بي",
+            "myOrders": "طلباتي",
+            "myReturns": "مرتجعاتي",
+            "myCancellations": "إلغاءاتي",
+            "myWishlist": "قائمة رغباتي",
+            "wishlist": "قائمة رغباتي"
+        },
+        "title": "تعديل الملف الشخصي",
+        "form": {
+            "firstName": {
+                "label": "الاسم الأول",
+                "validate": {
+                    "required": "الاسم الأول مطلوب"
+                }
+            },
+            "lastName": {
+                "label": "الاسم الأخير"
+            },
+            "emailAddress": {
+                "label": "البريد الإلكتروني",
+                "validate": {
+                    "required": "البريد الإلكتروني مطلوب"
+                }
+            },
+            "streetAddress": {
+                "label": "العنوان",
+                "validate": {
+                    "required": "العنوان مطلوب"
+                }
+            },
+            "currentPassword": {
+                "label": "تغيير كلمة المرور"
+            },
+            "newPassword": {
+                "label": "كلمة المرور الجديدة"
+            },
+            "confirmNewPassword": {
+                "label": "تأكيد كلمة المرور الجديدة",
+                "validate": {
+                    "match": "كلمات المرور غير متطابقة"
+                }
+            },
+            "submit": "حفظ التغييرات",
+            "cancel": "إلغاء"
+        },
+        "passwordSectionTitle": "تغيير كلمة المرور"
+    },
+    "contact": {
+        "info": {
+            "phone": {
+                "title": "اتصل بنا",
+                "content": "نحن متاحون 24/7، 7 أيام في الأسبوع.",
+                "text": "الهاتف"
+            },
+            "mail": {
+                "title": "اكتب لنا",
+                "content": "املأ النموذج وسنتصل بك خلال 24 ساعة.",
+                "text": "البريد الإلكتروني"
+            }
+        },
+        "form": {
+            "name": {
+                "label": "اسمك",
+                "validate": {
+                    "required": "الاسم مطلوب"
+                }
+            },
+            "email": {
+                "label": "بريدك الإلكتروني",
+                "validate": {
+                    "required": "البريد الإلكتروني مطلوب"
+                }
+            },
+            "phone": {
+                "label": "هاتفك",
+                "validate": {
+                    "required": "الهاتف مطلوب"
+                }
+            },
+            "message": {
+                "label": "رسالتك",
+                "validate": {
+                    "required": "الرسالة مطلوبة"
+                }
+            },
+            "submit": "إرسال الرسالة"
+        }
+    },
+    "about": {
+        "section1": {
+            "title": "قصتنا",
+            "content1": "تأسست Exclusive في عام 2015، وهي سوق تسوق عبر الإنترنت رائد في جنوب آسيا مع وجود نشط في بنغلاديش. بدعم من مجموعة واسعة من حلول التسويق المخصصة والبيانات والخدمات، لدى Exclusive 10,500 بائع و300 علامة تجارية وتخدم 3 ملايين عميل في جميع أنحاء المنطقة.",
+            "content2": "يقدم Exclusive أكثر من مليون منتج، وينمو بسرعة كبيرة. يقدم Exclusive تشكيلة متنوعة في فئات تتراوح من السلع الاستهلاكية."
+        },
+        "section2": [
+            {
+                "title": "10.5 ألف",
+                "content": "بائع نشط على موقعنا"
+            },
+            {
+                "title": "33 ألف",
+                "content": "مبيعات المنتجات الشهرية"
+            },
+            {
+                "title": "45.5 ألف",
+                "content": "عميل نشط على موقعنا"
+            },
+            {
+                "title": "25 ألف",
+                "content": "إجمالي المبيعات السنوية على موقعنا"
+            }
+        ]
+    }
+}

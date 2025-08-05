@@ -1,6 +1,7 @@
 interface Customization {
   fontFamily?: string;
   type: "light" | "dark";
+  locale: string;
   borderRadius?: number;
 }
 

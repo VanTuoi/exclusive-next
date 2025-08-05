@@ -1,494 +1,495 @@
 {
-    "common": {
-        "header": {
-            "banner": {
-                "saleContent": "所有泳衣夏季大促销，快递免费送货 - 5折优惠！",
-                "saleLink": "立即购买"
+  "common": {
+    "header": {
+      "banner": {
+        "saleContent": "所有泳衣夏季大促销，快递免费送货 - 5折优惠！",
+        "saleLink": "立即购买"
+      },
+      "selectLanguage": "选择语言",
+      "searchTitle": "您想找什么？",
+      "noResult": "未找到结果",
+      "user": {
+        "title": "打开设置",
+        "manageMyAccount": "管理我的账户",
+        "myOrder": "我的订单",
+        "myCancellations": "我的取消订单",
+        "myReviews": "我的评价",
+        "logout": "退出登录"
+      },
+      "nav": {
+        "home": "首页",
+        "contact": "联系我们",
+        "about": "关于我们",
+        "signup": "注册"
+      },
+      "language": {
+        "english": "英语",
+        "vietnamese": "越南语",
+        "japanese": "日语",
+        "chinese": "中国人",
+        "arabic": "阿拉伯语"
+      }
+    },
+    "footer": {
+      "contact": "联系我们",
+      "copy": "版权 Rimel {currentYear}。保留所有权利",
+      "subscribe": "订阅",
+      "sale": "首次订单享受9折优惠",
+      "email": {
+        "placeholder": "输入您的邮箱"
+      },
+      "support": "支持",
+      "sections": [
+        {
+          "title": "账户",
+          "items": [
+            {
+              "name": "我的账户",
+              "url": "#"
             },
-            "selectLanguage": "选择语言",
-            "searchTitle": "您想找什么？",
-            "noResult": "未找到结果",
-            "user": {
-                "title": "打开设置",
-                "manageMyAccount": "管理我的账户",
-                "myOrder": "我的订单",
-                "myCancellations": "我的取消订单",
-                "myReviews": "我的评价",
-                "logout": "退出登录"
+            {
+              "name": "登录/注册",
+              "url": "#"
             },
-            "nav": {
-                "home": "首页",
-                "contact": "联系我们",
-                "about": "关于我们",
-                "signup": "注册"
+            {
+              "name": "购物车",
+              "url": "#"
             },
-            "language": {
-                "english": "英语",
-                "vietnamese": "越南语",
-                "japanese": "日语",
-                "chinese": "中国人"
+            {
+              "name": "愿望清单",
+              "url": "#"
+            },
+            {
+              "name": "商店",
+              "url": "#"
             }
+          ]
         },
-        "footer": {
-            "contact": "联系我们",
-            "copy": "版权 Rimel {currentYear}。保留所有权利",
-            "subscribe": "订阅",
-            "sale": "首次订单享受9折优惠",
-            "email": {
-                "placeholder": "输入您的邮箱"
+        {
+          "title": "快速链接",
+          "items": [
+            {
+              "name": "隐私政策",
+              "url": "#"
             },
-            "support": "支持",
-            "sections": [
-                {
-                    "title": "账户",
-                    "items": [
-                        {
-                            "name": "我的账户",
-                            "url": "#"
-                        },
-                        {
-                            "name": "登录/注册",
-                            "url": "#"
-                        },
-                        {
-                            "name": "购物车",
-                            "url": "#"
-                        },
-                        {
-                            "name": "愿望清单",
-                            "url": "#"
-                        },
-                        {
-                            "name": "商店",
-                            "url": "#"
-                        }
-                    ]
-                },
-                {
-                    "title": "快速链接",
-                    "items": [
-                        {
-                            "name": "隐私政策",
-                            "url": "#"
-                        },
-                        {
-                            "name": "使用条款",
-                            "url": "#"
-                        },
-                        {
-                            "name": "常见问题",
-                            "url": "#"
-                        },
-                        {
-                            "name": "联系我们",
-                            "url": "#"
-                        }
-                    ]
-                }
-            ],
-            "downloadApp": {
-                "title": "下载我们的应用",
-                "content": "新用户可节省3美元"
+            {
+              "name": "使用条款",
+              "url": "#"
+            },
+            {
+              "name": "常见问题",
+              "url": "#"
+            },
+            {
+              "name": "联系我们",
+              "url": "#"
             }
-        },
-        "develop": {
-            "title": "此页面正在开发中",
-            "content": "请稍后再试",
-            "button": "返回首页"
-        },
-        "breadcrumbs": {
-            "home": "首页",
-            "cart": "购物车",
-            "account": "账户",
-            "myAccount": "我的账户",
-            "product": "产品",
-            "viewCart": "查看购物车",
-            "checkout": "结账",
-            "about": "关于我们",
-            "contact": "联系我们"
-        },
-        "notFound": {
-            "title": "404 - 页面未找到",
-            "description": "您寻找的页面不存在。",
-            "goHome": "返回首页"
+          ]
         }
+      ],
+      "downloadApp": {
+        "title": "下载我们的应用",
+        "content": "新用户可节省3美元"
+      }
     },
-    "home": {
-        "addToCart": "加入购物车",
-        "addToCartDialog": {
-            "title": "成功加入购物车",
-            "colors": "颜色",
-            "size": "尺寸",
-            "price": "价格",
-            "buttonBack": "继续购物",
-            "buttonCheckout": "结账",
-            "similarProduct": "类似产品"
-        },
-        "categoriesNav": "分类",
-        "flashSale": {
-            "title": "今日",
-            "content": "限时抢购"
-        },
-        "countingTime": {
-            "days": "天",
-            "hours": "小时",
-            "minutes": "分钟",
-            "seconds": "秒"
-        },
-        "categories": {
-            "title": "分类",
-            "content": "按分类浏览"
-        },
-        "monthSale": {
-            "title": "本月",
-            "content": "最畅销产品"
-        },
-        "bottomBanner": {
-            "title": "分类",
-            "content": "提升您的音乐体验",
-            "button": "立即购买！"
-        },
-        "explore": {
-            "title": "精选",
-            "content": "新品上市"
-        },
-        "buttonViewAll": "查看所有产品",
-        "arrival": {
-            "title": "精选",
-            "content": "新品上市",
-            "item": [
-                {
-                    "title": "PlayStation 5",
-                    "content": "黑白版PS5即将上市销售。"
-                },
-                {
-                    "title": "女士系列",
-                    "content": "精选女士系列带给您不一样的氛围。"
-                },
-                {
-                    "title": "音箱",
-                    "content": "亚马逊无线音箱"
-                },
-                {
-                    "title": "香水",
-                    "content": "GUCCI INTENSE OUD EDP"
-                }
-            ],
-            "button": "立即购买"
-        },
-        "support": [
-            {
-                "title": "免费快速送货",
-                "content": "所有订单超过{objectName}免费送货"
-            },
-            {
-                "title": "24/7客户服务",
-                "content": "友好的24/7客户支持"
-            },
-            {
-                "title": "退款保证",
-                "content": "30天内退款"
-            }
-        ]
+    "develop": {
+      "title": "此页面正在开发中",
+      "content": "请稍后再试",
+      "button": "返回首页"
     },
-    "productDetail": {
-        "review": "评价",
-        "inStock": "有货",
-        "outStock": "缺货",
-        "colors": "颜色",
-        "size": "尺寸",
-        "buttonBuy": "立即购买",
-        "support": {
-            "deliver": {
-                "title": "免费送货",
-                "content": "输入您的邮政编码查看送货情况"
-            },
-            "return": {
-                "title": "退货",
-                "content": "30天免费退货",
-                "details": "详情"
-            }
-        },
-        "relatedItem": "相关产品",
-        "notFound": "产品不存在或已被移除。"
+    "breadcrumbs": {
+      "home": "首页",
+      "cart": "购物车",
+      "account": "账户",
+      "myAccount": "我的账户",
+      "product": "产品",
+      "viewCart": "查看购物车",
+      "checkout": "结账",
+      "about": "关于我们",
+      "contact": "联系我们"
     },
-    "cart": {
-        "empty": "空",
-        "titleButton": "返回商店",
-        "table": {
-            "products": "产品",
-            "price": "价格",
-            "quantity": "数量",
-            "subtotal": "小计"
-        },
-        "buttonCoupon": "使用优惠券",
-        "inputCoupon": "优惠券代码",
-        "errorRequired": "需要优惠券代码",
-        "errorFormat": "优惠券代码格式无效",
-        "errorInvalid": "优惠券代码无效",
-        "warningApplied": "此代码已使用",
-        "successAdd": "成功添加促销",
-        "validateCoupon": {
-            "min": "最低",
-            "regex": "验证中"
-        },
-        "shipping": "免费",
-        "pay": {
-            "title": "购物车总计",
-            "subtotal": "小计",
-            "shipping": "运费",
-            "discount": "折扣",
-            "total": "总计",
-            "button": "前往结账",
-            "removeDiscount": "移除折扣",
-            "removeDiscountMessage": "成功移除促销",
-            "expirationDate": "过期日期"
-        }
-    },
-    "wishList": {
-        "title": "愿望清单",
-        "button": "全部加入购物车",
-        "empty": "空",
-        "justForYou": {
-            "title": "为您推荐"
-        }
-    },
-    "checkout": {
-        "title": "账单详情",
-        "shipping": "免费",
-        "pay": {
-            "title": "购物车总计",
-            "subtotal": "小计",
-            "shipping": "运费",
-            "discount": "折扣",
-            "total": "总计",
-            "button": "前往结账",
-            "removeDiscount": "移除折扣",
-            "expirationDate": "过期日期"
-        },
-        "form": {
-            "firstName": {
-                "label": "名字"
-            },
-            "companyName": {
-                "label": "公司名称"
-            },
-            "streetAddress": {
-                "label": "街道地址"
-            },
-            "apartment": {
-                "label": "公寓、楼层等(可选)"
-            },
-            "city": {
-                "label": "城镇/城市"
-            },
-            "phoneNumber": {
-                "label": "电话号码"
-            },
-            "emailAddress": {
-                "label": "邮箱地址"
-            },
-            "validate": {
-                "required": "此字段为必填项",
-                "email": "邮箱地址无效",
-                "phoneNumber": "电话号码无效"
-            }
-        },
-        "saveInfo": "保存此信息以便下次快速结账",
-        "payMethod": {
-            "bank": "银行",
-            "cash": "货到付款"
-        },
-        "button": "下单",
-        "emptyCart": "您的购物车是空的"
-    },
-    "loginPage": {
-        "title": "登录Exclusive",
-        "content": "输入您的详细信息",
-        "form": {
-            "contact": {
-                "label": "邮箱或电话号码",
-                "placeholder": "邮箱或电话号码"
-            },
-            "password": {
-                "label": "密码",
-                "placeholder": "密码"
-            }
-        },
-        "button": "登录",
-        "loginWithGoogle": "使用Google注册",
-        "forgetPassword": "忘记密码？",
-        "validate": {
-            "name": "全名",
-            "password": "密码",
-            "minLength": "{objectName}至少{minimumValue}个字符",
-            "maxLength": "{objectName}最多{maximumValue}个字符",
-            "regexSchema": "{objectName}必须包含至少1个字母1个数字和1个特殊字符"
-        },
-        "loginSuccess": "登录成功",
-        "loginGoogleSuccess": "Google登录成功",
-        "unknownError": "发生错误"
-    },
-    "signUpPage": {
-        "title": "创建账户",
-        "content": "输入您的详细信息",
-        "form": {
-            "name": {
-                "label": "全名",
-                "placeholder": "全名"
-            },
-            "contact": {
-                "label": "邮箱或电话号码",
-                "placeholder": "邮箱或电话号码"
-            },
-            "password": {
-                "label": "密码",
-                "placeholder": "密码"
-            }
-        },
-        "button": "注册",
-        "haveAccount": "忘记密码？",
-        "linkLogin": "登录",
-        "validate": {
-            "name": "全名",
-            "password": "密码",
-            "minLength": "{objectName}至少{minimumValue}个字符",
-            "maxLength": "{objectName}最多{maximumValue}个字符",
-            "regexSchema": "{objectName}必须包含至少1个字母1个数字和1个特殊字符"
-        },
-        "registerSuccess": "注册成功",
-        "logoutSuccess": "退出成功"
-    },
-    "forgetPassword": {
-        "title": "忘记密码",
-        "subtitle": "输入您的联系信息",
-        "contactLabel": "邮箱或电话号码",
-        "contactPlaceholder": "邮箱或电话号码",
-        "submitButton": "恢复密码",
-        "validation": {
-            "contactField": "联系信息无效"
-        },
-        "error": {
-            "notFound": "未找到匹配用户",
-            "unknown": "发生未知错误"
-        }
-    },
-    "profile": {
-        "tabs": {
-            "manageAccount": "管理我的账户",
-            "myProfile": "我的资料",
-            "addressBook": "地址簿",
-            "paymentOptions": "我的支付方式",
-            "myOrders": "我的订单",
-            "myReturns": "我的退货",
-            "myCancellations": "我的取消订单",
-            "myWishlist": "我的愿望清单",
-            "wishlist": "我的愿望清单"
-        },
-        "title": "编辑您的资料",
-        "form": {
-            "firstName": {
-                "label": "名字",
-                "validate": {
-                    "required": "需要名字"
-                }
-            },
-            "lastName": {
-                "label": "姓氏"
-            },
-            "emailAddress": {
-                "label": "邮箱",
-                "validate": {
-                    "required": "需要邮箱"
-                }
-            },
-            "streetAddress": {
-                "label": "地址",
-                "validate": {
-                    "required": "需要地址"
-                }
-            },
-            "currentPassword": {
-                "label": "密码更改"
-            },
-            "newPassword": {
-                "label": "新密码"
-            },
-            "confirmNewPassword": {
-                "label": "确认新密码",
-                "validate": {
-                    "match": "密码不匹配"
-                }
-            },
-            "submit": "保存更改",
-            "cancel": "取消"
-        },
-        "passwordSectionTitle": "密码更改"
-    },
-    "contact": {
-        "info": {
-            "phone": {
-                "title": "打电话给我们",
-                "content": "我们每周7天，每天24小时为您服务。",
-                "text": "电话"
-            },
-            "mail": {
-                "title": "写信给我们",
-                "content": "填写我们的表格，我们将在24小时内与您联系。",
-                "text": "邮箱"
-            }
-        },
-        "form": {
-            "name": {
-                "label": "您的姓名",
-                "validate": {
-                    "required": "需要您的姓名"
-                }
-            },
-            "email": {
-                "label": "您的邮箱",
-                "validate": {
-                    "required": "需要您的邮箱"
-                }
-            },
-            "phone": {
-                "label": "您的电话",
-                "validate": {
-                    "required": "需要您的电话"
-                }
-            },
-            "message": {
-                "label": "您的留言",
-                "validate": {
-                    "required": "需要留言"
-                }
-            },
-            "submit": "发送留言"
-        }
-    },
-    "about": {
-        "section1": {
-            "title": "我们的故事",
-            "content1": "Exclusive于2015年推出，是南亚首屈一指的在线购物平台，在孟加拉国活跃。通过广泛的定制营销、数据和服务解决方案支持，Exclusive拥有10,500家卖家和300个品牌，为该地区300万客户提供服务。",
-            "content2": "Exclusive提供超过100万种产品，增长非常迅速。Exclusive提供从消费者到各类别的多样化产品。"
-        },
-        "section2": [
-            {
-                "title": "10.5千",
-                "content": "活跃卖家"
-            },
-            {
-                "title": "33千",
-                "content": "月产品销售"
-            },
-            {
-                "title": "45.5千",
-                "content": "活跃客户"
-            },
-            {
-                "title": "25千",
-                "content": "年销售额"
-            }
-        ]
+    "notFound": {
+      "title": "404 - 页面未找到",
+      "description": "您寻找的页面不存在。",
+      "goHome": "返回首页"
     }
+  },
+  "home": {
+    "addToCart": "加入购物车",
+    "addToCartDialog": {
+      "title": "成功加入购物车",
+      "colors": "颜色",
+      "size": "尺寸",
+      "price": "价格",
+      "buttonBack": "继续购物",
+      "buttonCheckout": "结账",
+      "similarProduct": "类似产品"
+    },
+    "categoriesNav": "分类",
+    "flashSale": {
+      "title": "今日",
+      "content": "限时抢购"
+    },
+    "countingTime": {
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒"
+    },
+    "categories": {
+      "title": "分类",
+      "content": "按分类浏览"
+    },
+    "monthSale": {
+      "title": "本月",
+      "content": "最畅销产品"
+    },
+    "bottomBanner": {
+      "title": "分类",
+      "content": "提升您的音乐体验",
+      "button": "立即购买！"
+    },
+    "explore": {
+      "title": "精选",
+      "content": "新品上市"
+    },
+    "buttonViewAll": "查看所有产品",
+    "arrival": {
+      "title": "精选",
+      "content": "新品上市",
+      "item": [
+        {
+          "title": "PlayStation 5",
+          "content": "黑白版PS5即将上市销售。"
+        },
+        {
+          "title": "女士系列",
+          "content": "精选女士系列带给您不一样的氛围。"
+        },
+        {
+          "title": "音箱",
+          "content": "亚马逊无线音箱"
+        },
+        {
+          "title": "香水",
+          "content": "GUCCI INTENSE OUD EDP"
+        }
+      ],
+      "button": "立即购买"
+    },
+    "support": [
+      {
+        "title": "免费快速送货",
+        "content": "所有订单超过{objectName}免费送货"
+      },
+      {
+        "title": "24/7客户服务",
+        "content": "友好的24/7客户支持"
+      },
+      {
+        "title": "退款保证",
+        "content": "30天内退款"
+      }
+    ]
+  },
+  "productDetail": {
+    "review": "评价",
+    "inStock": "有货",
+    "outStock": "缺货",
+    "colors": "颜色",
+    "size": "尺寸",
+    "buttonBuy": "立即购买",
+    "support": {
+      "deliver": {
+        "title": "免费送货",
+        "content": "输入您的邮政编码查看送货情况"
+      },
+      "return": {
+        "title": "退货",
+        "content": "30天免费退货",
+        "details": "详情"
+      }
+    },
+    "relatedItem": "相关产品",
+    "notFound": "产品不存在或已被移除。"
+  },
+  "cart": {
+    "empty": "空",
+    "titleButton": "返回商店",
+    "table": {
+      "products": "产品",
+      "price": "价格",
+      "quantity": "数量",
+      "subtotal": "小计"
+    },
+    "buttonCoupon": "使用优惠券",
+    "inputCoupon": "优惠券代码",
+    "errorRequired": "需要优惠券代码",
+    "errorFormat": "优惠券代码格式无效",
+    "errorInvalid": "优惠券代码无效",
+    "warningApplied": "此代码已使用",
+    "successAdd": "成功添加促销",
+    "validateCoupon": {
+      "min": "最低",
+      "regex": "验证中"
+    },
+    "shipping": "免费",
+    "pay": {
+      "title": "购物车总计",
+      "subtotal": "小计",
+      "shipping": "运费",
+      "discount": "折扣",
+      "total": "总计",
+      "button": "前往结账",
+      "removeDiscount": "移除折扣",
+      "removeDiscountMessage": "成功移除促销",
+      "expirationDate": "过期日期"
+    }
+  },
+  "wishList": {
+    "title": "愿望清单",
+    "button": "全部加入购物车",
+    "empty": "空",
+    "justForYou": {
+      "title": "为您推荐"
+    }
+  },
+  "checkout": {
+    "title": "账单详情",
+    "shipping": "免费",
+    "pay": {
+      "title": "购物车总计",
+      "subtotal": "小计",
+      "shipping": "运费",
+      "discount": "折扣",
+      "total": "总计",
+      "button": "前往结账",
+      "removeDiscount": "移除折扣",
+      "expirationDate": "过期日期"
+    },
+    "form": {
+      "firstName": {
+        "label": "名字"
+      },
+      "companyName": {
+        "label": "公司名称"
+      },
+      "streetAddress": {
+        "label": "街道地址"
+      },
+      "apartment": {
+        "label": "公寓、楼层等(可选)"
+      },
+      "city": {
+        "label": "城镇/城市"
+      },
+      "phoneNumber": {
+        "label": "电话号码"
+      },
+      "emailAddress": {
+        "label": "邮箱地址"
+      },
+      "validate": {
+        "required": "此字段为必填项",
+        "email": "邮箱地址无效",
+        "phoneNumber": "电话号码无效"
+      }
+    },
+    "saveInfo": "保存此信息以便下次快速结账",
+    "payMethod": {
+      "bank": "银行",
+      "cash": "货到付款"
+    },
+    "button": "下单",
+    "emptyCart": "您的购物车是空的"
+  },
+  "loginPage": {
+    "title": "登录Exclusive",
+    "content": "输入您的详细信息",
+    "form": {
+      "contact": {
+        "label": "邮箱或电话号码",
+        "placeholder": "邮箱或电话号码"
+      },
+      "password": {
+        "label": "密码",
+        "placeholder": "密码"
+      }
+    },
+    "button": "登录",
+    "loginWithGoogle": "使用Google注册",
+    "forgetPassword": "忘记密码？",
+    "validate": {
+      "name": "全名",
+      "password": "密码",
+      "minLength": "{objectName}至少{minimumValue}个字符",
+      "maxLength": "{objectName}最多{maximumValue}个字符",
+      "regexSchema": "{objectName}必须包含至少1个字母1个数字和1个特殊字符"
+    },
+    "loginSuccess": "登录成功",
+    "loginGoogleSuccess": "Google登录成功",
+    "unknownError": "发生错误"
+  },
+  "signUpPage": {
+    "title": "创建账户",
+    "content": "输入您的详细信息",
+    "form": {
+      "name": {
+        "label": "全名",
+        "placeholder": "全名"
+      },
+      "contact": {
+        "label": "邮箱或电话号码",
+        "placeholder": "邮箱或电话号码"
+      },
+      "password": {
+        "label": "密码",
+        "placeholder": "密码"
+      }
+    },
+    "button": "注册",
+    "haveAccount": "忘记密码？",
+    "linkLogin": "登录",
+    "validate": {
+      "name": "全名",
+      "password": "密码",
+      "minLength": "{objectName}至少{minimumValue}个字符",
+      "maxLength": "{objectName}最多{maximumValue}个字符",
+      "regexSchema": "{objectName}必须包含至少1个字母1个数字和1个特殊字符"
+    },
+    "registerSuccess": "注册成功",
+    "logoutSuccess": "退出成功"
+  },
+  "forgetPassword": {
+    "title": "忘记密码",
+    "subtitle": "输入您的联系信息",
+    "contactLabel": "邮箱或电话号码",
+    "contactPlaceholder": "邮箱或电话号码",
+    "submitButton": "恢复密码",
+    "validation": {
+      "contactField": "联系信息无效"
+    },
+    "error": {
+      "notFound": "未找到匹配用户",
+      "unknown": "发生未知错误"
+    }
+  },
+  "profile": {
+    "tabs": {
+      "manageAccount": "管理我的账户",
+      "myProfile": "我的资料",
+      "addressBook": "地址簿",
+      "paymentOptions": "我的支付方式",
+      "myOrders": "我的订单",
+      "myReturns": "我的退货",
+      "myCancellations": "我的取消订单",
+      "myWishlist": "我的愿望清单",
+      "wishlist": "我的愿望清单"
+    },
+    "title": "编辑您的资料",
+    "form": {
+      "firstName": {
+        "label": "名字",
+        "validate": {
+          "required": "需要名字"
+        }
+      },
+      "lastName": {
+        "label": "姓氏"
+      },
+      "emailAddress": {
+        "label": "邮箱",
+        "validate": {
+          "required": "需要邮箱"
+        }
+      },
+      "streetAddress": {
+        "label": "地址",
+        "validate": {
+          "required": "需要地址"
+        }
+      },
+      "currentPassword": {
+        "label": "密码更改"
+      },
+      "newPassword": {
+        "label": "新密码"
+      },
+      "confirmNewPassword": {
+        "label": "确认新密码",
+        "validate": {
+          "match": "密码不匹配"
+        }
+      },
+      "submit": "保存更改",
+      "cancel": "取消"
+    },
+    "passwordSectionTitle": "密码更改"
+  },
+  "contact": {
+    "info": {
+      "phone": {
+        "title": "打电话给我们",
+        "content": "我们每周7天，每天24小时为您服务。",
+        "text": "电话"
+      },
+      "mail": {
+        "title": "写信给我们",
+        "content": "填写我们的表格，我们将在24小时内与您联系。",
+        "text": "邮箱"
+      }
+    },
+    "form": {
+      "name": {
+        "label": "您的姓名",
+        "validate": {
+          "required": "需要您的姓名"
+        }
+      },
+      "email": {
+        "label": "您的邮箱",
+        "validate": {
+          "required": "需要您的邮箱"
+        }
+      },
+      "phone": {
+        "label": "您的电话",
+        "validate": {
+          "required": "需要您的电话"
+        }
+      },
+      "message": {
+        "label": "您的留言",
+        "validate": {
+          "required": "需要留言"
+        }
+      },
+      "submit": "发送留言"
+    }
+  },
+  "about": {
+    "section1": {
+      "title": "我们的故事",
+      "content1": "Exclusive于2015年推出，是南亚首屈一指的在线购物平台，在孟加拉国活跃。通过广泛的定制营销、数据和服务解决方案支持，Exclusive拥有10,500家卖家和300个品牌，为该地区300万客户提供服务。",
+      "content2": "Exclusive提供超过100万种产品，增长非常迅速。Exclusive提供从消费者到各类别的多样化产品。"
+    },
+    "section2": [
+      {
+        "title": "10.5千",
+        "content": "活跃卖家"
+      },
+      {
+        "title": "33千",
+        "content": "月产品销售"
+      },
+      {
+        "title": "45.5千",
+        "content": "活跃客户"
+      },
+      {
+        "title": "25千",
+        "content": "年销售额"
+      }
+    ]
+  }
 }

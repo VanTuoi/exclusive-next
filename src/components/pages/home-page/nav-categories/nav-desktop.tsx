@@ -33,7 +33,7 @@ export const NavCategoriesDesktop = memo(() => {
       {dataNavCategories.map((item) => {
         const displayLocale = (locale as keyof CategoryNav["name"]) || "en";
         return (
-          <CustomLink variant="h4" href={"/" + item.url} key={item.url} maxLength={100}>
+          <CustomLink variant="h4" href={item.url} key={item.url} maxLength={100}>
             {item.name[displayLocale]}
           </CustomLink>
         );

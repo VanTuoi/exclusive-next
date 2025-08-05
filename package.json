@@ -49,6 +49,8 @@
     "react-google-autocomplete": "^2.7.3",
     "react-hook-form": "^7.56.3",
     "react-hot-toast": "^2.5.2",
+    "stylis": "^4.3.6",
+    "stylis-plugin-rtl": "^2.1.1",
     "swiper": "^11.1.14",
     "yet-another-react-lightbox": "^3.21.6",
     "zod": "^3.24.4",

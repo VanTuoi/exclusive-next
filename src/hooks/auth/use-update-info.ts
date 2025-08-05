@@ -18,8 +18,6 @@ export function useUpdateInfo() {
     setIsLoading(true);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-
       await getUserApi.changeInfo(updateUserData);
 
       showSnackbar("Update successful", "success");
