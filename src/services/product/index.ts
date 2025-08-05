@@ -2,26 +2,27 @@ import { ResponseData } from "~/types";
 
 import { API_URLS } from "~/constants/api";
 
-import { Category, CategoryNav, Product } from "~/types/product";
+import { AllCategory, Category, CategoryNav, Product } from "~/types/product";
 
+import { QueryConfig } from "~/hooks";
 import { getApi } from "~/utils/api-selector";
-import { arrayToQueryString } from "~/utils/query";
+import { arrayToQueryString, createSearchString } from "~/utils/query";
 
 export const productApi = (type: "public" | "private" = "public") => {
   const api = getApi(type);
 
   return {
-    getAllProducts: (entries: [string, string | number][]) => {
-      return api.get<ResponseData<[Product]>>(API_URLS.PUBLIC_API.PRODUCTS + arrayToQueryString(entries));
+    getAllProducts: (params: QueryConfig) => {
+      return api.get<ResponseData<[Product]>>(API_URLS.PUBLIC_API.PRODUCTS + createSearchString(params));
     },
     getProductDetails: (id: string) => {
       return api.get<ResponseData<Product>>(API_URLS.PUBLIC_API.PRODUCT_DETAILS + `/${id}`);
     },
-    getProductByName: (entries: [string, string | number][]) => {
-      return api.get<ResponseData<[Product]>>(API_URLS.PUBLIC_API.PRODUCTS + arrayToQueryString(entries));
-    },
     getProductCategories: () => {
       return api.get<ResponseData<[]>>(API_URLS.PUBLIC_API.PRODUCT_CATEGORIES);
+    },
+    getAllCategories: () => {
+      return api.get<ResponseData<[AllCategory]>>(API_URLS.PUBLIC_API.ALL_CATEGORIES);
     },
     getProductInCategories: (category: string, entries: [string, string | number][]) => {
       return api.get<ResponseData<[]>>(

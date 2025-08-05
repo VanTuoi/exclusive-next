@@ -1,15 +1,17 @@
+"use client";
 import Image from "next/image";
 
 import { Box, Button, Container, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { memo } from "react";
 
+import { useRouter } from "next/navigation";
 import { PromotionPeriod } from "~/components/ui/section";
 import { getDatePlusNDays } from "~/utils";
 
 const BottomBanner = memo(() => {
   const t = useTranslations();
-
+  const router = useRouter();
   const theme = useTheme();
   const isSmallDisplay = useMediaQuery(theme.breakpoints.down("lg"));
 
@@ -96,6 +98,7 @@ const BottomBanner = memo(() => {
             sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
           >
             <Button
+              onClick={() => router.push("/products")}
               variant="contained"
               size={!isSmallDisplay ? "large" : "medium"}
               sx={{

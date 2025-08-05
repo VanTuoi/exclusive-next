@@ -47,7 +47,7 @@ export const NavCategoriesMobile = memo(() => {
           {dataNavCategories.map((item) => {
             const displayLocale = (locale as keyof CategoryNav["name"]) || "en";
             return (
-              <CustomLink variant="body1" href={item.url} key={item.url}>
+              <CustomLink variant="h4" href={`/products?category=${item.url}`} key={item.url} maxLength={100}>
                 {item.name[displayLocale]}
               </CustomLink>
             );

@@ -1,10 +1,9 @@
+import { Box, useTheme } from "@mui/material";
 import Image from "next/image";
-
-import { Box, Typography, useTheme } from "@mui/material";
+import { useRouter } from "next/navigation";
 import { memo } from "react";
 
 import { Category } from "~/types/product";
-
 import { CategoriesButton } from "../../buttons/svg-button";
 
 interface ProductComponentProps {
@@ -13,9 +12,15 @@ interface ProductComponentProps {
 
 export const CategoriesComponent = memo(({ categories }: ProductComponentProps) => {
   const theme = useTheme();
+  const router = useRouter();
+
+  const handleNavigate = () => {
+    router.push(`/products?category=${categories.link}`);
+  };
 
   return (
     <Box
+      onClick={handleNavigate}
       sx={{
         height: "145px",
         width: "170px",
@@ -24,6 +29,7 @@ export const CategoriesComponent = memo(({ categories }: ProductComponentProps) 
         backgroundColor: theme.palette.background.default,
         borderRadius: "4px",
         overflow: "hidden",
+        cursor: "pointer",
         "&:hover .hover-button": {
           opacity: 1
         }
@@ -31,7 +37,7 @@ export const CategoriesComponent = memo(({ categories }: ProductComponentProps) 
     >
       <CategoriesButton variant="outlined">
         <Image src={categories.img} height={56} width={56} alt="icon" />
-        <Typography sx={{ color: theme.palette.text.primary }}> {categories.title}</Typography>
+        <Box component="span">{categories.title}</Box>
       </CategoriesButton>
     </Box>
   );

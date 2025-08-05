@@ -4,6 +4,7 @@ export interface Errors {
 
 export interface ResponseData<T> {
   data: T;
+  meta?: PaginationMeta;
   statusCode?: string | number;
   statusText?: string;
   message?: string;

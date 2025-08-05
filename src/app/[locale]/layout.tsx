@@ -55,7 +55,7 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={["ar", "he"].includes(locale) ? "rtl" : "ltr"}>
       <head>
         <link rel="dns-prefetch" href="https://js.stripe.com" />
       </head>

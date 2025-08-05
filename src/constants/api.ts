@@ -9,6 +9,7 @@ const PUBLIC_API = {
   NAV_CATEGORIES: "/nav/category",
 
   CATEGORIES: "/categories",
+  ALL_CATEGORIES: "/all-categories",
   PRODUCT_CATEGORIES: "/products/categories",
   PRODUCT_IN_CATEGORIES: "/products/category",
   PRODUCTS: "/products",

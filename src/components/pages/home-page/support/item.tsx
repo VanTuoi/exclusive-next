@@ -21,7 +21,7 @@ export const SupportItem = memo(({ icon, title, content }: SupportItemProps) => 
           color: theme.palette.text.primary,
           "&:hover": {
             backgroundColor: alpha(theme.palette.grey[300], 0.5),
-            "> :first-child": {
+            "> :first-of-type": {
               backgroundColor: alpha(theme.palette.common.black, 0.8)
             }
           }

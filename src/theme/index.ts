@@ -56,6 +56,7 @@ const theme = (customization: Customization): ReturnType<typeof createTheme> => 
   };
 
   const isLight = customization.type === "light";
+  const isRtl = customization.locale === "ar";
 
   const themeOption: ThemeOption = {
     colors,
@@ -70,7 +71,7 @@ const theme = (customization: Customization): ReturnType<typeof createTheme> => 
   };
 
   const themeOptions: ThemeOptions = {
-    direction: "ltr",
+    direction: isRtl ? "rtl" : "ltr",
     palette: themePalette(themeOption, isLight),
     typography: themeTypography(themeOption),
     components: OverrideStyles(themeOption)

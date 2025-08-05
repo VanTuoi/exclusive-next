@@ -16,11 +16,11 @@ export function removeBrackets(str: string): string {
  */
 export function formatCurrency(num: number | undefined, locale: string): string {
   const localeCurrencyMap: Record<string, string> = {
+    ar: "SAR",
     en: "USD",
+    ja: "JPY",
     vi: "VND",
-    fr: "EUR",
-    de: "EUR",
-    ja: "JPY"
+    zh: "CNY"
   };
   const currency = localeCurrencyMap[locale] || "USD";
   const value = num ?? 0;

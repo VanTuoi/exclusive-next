@@ -5,6 +5,7 @@ import { SwiperSlide } from "swiper/react";
 
 import { useHome } from "~/hooks";
 
+import { useRouter } from "next/navigation";
 import { Section } from "~/components/ui";
 import { CategoriesComponent, SliderProducts } from "~/components/ui/section";
 
@@ -15,7 +16,7 @@ type SliderProductsRef = {
 
 const BrowseByCategory = memo(() => {
   const t = useTranslations();
-
+  const router = useRouter();
   const { dataCategories } = useHome();
 
   const sliderRef = useRef<SliderProductsRef | null>(null);
@@ -29,6 +30,7 @@ const BrowseByCategory = memo(() => {
 
   return (
     <Section
+      handleViewAll={() => router.push("/products")}
       viewAll="none"
       title={t("home.categories.title")}
       content={t("home.categories.content")}
