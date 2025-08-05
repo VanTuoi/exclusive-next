@@ -412,7 +412,7 @@ export function home(mock: MockAdapter) {
             ],
             rating: {
               rate: 5 * Math.random(),
-              count: 4.5
+              count: 4
             },
             isNew: true,
             promotions: [
@@ -449,7 +449,7 @@ export function home(mock: MockAdapter) {
             ],
             rating: {
               rate: 5 * Math.random(),
-              count: 4.5
+              count: 4
             },
             isNew: true,
             promotions: [
@@ -493,7 +493,7 @@ export function home(mock: MockAdapter) {
             ],
             rating: {
               rate: 5 * Math.random(),
-              count: 4.5
+              count: 4
             },
             isNew: false,
             promotions: [
@@ -558,7 +558,7 @@ export function home(mock: MockAdapter) {
             ],
             rating: {
               rate: 5 * Math.random(),
-              count: 4.5
+              count: 4
             },
             isNew: false,
             promotions: [
@@ -595,7 +595,7 @@ export function home(mock: MockAdapter) {
             ],
             rating: {
               rate: 5 * Math.random(),
-              count: 4.5
+              count: 4
             },
             isNew: false,
             promotions: [
@@ -646,7 +646,7 @@ export function home(mock: MockAdapter) {
             ],
             rating: {
               rate: 5 * Math.random(),
-              count: 4.5
+              count: 4
             },
             isNew: false,
             promotions: [
@@ -732,7 +732,7 @@ export function home(mock: MockAdapter) {
             ],
             rating: {
               rate: 5 * Math.random(),
-              count: 4.5
+              count: 4
             },
             isNew: false,
             promotions: [

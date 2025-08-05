@@ -62,7 +62,7 @@ export const ProductJustForYouComponent = memo(({ product }: ProductComponentPro
       >
         <Image
           onClick={() => {
-            router.push("/" + product.category + "/" + product.id + "/" + product.title);
+            router.push("/product" + "/" + product.id + "/" + product.title);
           }}
           alt={product?.image?.find((img) => img.colorCode === selectedColor)?.alt || "img product"}
           src={
@@ -120,10 +120,10 @@ export const ProductJustForYouComponent = memo(({ product }: ProductComponentPro
         </Button>
       </Box>
       <CustomLink
-        href={"/" + product.category + "/" + product.id + "/" + product.title}
-        variant="h4"
-        maxLength={250}
-        sx={{ fontWeight: 600 }}
+        href={"/product" + "/" + product.id + "/" + product.title}
+        variant="h5"
+        maxLength={25}
+        sx={{ fontWeight: 500 }}
       >
         {product?.title}
       </CustomLink>
