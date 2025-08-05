@@ -72,7 +72,7 @@ export const CartItemRow: React.FC<CartItemRowProps> = memo(({ item }) => {
             <ClearIcon fontSize="small" style={{ color: theme.palette.background.paper }} />
           </Box>
           <Typography variant="body1" ml={2}>
-            <CustomLink maxLength={100} variant="h5" href={createUrl(product.category, product.id, product.title)}>
+            <CustomLink maxLength={100} variant="h5" href={createUrl("product", product.id, product.title)}>
               {product.title}
             </CustomLink>
           </Typography>

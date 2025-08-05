@@ -79,7 +79,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.5
+      count: 4
     },
     inStock: true,
     promotions: [
@@ -116,7 +116,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.5
+      count: 4
     },
     inStock: true,
     promotions: [
@@ -160,7 +160,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.5
+      count: 4
     },
     inStock: true,
     promotions: [
@@ -225,7 +225,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.5
+      count: 4
     },
     inStock: true,
     promotions: [
@@ -262,7 +262,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.5
+      count: 4
     },
     inStock: true,
     promotions: [
@@ -313,7 +313,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.5
+      count: 4
     },
     inStock: true,
     promotions: [
@@ -399,7 +399,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.5
+      count: 4
     },
     inStock: true,
     promotions: [
@@ -436,7 +436,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.7
+      count: 4
     },
     inStock: true,
     promotions: [
@@ -473,7 +473,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.6
+      count: 3
     },
     inStock: true,
     promotions: [
@@ -510,7 +510,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.8
+      count: 5
     },
     inStock: true,
     promotions: [],
@@ -540,7 +540,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.3
+      count: 4
     },
     inStock: true,
     promotions: [],
@@ -571,7 +571,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.2
+      count: 3
     },
     inStock: true,
     promotions: [],
@@ -601,7 +601,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.4
+      count: 3
     },
     inStock: true,
     promotions: [
@@ -637,7 +637,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.1
+      count: 4
     },
     inStock: true,
     promotions: [],
@@ -668,7 +668,7 @@ const PRODUCTS: Product[] = [
     ],
     rating: {
       rate: 5 * Math.random(),
-      count: 4.9
+      count: 4
     },
     inStock: true,
     promotions: [],
