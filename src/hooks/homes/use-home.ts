@@ -3,7 +3,7 @@ import { AxiosError } from "axios";
 import { useEffect, useState } from "react";
 
 import { homeApi, productApi } from "~/services";
-import { Category, CategoryNav, ImageBanner, Product } from "~/types";
+import { AllCategory, Category, CategoryNav, ImageBanner, Product } from "~/types";
 
 import { useCustomSnackbar } from "../use-toast";
 
@@ -28,6 +28,7 @@ export function useHome() {
   const [dataSupport, setDataSupport] = useState<[DataSupport] | []>([]);
   const [dataSocial, setDataSocial] = useState<[DataSocial] | []>([]);
   const [dataNavCategories, setDataNavCategories] = useState<[CategoryNav] | []>([]);
+  const [dataAllCategories, setDataAllCategories] = useState<[AllCategory] | []>([]);
   const [dataBanner, setDataBanner] = useState<[ImageBanner] | []>([]);
 
   useEffect(() => {
@@ -37,6 +38,7 @@ export function useHome() {
     handleGetBanner();
     handleGetCategories();
     handleGetFlashSafe();
+    handleGetAllCategories();
   }, []);
 
   const handleGetSupportInfo = async () => {
@@ -109,6 +111,20 @@ export function useHome() {
     }
   };
 
+  const handleGetAllCategories = async () => {
+    try {
+      const response = await getProductApi.getAllCategories();
+
+      setDataAllCategories(response.data.data);
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        const errorMessage = error.response?.data?.message;
+        showSnackbar(errorMessage, "error");
+      }
+      showSnackbar("Unknown error occurred", "error");
+    }
+  };
+
   const handleGetBanner = async () => {
     try {
       const response = await getHomeApi.getBanner();
@@ -142,11 +158,13 @@ export function useHome() {
     handleGetSupportSocial,
     handleGetNavCategories,
     handleGetProductCategories,
+    handleGetAllCategories,
     dataSocial,
     dataSupport,
     dataNavCategories,
     dataCategories,
     dataBanner,
-    dataFlashSafe
+    dataFlashSafe,
+    dataAllCategories
   };
 }

@@ -23,7 +23,14 @@ const LANGUAGES = [
     key: "ja",
     translationKey: "language.japanese"
   },
-  { key: "zh", translationKey: "language.chinese" }
+  {
+    key: "zh",
+    translationKey: "language.chinese"
+  },
+  {
+    key: "ar",
+    translationKey: "language.arabic"
+  }
 ];
 
 export const LanguageSelect = memo(() => {

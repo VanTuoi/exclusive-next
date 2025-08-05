@@ -41,7 +41,7 @@ export function auth(mock: MockAdapter) {
     }
   });
 
-  mock.onPatch(`${API_URLS.PROTECTED_API.CHANGE_INFO}`).reply(400, {
+  mock.onPatch(`${API_URLS.PROTECTED_API.CHANGE_INFO}`).reply(200, {
     success: true,
     message: "Get info successfully",
     data: {

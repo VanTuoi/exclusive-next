@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { usePathname } from "next/navigation";
 import { memo } from "react";
 
 import { Cart } from "./cart";
@@ -14,6 +15,10 @@ import { WishList } from "./wish-list";
 export const Header = memo(() => {
   const theme = useTheme();
   const isSmallDisplay = useMediaQuery(theme.breakpoints.down("lg"));
+  const pathname = usePathname();
+
+  const isProductPage = pathname?.includes("/products");
+
   return (
     <Box
       sx={{
@@ -47,7 +52,7 @@ export const Header = memo(() => {
             gap: 1
           }}
         >
-          <Search />
+          {!isProductPage && <Search />}
           <WishList />
           <Cart />
           <User />

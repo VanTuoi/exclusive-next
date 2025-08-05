@@ -15,6 +15,7 @@ export const Nav = () => {
 
   const NAV = [
     { titleKey: "home", link: "/" },
+    { titleKey: "products", link: "/products" },
     { titleKey: "contact", link: "/contact" },
     { titleKey: "about", link: "/about" },
     { titleKey: "signup", link: "/auth/sign-up" }

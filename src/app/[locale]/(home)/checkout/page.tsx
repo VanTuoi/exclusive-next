@@ -12,10 +12,9 @@ const CartPage = () => {
   const t = useTranslations("common.breadcrumbs");
 
   const paths: Path[] = [
-    { title: t("account"), link: `/${locale}/account` },
-    { title: t("myAccount"), link: `/${locale}/my-account` },
-    { title: t("product"), link: `/${locale}/product` },
-    { title: t("viewCart"), link: `/${locale}/view-cart` },
+    { title: t("account"), link: `/${locale}/user/profile` },
+    { title: t("myAccount"), link: `/${locale}/user/profile` },
+    { title: t("viewCart"), link: `/${locale}/cart` },
     { title: t("checkout"), link: `/${locale}/checkout` }
   ];
 

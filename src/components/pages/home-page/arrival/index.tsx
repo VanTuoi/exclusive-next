@@ -26,7 +26,7 @@ const Arrival = memo(() => {
               img={"/assets/imgs/bottom-banner/img1.webp"}
               title={t("home.arrival.item.0.title")}
               content={t("home.arrival.item.0.content")}
-              link="#"
+              link="/products"
             />
           </Grid>
           <Grid container size={{ xs: 12, md: 6 }}>
@@ -41,7 +41,7 @@ const Arrival = memo(() => {
                 img={"/assets/imgs/bottom-banner/img2.webp"}
                 title={t("home.arrival.item.1.title")}
                 content={t("home.arrival.item.1.content")}
-                link="#"
+                link="/products"
               />
             </Grid>
             <Grid container size={12}>
@@ -56,7 +56,7 @@ const Arrival = memo(() => {
                   img={"/assets/imgs/bottom-banner/img3.webp"}
                   title={t("home.arrival.item.2.title")}
                   content={t("home.arrival.item.2.content")}
-                  link="#"
+                  link="/products"
                 />
               </Grid>
               <Grid size={6}>
@@ -69,7 +69,7 @@ const Arrival = memo(() => {
                   img={"/assets/imgs/bottom-banner/img4.webp"}
                   title={t("home.arrival.item.3.title")}
                   content={t("home.arrival.item.3.content")}
-                  link="#"
+                  link="/products"
                 />
               </Grid>
             </Grid>

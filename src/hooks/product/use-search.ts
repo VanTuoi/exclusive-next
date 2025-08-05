@@ -2,15 +2,12 @@
 import { AxiosError } from "axios";
 import { useState } from "react";
 
-import { productApi } from "~/services";
 import { Product } from "~/types";
 
 import { useCustomSnackbar } from "../use-toast";
 
 export function useSearch() {
   const { showSnackbar } = useCustomSnackbar();
-
-  const getProductApi = productApi("public");
 
   const [dataProductByName, setDataProductByName] = useState<[Product] | []>([]);
 
@@ -21,9 +18,7 @@ export function useSearch() {
         return;
       }
 
-      const response = await getProductApi.getProductByName([["search", name]]);
-
-      setDataProductByName(response.data.data);
+      setDataProductByName([]);
     } catch (error) {
       if (error instanceof AxiosError) {
         const errorMessage = error.response?.data?.message;

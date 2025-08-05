@@ -5,6 +5,7 @@ import { SwiperSlide } from "swiper/react";
 
 import { useHome } from "~/hooks";
 
+import { useRouter } from "next/navigation";
 import { Section } from "~/components/ui";
 import { ProductComponent, SliderProducts } from "~/components/ui/section";
 
@@ -15,7 +16,7 @@ type SliderProductsRef = {
 
 const MonthSale = memo(() => {
   const t = useTranslations();
-
+  const router = useRouter();
   const { dataFlashSafe } = useHome();
 
   const sliderRef = useRef<SliderProductsRef | null>(null);
@@ -29,6 +30,7 @@ const MonthSale = memo(() => {
 
   return (
     <Section
+      handleViewAll={() => router.push("/products")}
       viewAll="top-right"
       title={t("home.monthSale.title")}
       content={t("home.monthSale.content")}
@@ -39,7 +41,7 @@ const MonthSale = memo(() => {
     >
       <SliderProducts ref={sliderRef}>
         {dataFlashSafe.map((item) => (
-          <SwiperSlide key={item.id} style={{ width: "250px", height: "auto" }}>
+          <SwiperSlide key={item.id} style={{ width: "220px", height: "auto" }}>
             <ProductComponent product={item} />
           </SwiperSlide>
         ))}
