@@ -18,6 +18,7 @@
       },
       "nav": {
         "home": "ホーム",
+        "products": "商品",
         "contact": "お問い合わせ",
         "about": "会社概要",
         "signup": "登録"
@@ -191,6 +192,20 @@
         "content": "30日間返金保証"
       }
     ]
+  },
+  "products": {
+    "search_placeholder": "商品を検索",
+    "search": "検索",
+    "all_categories": "すべてのカテゴリ",
+    "sort_by": "並び替え",
+    "order": "順序",
+    "name": "名前",
+    "price": "価格",
+    "created_at": "作成日",
+    "sold": "販売済み",
+    "view": "表示",
+    "asc": "昇順",
+    "desc": "降順"
   },
   "productDetail": {
     "review": "レビュー",

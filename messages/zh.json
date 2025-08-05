@@ -18,6 +18,7 @@
       },
       "nav": {
         "home": "首页",
+        "products": "产品",
         "contact": "联系我们",
         "about": "关于我们",
         "signup": "注册"
@@ -191,6 +192,20 @@
         "content": "30天内退款"
       }
     ]
+  },
+  "products": {
+    "search_placeholder": "搜索商品",
+    "search": "搜索",
+    "all_categories": "所有分类",
+    "sort_by": "排序方式",
+    "order": "顺序",
+    "name": "名称",
+    "price": "价格",
+    "created_at": "创建日期",
+    "sold": "已售",
+    "view": "查看",
+    "asc": "升序",
+    "desc": "降序"
   },
   "productDetail": {
     "review": "评价",

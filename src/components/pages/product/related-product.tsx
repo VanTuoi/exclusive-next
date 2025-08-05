@@ -38,7 +38,7 @@ export const RelatedProduct = memo(({ id }: RelatedProductProps) => {
   };
 
   return (
-    <Container maxWidth={"lg"}>
+    <Container>
       <Section
         nextItem={false}
         viewAll="none"
@@ -51,13 +51,13 @@ export const RelatedProduct = memo(({ id }: RelatedProductProps) => {
         {!isLoading ? (
           <SliderProducts ref={sliderRef}>
             {dataFlashSafe.map((item) => (
-              <SwiperSlide key={item.title} style={{ width: "270px", height: "auto" }}>
+              <SwiperSlide key={item.title} style={{ width: "220px", height: "auto" }}>
                 <ProductComponent product={item} key={item.id} />
               </SwiperSlide>
             ))}
           </SliderProducts>
         ) : (
-          <Skeleton variant="rounded" width={"244px"} height={"244px"}></Skeleton>
+          <Skeleton variant="rounded" width={"220px"} height={"200px"}></Skeleton>
         )}
       </Section>
     </Container>

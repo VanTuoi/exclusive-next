@@ -9,6 +9,7 @@ import { useFlashSales } from "~/hooks";
 import { Section } from "~/components/ui";
 import { ProductComponent, SliderProducts } from "~/components/ui/section";
 
+import { useRouter } from "next/navigation";
 import { getDatePlusNDays } from "~/utils/time";
 
 type SliderProductsRef = {
@@ -18,6 +19,7 @@ type SliderProductsRef = {
 
 const FlashSales = memo(() => {
   const t = useTranslations();
+  const router = useRouter();
   const { dataFlashSafe, isLoading } = useFlashSales();
 
   const sliderRef = useRef<SliderProductsRef | null>(null);
@@ -31,6 +33,7 @@ const FlashSales = memo(() => {
 
   return (
     <Section
+      handleViewAll={() => router.push("/products")}
       nextItem={true}
       viewAll="bottom"
       title={t("home.flashSale.title")}

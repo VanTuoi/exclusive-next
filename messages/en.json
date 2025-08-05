@@ -18,6 +18,7 @@
       },
       "nav": {
         "home": "Home",
+        "products": "Products",
         "contact": "Contact",
         "about": "About",
         "signup": "Sign up"
@@ -191,6 +192,20 @@
         "content": "We reurn money within 30 days"
       }
     ]
+  },
+  "products": {
+    "search_placeholder": "Search products",
+    "search": "Search",
+    "all_categories": "All Categories",
+    "sort_by": "Sort By",
+    "order": "Order",
+    "name": "Name",
+    "price": "Price",
+    "created_at": "Created Date",
+    "sold": "Sold",
+    "view": "View",
+    "asc": "Ascending",
+    "desc": "Descending"
   },
   "productDetail": {
     "review": "Reviews",
