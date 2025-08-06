@@ -1,7 +1,7 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, Button, Card, Grid, Stack, Typography, useTheme } from "@mui/material";
-import { memo, useEffect } from "react";
+import { memo, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -16,11 +16,8 @@ import { BorderlessInput } from "~/components/pages/check-out/borderless-text-fi
 
 export const ProfileForm = memo(() => {
   const theme = useTheme();
-
   const t = useTranslations();
-
   const { userData } = useAuthStore();
-
   const { handleUpdateInfo } = useUpdateInfo();
 
   const formSchema = z
@@ -43,12 +40,34 @@ export const ProfileForm = memo(() => {
     formState: { errors, isValid, isSubmitting },
     setValue,
     trigger,
-    handleSubmit
+    handleSubmit,
+    watch
   } = useForm<z.infer<typeof formSchema>>({
     mode: "onChange",
     resolver: zodResolver(formSchema),
     defaultValues: {}
   });
+
+  const formValues = watch();
+
+  const [hasChanges, setHasChanges] = useState(false);
+
+  const checkForChanges = () => {
+    if (!userData) return false;
+    return (
+      formValues.firstName !== (userData.firstName ?? "") ||
+      formValues.lastName !== (userData.lastName ?? "") ||
+      formValues.streetAddress !== (userData.streetAddress ?? "") ||
+      formValues.emailAddress !== (userData.emailAddress ?? "") ||
+      formValues.currentPassword ||
+      formValues.newPassword ||
+      formValues.confirmNewPassword
+    );
+  };
+
+  useEffect(() => {
+    setHasChanges(!!checkForChanges());
+  }, [formValues, userData]);
 
   const onChange = (name: keyof Omit<UpdateUserData, "id">, value: string) => {
     setValue(name, value);
@@ -169,15 +188,12 @@ export const ProfileForm = memo(() => {
             </Grid>
             <Grid size={{ xs: 12 }}>
               <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }} gap={1}>
-                <Button type="button" variant="text" color="primary" size="large" disabled={isSubmitting}>
-                  {t("profile.form.cancel")}
-                </Button>
                 <Button
                   type="submit"
                   variant="contained"
                   color="primary"
                   size="large"
-                  disabled={!isValid || isSubmitting}
+                  disabled={!isValid || !hasChanges || isSubmitting}
                 >
                   {t("profile.form.submit")}
                 </Button>

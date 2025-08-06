@@ -28,7 +28,7 @@ export const ContactForm = memo(() => {
 
   const {
     register,
-    formState: { errors, isValid, isSubmitting },
+    formState: { errors, isValid, isSubmitting, isSubmitted },
     setValue,
     trigger,
     handleSubmit
@@ -113,7 +113,7 @@ export const ContactForm = memo(() => {
               variant="contained"
               color="primary"
               size="large"
-              disabled={!isValid || isSubmitting}
+              disabled={isSubmitted && (!isValid || isSubmitting)}
             >
               {t("contact.form.submit")}
             </CusTomButton>
