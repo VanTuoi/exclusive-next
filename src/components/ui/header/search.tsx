@@ -66,6 +66,8 @@ export const Search = memo(() => {
       options={dataProducts}
       getOptionLabel={(option) => option.title}
       noOptionsText={t("noResult")}
+      disableClearable
+      popupIcon={null}
       sx={{
         display: isSmallScreen ? "none" : "flex",
         width: 250,
